@@ -1,0 +1,10 @@
+.footer {
+  background-color: #f0f3f8;
+}
+.addressWrap {
+  display: flex;
+  align-items: center;
+}
+.copyright {
+  background-color: var(--body-text);
+}

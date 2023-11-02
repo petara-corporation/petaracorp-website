@@ -3,9 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --body-text: #212121;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --active-color: #e93325;
+}
+
+* {
+  letter-spacing: 0.5px;
+}
+
+@font-face {
+  font-family: "noto_sans";
+  src: url("../../public/fonts/notosans-regular-webfont.woff2") format("woff2"),
+    url("../../public/fonts/notosans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +30,13 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "noto_sans";
+  color: var(--body-text);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.page-offset {
+  margin-top: 120px;
 }
