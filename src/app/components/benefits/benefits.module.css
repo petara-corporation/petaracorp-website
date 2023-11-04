@@ -1,0 +1,10 @@
+.bar {
+  width: 120px;
+  height: 2px;
+  background-color: var(--active-color);
+  border-radius: 8px;
+  margin-bottom: 64px;
+}
+.benefitsWrap {
+  margin: 64px 0;
+}

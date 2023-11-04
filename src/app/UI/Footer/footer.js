@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
 import styles from "./footer.module.css";
+import ContactUsModal from "@/app/components/contact-popup/contact-popup";
 
 export default function Footer() {
+  const [open, setOpen] = useState(false);
+  const hideModal = () => {
+    setOpen(false);
+  };
   return (
     <footer className={styles.footer}>
       <div
@@ -56,7 +64,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="" className="font-medium inline-block text-sm">
+                <Link
+                  href=""
+                  className="font-medium inline-block text-sm"
+                  onClick={() => setOpen(true)}
+                >
                   Contact
                 </Link>
               </li>
@@ -124,6 +136,7 @@ export default function Footer() {
           reserved.
         </p>
       </div>
+      <ContactUsModal open={open} hideModal={hideModal} email={""} name={""} />
     </footer>
   );
 }
