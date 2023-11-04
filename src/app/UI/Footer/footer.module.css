@@ -8,3 +8,7 @@
 .copyright {
   background-color: var(--body-text);
 }
+.moto {
+  font-family: "trashhand";
+  margin: 15px;
+}

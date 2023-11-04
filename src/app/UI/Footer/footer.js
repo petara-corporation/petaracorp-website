@@ -29,6 +29,7 @@ export default function Footer() {
               />
             </Link>
           </div>
+          <p className={styles.moto}>For Your Business Success</p>
         </section>
         <section className={styles.footerNav}>
           <nav>

@@ -21,6 +21,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "trashhand";
+  src: url("../../public/fonts/trashhand-webfont.woff2") format("woff2"),
+    url("../../public/fonts/trashhand-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
