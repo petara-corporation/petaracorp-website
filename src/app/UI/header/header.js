@@ -14,10 +14,46 @@ export default function Header() {
     setOpen(false);
   };
   return (
-    <header className="fixed w-full p-8 top-0 bg-white z-10">
-      <div className="container mx-auto flex justify-between">
-        <div className="logo">
-          <Link href="/">
+    <header
+      className={`fixed w-full p-4 md:p-8 top-0 bg-white z-10 ${styles.header}`}
+    >
+      <div
+        className={`container  mx-auto flex justify-between ${styles.resContainer}`}
+      >
+        <div className="flex">
+          <div className={`${styles.hamburger} relative`}>
+            <Image
+              className={`relative mr-4 top-3`}
+              src="/menu.svg"
+              alt="Menu"
+              width={35}
+              height={35}
+              priority
+            />
+            <div className={`${styles.menuSlide} absolute`}>
+              <div className={`${styles.nav}`}>
+                <nav className={`${styles.mobileMenu} self-center`}>
+                  <ul className="my-4">
+                    {navLinks.map((nav) => {
+                      return (
+                        <li className="mb-2" key={nav.id}>
+                          <Link
+                            className={`block p-4 ${
+                              pathname === nav.path ? styles.activeLinkMob : ""
+                            }`}
+                            href={nav.path}
+                          >
+                            {nav.title}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <Link href="/" className="block" style={{ width: "163px" }}>
             <Image
               className="relative"
               src="/logo.svg"
@@ -28,14 +64,14 @@ export default function Header() {
             />
           </Link>
         </div>
-        <div className="nav flex">
-          <nav className="self-center">
+        <div className="flex">
+          <nav className={`${styles.desktopMenu} self-center`}>
             <ul className="flex">
               {navLinks.map((nav) => {
                 return (
-                  <li className="mr-8" key={nav.id}>
+                  <li className="mr-4 lg:mr-8" key={nav.id}>
                     <Link
-                      className={`${styles.link} px-8 pb-3 ${
+                      className={`${styles.link} px-4 lg:px-8 pb-3 ${
                         pathname === nav.path ? styles.activeLink : ""
                       }`}
                       href={nav.path}
@@ -54,6 +90,7 @@ export default function Header() {
           </button>
         </div>
       </div>
+
       <ContactUsModal open={open} hideModal={hideModal} email={""} name={""} />
     </header>
   );

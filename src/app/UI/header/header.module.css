@@ -5,6 +5,10 @@
   transition: all 100ms ease-out;
 }
 
+.activeLinkMob {
+  color: var(--active-color);
+}
+
 .link {
   font-size: 20px;
   font-weight: 600;
@@ -21,8 +25,64 @@
   width: 180px;
 }
 
+.desktopMenu {
+  display: block;
+}
+
 .cta:hover {
   transition: all 200ms ease-in;
   color: #fff;
   background-color: var(--active-color);
+}
+
+.menuSlide {
+  transform: translateX(-280px);
+  transition: all 0.5s ease-out;
+  width: 260px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  top: 72px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger:hover .menuSlide {
+  transform: translateX(-20px);
+}
+
+@media only screen and (max-width: 1024px) {
+  .link {
+    font-size: 16px;
+    padding: 0 16px 0.75em;
+  }
+  .resContainer {
+    width: 98%;
+    max-width: 98%;
+  }
+}
+
+@media only screen and (max-width: 819px) {
+  .desktopMenu {
+    display: none;
+  }
+  .nav {
+  }
+  .hamburger {
+    display: block;
+  }
+  .header {
+    border-bottom: 1px solid #c7c7c7;
+  }
+  .cta {
+    width: 130px;
+    line-height: 40px;
+    font-size: 14px;
+    white-space: nowrap;
+    position: relative;
+    top: 8px;
+  }
 }

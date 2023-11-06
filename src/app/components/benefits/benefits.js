@@ -31,10 +31,10 @@ export default function Benefits() {
         <div className={`${styles.bar}`}></div>
       </div>
       <div className="container mx-auto">
-        <ul className="flex justify-between flex-wrap">
+        <ul className=" block md:flex justify-between flex-wrap">
           {benefitsList.map((benefit) => {
             return (
-              <li key={benefit.id} className="text-center">
+              <li key={benefit.id} className="text-center mb-6 md:mb-0">
                 <div className="">
                   <Image
                     className="relative inline-block mb-6"

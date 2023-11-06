@@ -28,7 +28,7 @@ export default function ContactUs() {
             maxLength={60}
             placeholder="Name"
             required
-            className={styles.input}
+            className={`${styles.input} mt-4 mr-0 md:mt-0 md:mr-4`}
             onChange={(e) => setFullname(e.target.value)}
           />
           <input
@@ -36,10 +36,13 @@ export default function ContactUs() {
             maxLength={60}
             placeholder="Email"
             required
-            className={styles.input}
+            className={`${styles.input} mt-4 mr-0 md:mt-0 md:mr-4`}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button className={styles.quoteBtn} onClick={() => setOpen(true)}>
+          <button
+            className={`${styles.quoteBtn} mt-4 ml-0 md:ml-4`}
+            onClick={() => setOpen(true)}
+          >
             Get Quote
           </button>
         </div>

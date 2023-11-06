@@ -9,10 +9,17 @@ export default function OurServices() {
         <h2 className="text-4xl font-semibold mb-4">Our Services</h2>
         <div className={`${styles.bar}`}></div>
       </div>
-      <div className="images container mx-auto flex justify-between">
-        <div className={`${styles.layerWrap} w-2/4 mr-6 relative`}>
+      <div className="images container mx-auto block md:flex justify-between">
+        <div
+          className={`${styles.layerWrap} w-11/12 mx-auto md:w-2/4 mb-8 md:mb-0 md:mr-6 relative`}
+        >
           <div className={styles.layerImageWrap}>
-            <Image src="/service-1.png" alt="Bouncy and Inflatables" fill />
+            <Image
+              src="/service-1.png"
+              alt="Bouncy and Inflatables"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
             <div className={styles.overlay}>
               <h2>Bouncy & Inflatables</h2>
               <h3>Various products and categories</h3>
@@ -28,9 +35,16 @@ export default function OurServices() {
             </div>
           </div>
         </div>
-        <div className={`${styles.layerWrap} w-2/4 relative`}>
+        <div
+          className={`${styles.layerWrap} w-11/12 mx-auto md:w-2/4 relative`}
+        >
           <div className={styles.layerImageWrap}>
-            <Image src="/service-2.png" alt="Bouncy and Inflatables" fill />
+            <Image
+              src="/service-2.png"
+              alt="Bouncy and Inflatables"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
             <div className={styles.overlay}>
               <h2>Corporate Gifting</h2>
               <h3>Various products and categories</h3>

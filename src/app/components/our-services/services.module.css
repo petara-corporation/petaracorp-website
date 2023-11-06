@@ -89,3 +89,17 @@
   border: 1px solid var(--active-color);
   background-color: var(--active-color);
 }
+
+@media only screen and (max-width: 767px) {
+  .layerImageWrap {
+    min-height: 350px;
+  }
+  .overlay h2,
+  .layerWrap .hoverLayer .text h2 {
+    font-size: 24px;
+  }
+  .overlay h3,
+  .layerWrap .hoverLayer .text h3 {
+    font-size: 18px;
+  }
+}

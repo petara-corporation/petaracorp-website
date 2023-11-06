@@ -6,7 +6,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const HeroCarousel = () => (
   <div className="relative w-full mb-10">
-    <Carousel autoPlay infiniteLoop showStatus={false} showThumbs={false}>
+    <Carousel
+      autoPlay
+      infiniteLoop
+      showStatus={false}
+      showThumbs={false}
+      dynamicHeight={true}
+    >
       <div className="slide">
         <img alt="Premium Inflatable Solutions" src="./slide1.jpg" />
         <div className={`${styles.overlayText} legend`}>

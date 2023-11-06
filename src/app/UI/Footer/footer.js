@@ -13,12 +13,9 @@ export default function Footer() {
   };
   return (
     <footer className={styles.footer}>
-      <div
-        className="container mx-auto flex justify-between"
-        style={{ padding: "70px 0" }}
-      >
+      <div className="container mx-auto block px-8 md:px-4 md:flex py-4 md:py-16 justify-between">
         <section className="logoSection">
-          <div className="logo">
+          <div className="logo -ml-4">
             <Link href="/">
               <Image
                 className="relative"
@@ -31,7 +28,7 @@ export default function Footer() {
           </div>
           <p className={styles.moto}>For Your Business Success</p>
         </section>
-        <section className={styles.footerNav}>
+        <section className={`${styles.footerNav} mb-4 md:mb-0`}>
           <nav>
             <ul>
               <li>
@@ -76,7 +73,7 @@ export default function Footer() {
             </ul>
           </nav>
         </section>
-        <section>
+        <section className="border-b mb-4 md:border-transparent md:mb-0">
           <nav>
             <ul>
               <li>
