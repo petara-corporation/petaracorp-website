@@ -1,5 +1,5 @@
 import Benefits from "./components/benefits/benefits";
-import ContactUs from "./components/contact-us/contact-us";
+import ContactUsSection from "./components/contact-us-section/contact-us-section";
 import HeroCarousel from "./components/hero-slider/hero-slider";
 import OurServices from "./components/our-services/our-services";
 
@@ -10,7 +10,7 @@ export default function Home() {
         <HeroCarousel />
         <OurServices />
         <Benefits />
-        <ContactUs />
+        <ContactUsSection />
 
         {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
           <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">

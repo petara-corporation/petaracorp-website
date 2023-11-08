@@ -1,34 +1,27 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./header.module.css";
 import { navLinks } from "./data";
-import ContactUsModal from "@/app/components/contact-popup/contact-popup";
 
 export default function Header() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-  const hideModal = () => {
-    setOpen(false);
-  };
   return (
     <header
-      className={`fixed w-full p-4 md:p-8 top-0 bg-white z-10 ${styles.header}`}
+      className={`fixed w-full p-2 md:p-4 top-0 bg-white z-10  ${styles.header}`}
     >
       <div
-        className={`container  mx-auto flex justify-between ${styles.resContainer}`}
+        className={`container  mx-auto flex justify-between items-center ${styles.resContainer}`}
       >
         <div className="flex">
           <div className={`${styles.hamburger} relative`}>
             <Image
-              className={`relative mr-4 top-3`}
+              className={`relative mr-4 top-1`}
               src="/menu.svg"
               alt="Menu"
               width={35}
               height={35}
-              priority
             />
             <div className={`${styles.menuSlide} absolute`}>
               <div className={`${styles.nav}`}>
@@ -37,14 +30,14 @@ export default function Header() {
                     {navLinks.map((nav) => {
                       return (
                         <li className="mb-2" key={nav.id}>
-                          <Link
+                          <a
                             className={`block p-4 ${
                               pathname === nav.path ? styles.activeLinkMob : ""
                             }`}
                             href={nav.path}
                           >
                             {nav.title}
-                          </Link>
+                          </a>
                         </li>
                       );
                     })}
@@ -53,7 +46,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <Link href="/" className="block" style={{ width: "163px" }}>
+          <Link href="/" className={`block ${styles.logoWidth}`}>
             <Image
               className="relative"
               src="/logo.svg"
@@ -69,15 +62,15 @@ export default function Header() {
             <ul className="flex">
               {navLinks.map((nav) => {
                 return (
-                  <li className="mr-4 lg:mr-8" key={nav.id}>
-                    <Link
-                      className={`${styles.link} px-4 lg:px-8 pb-3 ${
+                  <li className="mr-4" key={nav.id}>
+                    <a
+                      className={`${styles.link} px-4 pb-3 whitespace-nowrap ${
                         pathname === nav.path ? styles.activeLink : ""
                       }`}
                       href={nav.path}
                     >
                       {nav.title}
-                    </Link>
+                    </a>
                   </li>
                 );
               })}
@@ -85,13 +78,11 @@ export default function Header() {
           </nav>
         </div>
         <div className="ctaWrap">
-          <button className={`${styles.cta} `} onClick={() => setOpen(true)}>
+          <a className={`${styles.cta} `} href="/contact-us">
             Get in Touch
-          </button>
+          </a>
         </div>
       </div>
-
-      <ContactUsModal open={open} hideModal={hideModal} email={""} name={""} />
     </header>
   );
 }

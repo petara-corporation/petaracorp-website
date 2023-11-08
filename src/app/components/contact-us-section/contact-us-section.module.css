@@ -28,7 +28,7 @@
   border-radius: 40px;
   background: linear-gradient(180deg, #e97358 0%, #e93325 100%);
   width: 138px;
-  height: 48px;
+  line-height: 48px;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;

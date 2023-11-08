@@ -8,3 +8,9 @@
 .benefitsWrap {
   margin: 64px 0;
 }
+@media only screen and (max-width: 819px) {
+  .bar {
+    width: 55px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import ContactUsModal from "../contact-popup/contact-popup";
-import styles from "./contact-us.module.css";
+import styles from "./contact-us-section.module.css";
 
-export default function ContactUs() {
+export default function ContactUsSection() {
   const [open, setOpen] = useState(false);
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ export default function ContactUs() {
       >
         <h2 className="text-4xl font-semibold mb-4">Contact Us</h2>
         <div className={`${styles.bar}`}></div>
-        <p className="mb-14">
+        <p className="mb-14 px-4">
           We can’t wait to hear about your next project! We will get back to you
         </p>
       </div>
@@ -39,20 +39,20 @@ export default function ContactUs() {
             className={`${styles.input} mt-4 mr-0 md:mt-0 md:mr-4`}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button
+          <a
+            href={`/contact-us/?name=${fullname}&email=${email}`}
             className={`${styles.quoteBtn} mt-4 ml-0 md:ml-4`}
-            onClick={() => setOpen(true)}
           >
             Get Quote
-          </button>
+          </a>
         </div>
       </div>
-      <ContactUsModal
+      {/* <ContactUsModal
         open={open}
         hideModal={hideModal}
         email={email}
         name={fullname}
-      />
+      /> */}
     </section>
   );
 }

@@ -27,7 +27,7 @@ export default function Benefits() {
       <div
         className={`${styles.heading} container text-center flex flex-col items-center mx-auto`}
       >
-        <h2 className="text-4xl font-semibold mb-4">Benefits</h2>
+        <h2 className="text-2xl md:text-4xl font-semibold mb-4">Benefits</h2>
         <div className={`${styles.bar}`}></div>
       </div>
       <div className="container mx-auto">
@@ -45,7 +45,9 @@ export default function Benefits() {
                   />
                 </div>
 
-                <div className="font-bold text-2xl mb-2">{benefit.title}</div>
+                <div className="font-bold text-xl md:text-2xl mb-2">
+                  {benefit.title}
+                </div>
                 <div
                   className="font-light"
                   dangerouslySetInnerHTML={{ __html: benefit.desc }}

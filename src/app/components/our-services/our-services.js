@@ -6,7 +6,9 @@ export default function OurServices() {
   return (
     <section className="ourServices">
       <div className="heading container text-center flex flex-col items-center mx-auto">
-        <h2 className="text-4xl font-semibold mb-4">Our Services</h2>
+        <h2 className="text-2xl md:text-4xl font-semibold mb-4">
+          Our Services
+        </h2>
         <div className={`${styles.bar}`}></div>
       </div>
       <div className="images container mx-auto block md:flex justify-between">
