@@ -62,13 +62,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href=""
+                <a
+                  href="/contact-us"
                   className="font-medium inline-block text-sm"
-                  onClick={() => setOpen(true)}
                 >
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </nav>
