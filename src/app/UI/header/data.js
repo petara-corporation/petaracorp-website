@@ -62,7 +62,7 @@ export const navLinks = [
   {
     id: 3,
     title: "Corporate Gifting",
-    path: "/products",
+    path: "/corporate-gifting",
   },
   {
     id: 4,
