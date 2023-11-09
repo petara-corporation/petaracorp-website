@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./contact-us.module.css";
 import React, { useState, useRef, useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 const ContactUs = () => {
   const [isOpen, setIsOpen] = useState(false);

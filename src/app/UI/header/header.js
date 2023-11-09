@@ -9,7 +9,7 @@ export default function Header() {
   const pathname = usePathname();
   return (
     <header
-      className={`fixed w-full p-2 md:p-4 top-0 bg-white z-10  ${styles.header}`}
+      className={`fixed w-full py-2 md:py-0 px-2 md:px-4 top-0 bg-white z-10  ${styles.header}`}
     >
       <div
         className={`container  mx-auto flex justify-between items-center ${styles.resContainer}`}
@@ -62,7 +62,7 @@ export default function Header() {
             <ul className="flex">
               {navLinks.map((nav) => {
                 return (
-                  <li className="mr-4" key={nav.id}>
+                  <li className={`mr-4 ${styles.mainMenu}`} key={nav.id}>
                     <a
                       className={`${styles.link} px-4 pb-3 whitespace-nowrap ${
                         pathname === nav.path ? styles.activeLink : ""
@@ -71,6 +71,40 @@ export default function Header() {
                     >
                       {nav.title}
                     </a>
+                    {nav?.subMenu && (
+                      <div className={styles.subnav}>
+                        <ul className="flex flex-wrap justify-center">
+                          {nav?.subMenu?.map((sub) => {
+                            return (
+                              <li
+                                className={`ml-4 py-8 ${styles.menuItem}`}
+                                key={sub?.id}
+                              >
+                                <div className={`${styles.layerWrap} relative`}>
+                                  <div className={styles.layerImageWrap}>
+                                    <Image
+                                      className="relative"
+                                      src={sub.img}
+                                      alt={sub.label}
+                                      width={200}
+                                      height={200}
+                                    />
+                                    <div className={styles.overlay}>
+                                      <h2>{sub.label}</h2>
+                                    </div>
+                                  </div>
+                                  <div className={styles.hoverLayer}>
+                                    <div className={styles.text}>
+                                      <h2>{sub.label}</h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    )}
                   </li>
                 );
               })}
