@@ -13,6 +13,7 @@ export const navLinks = [
         id: 1,
         label: "Inflatables",
         img: "/menu.jpg",
+        url: "/products/inflatables",
         subProducts: [
           "Ground Inflatable Product Shape ",
           "Ground Inflatable Character Shape",
@@ -22,6 +23,7 @@ export const navLinks = [
         id: 2,
         label: "Bouncy",
         img: "/menu.jpg",
+        url: "/products/bouncy",
         subProducts: [
           "Ball Pool : Bouncy with Ball",
           "Basic Bouncy : Standard Bouncy",
@@ -39,6 +41,7 @@ export const navLinks = [
         id: 3,
         label: "Costumes",
         img: "/menu.jpg",
+        url: "/products/costumes",
         subProducts: [
           "Inflatable Costume : Product Shape",
           "Inflatable Costume : Character Shape ",
@@ -49,12 +52,14 @@ export const navLinks = [
         id: 4,
         label: "Arches & Kiosk",
         img: "/menu.jpg",
+        url: "/products/inflatables",
         subProducts: ["Arches & Kiosk", "Balloons & Blimps"],
       },
       {
         id: 5,
         label: "Balloons & Blimps",
         img: "/menu.jpg",
+        url: "/products/inflatables",
         subProducts: ["Arches & Kiosk", "Balloons & Blimps"],
       },
     ],
@@ -66,8 +71,8 @@ export const navLinks = [
   },
   {
     id: 4,
-    title: "Gallery",
-    path: "/gallery",
+    title: "Portfolio",
+    path: "/portfolio",
   },
   {
     id: 5,

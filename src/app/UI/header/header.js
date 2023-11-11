@@ -80,25 +80,29 @@ export default function Header() {
                                 className={`ml-4 py-8 ${styles.menuItem}`}
                                 key={sub?.id}
                               >
-                                <div className={`${styles.layerWrap} relative`}>
-                                  <div className={styles.layerImageWrap}>
-                                    <Image
-                                      className="relative"
-                                      src={sub.img}
-                                      alt={sub.label}
-                                      width={200}
-                                      height={200}
-                                    />
-                                    <div className={styles.overlay}>
-                                      <h2>{sub.label}</h2>
+                                <a href={sub.url}>
+                                  <div
+                                    className={`${styles.layerWrap} relative`}
+                                  >
+                                    <div className={styles.layerImageWrap}>
+                                      <Image
+                                        className="relative"
+                                        src={sub.img}
+                                        alt={sub.label}
+                                        width={200}
+                                        height={200}
+                                      />
+                                      <div className={styles.overlay}>
+                                        <h2>{sub.label}</h2>
+                                      </div>
+                                    </div>
+                                    <div className={styles.hoverLayer}>
+                                      <div className={styles.text}>
+                                        <h2>{sub.label}</h2>
+                                      </div>
                                     </div>
                                   </div>
-                                  <div className={styles.hoverLayer}>
-                                    <div className={styles.text}>
-                                      <h2>{sub.label}</h2>
-                                    </div>
-                                  </div>
-                                </div>
+                                </a>
                               </li>
                             );
                           })}

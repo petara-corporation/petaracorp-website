@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./inflatable.module.css";
+import styles from "./bouncy.module.css";
 
 export default function Inflatables() {
   return (
@@ -8,16 +8,14 @@ export default function Inflatables() {
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
         >
-          <h2 className="text-4xl font-semibold mb-4">Inflatables</h2>
+          <h2 className="text-4xl font-semibold mb-4">Bouncy</h2>
           <div className={`${styles.bar}`}></div>
         </div>
       </div>
       <div className={`${styles.productDetailsWrap} container mx-auto mb-8`}>
         <div className={styles.flexWrap}>
           <div className={styles.prodInfo}>
-            <h1 className="text-4xl mb-8 ">
-              Draw attention with giant inflatables
-            </h1>
+            <h1 className="text-4xl mb-8 ">Draw attention with giant bouncy</h1>
             <p className="mb-8 text">
               Giant inflatables serve as an ideal medium for effective branding,
               capturing attention with their playful nature and providing ample
@@ -62,7 +60,7 @@ export default function Inflatables() {
             </ul>
             <div>
               <a className={styles.portfolioLink} href="/portfolio">
-                View Inflatable Portfolio
+                View Bouncy Portfolio
               </a>
             </div>
           </div>

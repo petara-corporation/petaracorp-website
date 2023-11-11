@@ -81,6 +81,7 @@ export default function Products() {
                           src={sub.img}
                           alt={sub.label}
                           fill={true}
+                          sizes="(max-width: 768px) 25vw, 25vw"
                         />
                         <div className={styles.overlay}>
                           <h2>{sub.label}</h2>

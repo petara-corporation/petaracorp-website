@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./inflatable.module.css";
+import styles from "./costumes.module.css";
 
 export default function Inflatables() {
   return (
@@ -8,7 +8,7 @@ export default function Inflatables() {
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
         >
-          <h2 className="text-4xl font-semibold mb-4">Inflatables</h2>
+          <h2 className="text-4xl font-semibold mb-4">Costumes</h2>
           <div className={`${styles.bar}`}></div>
         </div>
       </div>
@@ -62,7 +62,7 @@ export default function Inflatables() {
             </ul>
             <div>
               <a className={styles.portfolioLink} href="/portfolio">
-                View Inflatable Portfolio
+                View Costume Portfolio
               </a>
             </div>
           </div>
