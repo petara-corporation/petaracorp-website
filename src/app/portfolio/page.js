@@ -8,11 +8,41 @@ import { GalleryItems, TabList } from "./data";
 
 const Portfolio = () => {
   const brands = [
-    "/audi.gif",
-    "/CocomelonLogo.png",
-    "/reliance.png",
-    "/sunburn.png",
-    "/cococola.png",
+    {
+      id: 1,
+      name: "ICICI Bank",
+      url: "/icici.png",
+    },
+    {
+      id: 2,
+      name: "Servo",
+      url: "/servo.png",
+    },
+    {
+      id: 3,
+      name: "Piaggio",
+      url: "/piaggio.png",
+    },
+    {
+      id: 4,
+      name: "Syngenta",
+      url: "/syngenta.png",
+    },
+    {
+      id: 5,
+      name: "Coromandel",
+      url: "/coromandel.png",
+    },
+    {
+      id: 6,
+      name: "Vision",
+      url: "/vision.png",
+    },
+    {
+      id: 7,
+      name: "UPL",
+      url: "/upl.png",
+    },
   ];
 
   const [selectedTab, setSelectedTab] = useState("All");
@@ -53,8 +83,12 @@ const Portfolio = () => {
           >
             {brands.map((slide) => {
               return (
-                <div className={styles.slide} key={slide}>
-                  <img alt="Premium Inflatable Solutions" src={slide} />
+                <div className={styles.slide} key={slide.id}>
+                  <img
+                    alt={slide.name}
+                    src={slide.url}
+                    className={styles.imgSlide}
+                  />
                 </div>
               );
             })}

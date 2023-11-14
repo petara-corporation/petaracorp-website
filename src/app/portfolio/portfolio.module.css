@@ -68,6 +68,10 @@
   cursor: pointer;
 }
 
+.imgSlide {
+  padding: 40px;
+}
+
 @media only screen and (max-width: 768px) {
   .bgwrap {
     height: 300px;

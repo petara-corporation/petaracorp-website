@@ -1,0 +1,102 @@
+"use client";
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import styles from "./testimonials.module.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+export default function Testimonials() {
+  const brands = [
+    {
+      id: 1,
+      name: "ICICI Bank",
+      url: "/icici.png",
+    },
+    {
+      id: 2,
+      name: "Servo",
+      url: "/servo.png",
+    },
+    {
+      id: 3,
+      name: "Piaggio",
+      url: "/piaggio.png",
+    },
+    {
+      id: 4,
+      name: "Syngenta",
+      url: "/syngenta.png",
+    },
+    {
+      id: 5,
+      name: "Coromandel",
+      url: "/coromandel.png",
+    },
+    {
+      id: 6,
+      name: "Vision",
+      url: "/vision.png",
+    },
+    {
+      id: 7,
+      name: "UPL",
+      url: "/upl.png",
+    },
+  ];
+
+  return (
+    <section className={styles.testimonialsWrap}>
+      <div className="heading container text-center flex flex-col items-center mx-auto">
+        <h2 className="text-2xl md:text-4xl font-semibold mb-4">
+          Collaborating with Our Product
+        </h2>
+        <div className={`${styles.bar}`}></div>
+      </div>
+      <div className={`${styles.brandsCarousel} container mx-auto`}>
+        <div className={`${styles.desktopCarosel}`}>
+          <Carousel
+            autoPlay
+            infiniteLoop
+            showStatus={false}
+            showThumbs={false}
+            centerMode
+            centerSlidePercentage={20}
+          >
+            {brands.map((slide) => {
+              return (
+                <div className={styles.slide} key={slide.id}>
+                  <img
+                    alt={slide.name}
+                    src={slide.url}
+                    className={styles.imgSlide}
+                  />
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
+        <div className={`${styles.mobileCarosel}`}>
+          <Carousel
+            autoPlay
+            infiniteLoop
+            showStatus={false}
+            showThumbs={false}
+            centerMode
+            centerSlidePercentage={50}
+          >
+            {brands.map((slide) => {
+              return (
+                <div className={styles.slide} key={slide.id}>
+                  <img
+                    alt={slide.name}
+                    src={slide.url}
+                    className={styles.imgSlide}
+                  />
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  );
+}

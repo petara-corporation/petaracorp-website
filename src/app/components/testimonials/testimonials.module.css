@@ -1,0 +1,32 @@
+.testimonialsWrap {
+  padding: 60px 0;
+  margin-bottom: 60px;
+  background-image: url("../../../../public/bg2.jpeg");
+}
+
+.bar {
+  width: 160px;
+  height: 2px;
+  background-color: var(--active-color);
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.imgSlide {
+  padding: 16px;
+}
+.mobileCarosel {
+  display: none;
+}
+.desktopCarosel {
+  display: block;
+}
+
+@media only screen and (max-width: 750px) {
+  .mobileCarosel {
+    display: block;
+  }
+  .desktopCarosel {
+    display: none;
+  }
+}
