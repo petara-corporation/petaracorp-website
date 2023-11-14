@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from "next/image";
 import { useState } from "react";
 import { GalleryItems, TabList } from "./data";
+import ImageViewer from "../components/image-viewer/image-viewer";
 
 const Portfolio = () => {
   const brands = [
@@ -46,7 +47,10 @@ const Portfolio = () => {
   ];
 
   const [selectedTab, setSelectedTab] = useState("All");
+  const [selectedImgIndex, setSelectedImgIndex] = useState(0);
   const [displayList, setDisplayList] = useState(GalleryItems);
+  const [isOpen, setIsOpen] = useState(false);
+
   function filterPortfolio(tab) {
     setSelectedTab(tab);
     if (tab !== "All") {
@@ -55,6 +59,13 @@ const Portfolio = () => {
     } else {
       setDisplayList(GalleryItems);
     }
+  }
+  function setIndex(index) {
+    setSelectedImgIndex(index);
+    setIsOpen(true);
+  }
+  function hideModal() {
+    setIsOpen(false);
   }
   return (
     <section className="portfolio mb-8">
@@ -111,7 +122,7 @@ const Portfolio = () => {
           <ul
             className={`${styles.imgList} grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4`}
           >
-            {displayList.map((image) => {
+            {displayList.map((image, index) => {
               return (
                 <li key={image.alt} className="relative">
                   <Image
@@ -120,6 +131,7 @@ const Portfolio = () => {
                     alt={image.alt}
                     fill={true}
                     sizes="(max-width: 768px) 25vw, 25vw"
+                    onClick={() => setIndex(index)}
                   />
                 </li>
               );
@@ -127,6 +139,12 @@ const Portfolio = () => {
           </ul>
         </div>
       </div>
+      <ImageViewer
+        images={displayList}
+        currentIndex={selectedImgIndex}
+        hideModal={hideModal}
+        open={isOpen}
+      />
     </section>
   );
 };

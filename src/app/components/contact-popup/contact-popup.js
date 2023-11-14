@@ -2,7 +2,7 @@
 
 import styles from "./contact-popup.module.css";
 import React, { useState, useRef, useEffect } from "react";
-import useOutsideClick from "./useOutsideClick";
+import useOutsideClick from "../useOutsideClick";
 
 const ContactUsModal = (props) => {
   const [isOpen, setIsOpen] = useState(false);
