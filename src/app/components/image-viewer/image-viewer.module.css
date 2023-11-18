@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(33, 33, 33, 0.5);
+  background: rgba(10, 10, 10, 0.9);
   z-index: 20;
 }
 
@@ -61,14 +61,27 @@
 }
 .quoteBtn {
   border-radius: 40px;
-  background: linear-gradient(180deg, #e97358 0%, #e93325 100%);
-  width: 138px;
-  line-height: 48px;
   font-size: 14px;
-  font-weight: 700;
   cursor: pointer;
   display: inline-block;
   color: #fff;
+}
+
+.actionBtnWrap {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.prev {
+  position: relative;
+  left: 5%;
+}
+.next {
+  position: relative;
+  right: 5%;
 }
 
 @media only screen and (max-width: 750px) {

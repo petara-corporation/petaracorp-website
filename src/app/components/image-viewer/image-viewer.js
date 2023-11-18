@@ -3,6 +3,7 @@
 import styles from "./image-viewer.module.css";
 import React, { useState, useRef, useEffect } from "react";
 import useOutsideClick from "../useOutsideClick";
+import Image from "next/image";
 
 const ImageViewer = (props) => {
   const [imgIndex, setCurrentIndex] = useState(props.currentIndex);
@@ -43,14 +44,32 @@ const ImageViewer = (props) => {
     <div
       className={`${styles.backdrop} ${props.open ? styles.show : styles.hide}`}
     >
-      <div className={`${styles.popup} ${styles.ContactUsModalWrap}`} ref={ref}>
-        {imgList.length >= 1 && showImage()}
-        <div className="text-center p-4">
-          <button className={`${styles.quoteBtn} mr-4`} onClick={prevImage}>
-            Previous
+      <div className={` ${styles.ContactUsModalWrap}`} ref={ref}>
+        <div className={styles.popup}>{imgList.length >= 1 && showImage()}</div>
+        <div className={`${styles.actionBtnWrap} text-center p-4`}>
+          <button
+            className={`${styles.quoteBtn} ${styles.prev}  mr-4`}
+            onClick={prevImage}
+          >
+            <Image
+              className="relative"
+              src="/chevron-left.svg"
+              alt="Left"
+              width={40}
+              height={40}
+            />
           </button>
-          <button className={styles.quoteBtn} onClick={nextImage}>
-            Next
+          <button
+            className={`${styles.quoteBtn} ${styles.next}`}
+            onClick={nextImage}
+          >
+            <Image
+              className="relative"
+              src="/chevron-right.svg"
+              alt="Left"
+              width={40}
+              height={40}
+            />
           </button>
         </div>
       </div>
