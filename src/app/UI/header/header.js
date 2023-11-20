@@ -4,9 +4,102 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./header.module.css";
 import { navLinks } from "./data";
+import ContactUsModal from "@/app/components/contact-popup/contact-popup";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const [images, setImages] = useState([
+    {
+      src: "/service-1.png",
+      alt: "Inflatables",
+    },
+    {
+      src: "/service-2.png",
+      alt: "Corporate Gifting",
+    },
+  ]);
+
+  const hideModal = () => {
+    setOpen(false);
+  };
+
+  const showModal = () => {
+    setOpen(true);
+  };
+
+  useEffect(() => {
+    prepareModal();
+  }, [pathname]);
+
+  const prepareModal = () => {
+    switch (pathname) {
+      case "/":
+        if (localStorage.getItem("homepage")) {
+          return;
+        } else {
+          setImages([
+            {
+              src: "/service-1.png",
+              alt: "Inflatables",
+            },
+            {
+              src: "/service-2.png",
+              alt: "corporate gifting",
+            },
+          ]);
+          setTimeout(() => {
+            showModal();
+          }, 2500);
+          localStorage.setItem("homepage", true);
+        }
+        break;
+      case "/corporate-gifting":
+        if (localStorage.getItem("corporate")) {
+          return;
+        } else {
+          setImages([
+            {
+              src: "/service-1.jpg",
+              alt: "corporate 1",
+            },
+            {
+              src: "/service-2.png",
+              alt: "corporate",
+            },
+          ]);
+          setTimeout(() => {
+            showModal();
+          }, 2500);
+          localStorage.setItem("corporate", true);
+        }
+        break;
+      case "/products/inflatables":
+        if (localStorage.getItem("inflatables")) {
+          return;
+        } else {
+          setImages([
+            {
+              src: "/bouncy.png",
+              alt: "Bouncy",
+            },
+            {
+              src: "/inflatable.png",
+              alt: "Inflatables",
+            },
+          ]);
+          setTimeout(() => {
+            showModal();
+          }, 2500);
+          localStorage.setItem("inflatables", true);
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <header
       className={`fixed w-full py-2 md:py-0 px-2 md:px-4 top-0 bg-white z-10  ${styles.header}`}
@@ -116,11 +209,12 @@ export default function Header() {
           </nav>
         </div>
         <div className="ctaWrap">
-          <a className={`${styles.cta} `} href="/contact-us">
+          <button className={`${styles.cta} `} onClick={showModal}>
             Get in Touch
-          </a>
+          </button>
         </div>
       </div>
+      <ContactUsModal open={open} images={images} hideModal={hideModal} />
     </header>
   );
 }
