@@ -39,24 +39,26 @@
 
 .tabList {
   display: flex;
-  border-left: 1px solid #c7c7c7;
   overflow-x: auto;
   width: 100%;
 }
 .tabList li {
   padding: 16px;
-  border-right: 1px solid #c7c7c7;
-  border-top: 1px solid #c7c7c7;
+  border-bottom: 2px solid transparent;
   border-top-right-radius: 8px;
   cursor: pointer;
+  font-family: "roboto";
+  color: #8c8c8c;
 }
 
 .tabList li.activeTab {
-  background-color: #ccc;
+  border-bottom: 2px solid #2c74d6;
+  font-weight: bold;
+  color: #000;
 }
 
 .imgList {
-  border: 1px solid #c7c7c7;
+  border-top: 2px solid #f4f4f4;
 }
 
 .gridImgPortfolio {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactUsSection from "../components/contact-us-section/contact-us-section";
+import Trustmarker from "../components/trustmarker-section/trustmarker";
 import styles from "./about-us.module.css";
 
 export default function About() {
@@ -166,8 +166,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className={`${styles.processItem} flex-row-reverse`}>
-        <ContactUsSection />
+      <div className={`${styles.processItem}`}>
+        <Trustmarker />
       </div>
     </section>
   );

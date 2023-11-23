@@ -1,7 +1,7 @@
 .testimonialsWrap {
   padding: 60px 0;
-  margin-bottom: 60px;
-  background-image: url("../../../../public/bg2.jpeg");
+  /* background-image: url("../../../../public/bg2.jpeg"); */
+  background-color: #e8f2f7;
 }
 
 .bar {

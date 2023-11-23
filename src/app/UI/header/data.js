@@ -12,7 +12,7 @@ export const navLinks = [
       {
         id: 1,
         label: "Inflatables",
-        img: "/menu.jpg",
+        img: "/inflatable-icon.svg",
         url: "/products/inflatables",
         subProducts: [
           "Ground Inflatable Product Shape ",
@@ -22,7 +22,7 @@ export const navLinks = [
       {
         id: 2,
         label: "Bouncy",
-        img: "/menu.jpg",
+        img: "/bouncy-icon.svg",
         url: "/products/bouncy",
         subProducts: [
           "Ball Pool : Bouncy with Ball",
@@ -40,7 +40,7 @@ export const navLinks = [
       {
         id: 3,
         label: "Costumes",
-        img: "/menu.jpg",
+        img: "/costume-icon.svg",
         url: "/products/costumes",
         subProducts: [
           "Inflatable Costume : Product Shape",
@@ -51,14 +51,14 @@ export const navLinks = [
       {
         id: 4,
         label: "Arches & Kiosk",
-        img: "/menu.jpg",
+        img: "/arches-icon.svg",
         url: "/products/inflatables",
         subProducts: ["Arches & Kiosk", "Balloons & Blimps"],
       },
       {
         id: 5,
         label: "Balloons & Blimps",
-        img: "/menu.jpg",
+        img: "/balloon-icon.svg",
         url: "/products/inflatables",
         subProducts: ["Arches & Kiosk", "Balloons & Blimps"],
       },

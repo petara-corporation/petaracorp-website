@@ -131,6 +131,19 @@ export default function Header() {
                           >
                             {nav.title}
                           </a>
+                          {nav?.subMenu && (
+                            <div className="">
+                              <ul className="pl-6">
+                                {nav?.subMenu?.map((sub) => {
+                                  return (
+                                    <li className={`ml-4 py-2`} key={sub?.id}>
+                                      <a href={sub.url}>{sub.label}</a>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          )}
                         </li>
                       );
                     })}
@@ -166,36 +179,40 @@ export default function Header() {
                     </a>
                     {nav?.subMenu && (
                       <div className={styles.subnav}>
-                        <ul className="flex flex-wrap justify-center">
+                        <ul className="container mx-auto flex flex-wrap justify-left">
                           {nav?.subMenu?.map((sub) => {
                             return (
                               <li
-                                className={`ml-4 py-8 ${styles.menuItem}`}
+                                className={`mr-12 flex py-8 ${styles.menuItem}`}
                                 key={sub?.id}
                               >
-                                <a href={sub.url}>
-                                  <div
-                                    className={`${styles.layerWrap} relative`}
-                                  >
-                                    <div className={styles.layerImageWrap}>
-                                      <Image
-                                        className="relative"
-                                        src={sub.img}
-                                        alt={sub.label}
-                                        width={200}
-                                        height={200}
-                                      />
-                                      <div className={styles.overlay}>
-                                        <h2>{sub.label}</h2>
-                                      </div>
-                                    </div>
-                                    <div className={styles.hoverLayer}>
-                                      <div className={styles.text}>
-                                        <h2>{sub.label}</h2>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </a>
+                                <div className={`relative`}>
+                                  <Image
+                                    className="relative"
+                                    src={sub.img}
+                                    alt={sub.label}
+                                    width={80}
+                                    height={80}
+                                  />
+                                </div>
+                                <div className={styles.menuInfo}>
+                                  <h2>{sub.label}</h2>
+                                  <p>
+                                    Some two liners go here <br /> Some two
+                                    liners go here
+                                  </p>
+
+                                  <a href={sub.url} className="block flex">
+                                    Show Details{" "}
+                                    <Image
+                                      className="relative ml-1"
+                                      src="/arrow-right.svg"
+                                      alt="Arrow"
+                                      width={12}
+                                      height={12}
+                                    />
+                                  </a>
+                                </div>
                               </li>
                             );
                           })}

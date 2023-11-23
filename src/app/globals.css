@@ -29,6 +29,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "roboto";
+  src: url("../../public/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("../../public/fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -58,4 +66,16 @@ body {
 
 .slider {
   align-items: center;
+}
+
+.carousel .control-dots .dot {
+  width: 40px !important;
+  height: 4px !important;
+  border-radius: 0 !important;
+  background: #c7c7c7 !important;
+}
+
+.carousel .control-dots .dot.selected,
+.carousel .control-dots .dot:hover {
+  background-color: #2c74d6 !important;
 }

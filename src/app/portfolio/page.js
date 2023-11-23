@@ -120,7 +120,7 @@ const Portfolio = () => {
             })}
           </ul>
           <ul
-            className={`${styles.imgList} grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4`}
+            className={`${styles.imgList} grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-4`}
           >
             {displayList.map((image, index) => {
               return (
