@@ -16,24 +16,11 @@ export default function About() {
       <div className={`${styles.aboutInfo} container mx-auto text-center`}>
         <h2 className="text-4xl mb-8 ">About Petara</h2>
         <p className="mb-8 text">
-          Petara has been your trusted collaborator for creating, manufacturing,
-          and implementing visual marketing solutions for a wide range of
-          projects. We are eager to assist you with branding, provide the ideal
-          attention-grabber for your events, and facilitate your product
-          launches. Our focus is dedicated to sustainable business practices and
-          environmental considerations.
+          Petara has been your trusted collaborator for creating, manufacturing, and implementing visual marketing solutions for a wide range of projects. We are eager to assist you with branding, provide the ideal attention-grabber for your events, and facilitate your product launches. Our focus is dedicated to sustainable business practices and environmental considerations.
         </p>
         <h3 className="text-xl mb-8 font-bold">ALL PROJECTS, BIG AND SMALL</h3>
         <p className="mb-8">
-          Flexibility is a core principle that runs throughout our entire
-          organization, complementing our boundless imagination. In addition to
-          our dedicated permanent team, we have the capacity to quickly expand
-          to a workforce of up to 300 individuals when tackling substantial
-          projects. This adaptability empowers us to effectively manage major
-          undertakings. Trustworthiness is paramount to us, especially when
-          handling product launches; rest assured, your confidential information
-          is secure with X-Treme Creations, ensuring a bright future for your
-          endeavors.
+          Flexibility is a core principle that runs throughout our entire organization, complementing our boundless imagination. In addition to our dedicated permanent team, we have the capacity to quickly expand to a workforce of up to 300 individuals when tackling substantial projects. This adaptability empowers us to effectively manage major undertakings. Trustworthiness is paramount to us, especially when handling product launches; rest assured, your confidential information is secure with X-Treme Creations, ensuring a bright future for your endeavors.
         </p>
       </div>
       <div className={`${styles.processWrap} container mx-auto pt-8`}>

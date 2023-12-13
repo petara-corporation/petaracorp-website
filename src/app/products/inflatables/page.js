@@ -16,36 +16,19 @@ export default function Inflatables() {
         <div className={styles.flexWrap}>
           <div className={styles.prodInfo}>
             <h1 className="text-4xl mb-8 ">
-              Draw attention with giant inflatables
+              Meet the attention-grabbing means of promoting your brand
             </h1>
             <p className="mb-8 text">
-              Giant inflatables serve as an ideal medium for effective branding,
-              capturing attention with their playful nature and providing ample
-              space for showcasing your brand name and logo.
+              Whether at trade shows, corporate events, or community gatherings, the sheer size and vibrant designs of inflatables make them impossible to ignore, ensuring maximum visibility for your brand. The interactive nature of inflatables also fosters engagement and generates a buzz that extends far beyond the event itself.
             </p>
             <h3 className="text-xl mb-8 font-bold">
-              CUSTOMIZABLE INFLATABLE STRUCTURES:
+              STEP INTO OUR WORLD OF 3D WONDERS:
             </h3>
             <p className="mb-8 text">
-              Our 3D range includes large inflatable products that can be
-              assembled or, more commonly, stitched together. These structures
-              require a continuous airflow and pressure, typically provided by a
-              blower. Alternatively, polystyrene is an option based on your
-              project requirements. Our giant inflatables know no bounds, and
-              drawing upon our extensive expertise in textiles, design, and
-              complex installations, we can bring your concept to life while
-              staying within your initial budget.
+              Featuring our wide range of expansive inflatable products that seamlessly come together.
+              These structures take form through continuous airflow and pressure from a blower. Leveraging our extensive expertise in textiles, design, and complex installations, we have the ability to breathe life into even your wildest ideas—all without breaking the bank.
             </p>
-            <h3 className="text-xl mb-8 font-bold">
-              COMMUNICATION THROUGH FIGURES OR PRODUCT ENLARGEMENTS:
-            </h3>
-            <p className="mb-8 text">
-              In addition to the publi-arch, sky tube, or sky dancer, we offer
-              inflatable walkers—costumes worn by individuals at fairs or events
-              to garner extra attention for your product or brand. Explore other
-              possibilities such as product blow-ups, wrappings, logos, stands,
-              pillars, walls, bars, game structures, and more.
-            </p>
+            
             <h3 className="text-xl mb-2 font-bold">
               CHOOSE FROM TREMENDOUS COLLECTION
             </h3>
@@ -56,7 +39,7 @@ export default function Inflatables() {
               <li>Animals</li>
               <li>Logos</li>
               <li>Games</li>
-              <li> Tents</li>
+              <li>Tents</li>
               <li>Walls</li>
               <li>Shapes</li>
             </ul>
@@ -70,7 +53,7 @@ export default function Inflatables() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src="/service-1.png"
+                src="/ball.png"
                 alt="Bouncy and Inflatables"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -98,7 +81,7 @@ export default function Inflatables() {
               <div className="flex-1 relative">
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src="/disney-inflatable.png"
+                  src="/ferrero-kinderjoy-inflatable.png"
                   alt="Bouncy and Inflatables"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

@@ -9,12 +9,12 @@ export default function Testimonials() {
     {
       id: 1,
       name: "ICICI Bank",
-      url: "/icici.png",
+      url: "/icici_logo.png",
     },
     {
       id: 2,
       name: "Servo",
-      url: "/servo.png",
+      url: "/servo-logo-newa.jpg",
     },
     {
       id: 3,
@@ -47,20 +47,20 @@ export default function Testimonials() {
     <section className={styles.testimonialsWrap}>
       <div className="heading container text-center flex flex-col items-center mx-auto">
         <h2 className="text-2xl md:text-4xl font-semibold mb-4">
-          Collaborating with Our Product
+        Brands That Trust Us Through Years
         </h2>
         <div className={`${styles.bar}`}></div>
       </div>
       <div className={`${styles.brandsCarousel} container mx-auto`}>
         <div className={`${styles.desktopCarosel}`}>
-          <Carousel
+          {/* <Carousel
             autoPlay
             infiniteLoop
             showStatus={false}
             showThumbs={false}
-            centerMode
-            centerSlidePercentage={20}
-          >
+            // centerMode
+            // centerSlidePercentage={20}
+          > */}
             {brands.map((slide) => {
               return (
                 <div className={styles.slide} key={slide.id}>
@@ -72,7 +72,7 @@ export default function Testimonials() {
                 </div>
               );
             })}
-          </Carousel>
+          {/* </Carousel> */}
         </div>
         <div className={`${styles.mobileCarosel}`}>
           <Carousel

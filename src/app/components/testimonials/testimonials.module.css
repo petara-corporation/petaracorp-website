@@ -19,7 +19,10 @@
   display: none;
 }
 .desktopCarosel {
-  display: block;
+  display: flex;
+}
+.desktopCarosel img {
+  height: 100px;
 }
 
 @media only screen and (max-width: 750px) {

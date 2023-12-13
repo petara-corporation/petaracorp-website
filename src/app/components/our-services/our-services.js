@@ -17,22 +17,24 @@ export default function OurServices() {
         >
           <div className={styles.layerImageWrap}>
             <Image
-              src="/service-1.png"
+              src="/inflatables_and_bouncies.png"
               alt="Bouncy and Inflatables"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className={styles.overlay}>
               <h2>Bouncy & Inflatables</h2>
-              <h3>Various products and categories</h3>
+              <h3>Embark on a journey of inflatable wonder where the fun never deflates</h3>
             </div>
           </div>
           <div className={styles.hoverLayer}>
             <div className={styles.text}>
-              <h2>Bouncy & Inflatables</h2>
-              <h3>Various products and categories</h3>
-              <Link href={"/"} className={styles.viewAll}>
-                View All
+              <h2>Bouncy & Inflatables: Larger than life products</h2>
+              <h3 className={styles.no_mobile}>Embark on a journey of inflatable wonder where the fun never deflates</h3>
+              <br className={styles.no_mobile} />
+              <h4 >Explore a wide variety of inflatables that promise a lasting visual impact, ensuring your brand stays activated in the hearts and minds of your customers.</h4>
+              <Link href={"/products"} className={styles.viewAll}>
+                View Products
               </Link>
             </div>
           </div>
@@ -49,15 +51,17 @@ export default function OurServices() {
             />
             <div className={styles.overlay}>
               <h2>Corporate Gifting</h2>
-              <h3>Various products and categories</h3>
+              <h3>Elevate your corporate connections with the art of thoughtful gifting</h3>
             </div>
           </div>
           <div className={styles.hoverLayer}>
             <div className={styles.text}>
               <h2>Corporate Gifting</h2>
-              <h3>Various products and categories</h3>
+              <h3>Elevate your corporate connections with the art of thoughtful gifting</h3>
+              <br />
+              <h4>Forge lasting impressions with our sophisticated and personalized corporate gifting solutions.</h4>
               <Link href={"/"} className={styles.viewAll}>
-                View All
+                View products
               </Link>
             </div>
           </div>

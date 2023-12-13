@@ -155,7 +155,7 @@ export default function Header() {
           <Link href="/" className={`block ${styles.logoWidth}`}>
             <Image
               className="relative"
-              src="/logo.svg"
+              src="/petara_logo.png"
               alt="Petara Logo"
               width={163}
               height={55}
@@ -197,10 +197,11 @@ export default function Header() {
                                 </div>
                                 <div className={styles.menuInfo}>
                                   <h2>{sub.label}</h2>
-                                  <p>
+                                  {/* <p>
                                     Some two liners go here <br /> Some two
                                     liners go here
-                                  </p>
+                                  </p> */}
+                                  {sub.subProducts.map(prod => <p>{prod}</p>)}
 
                                   <a href={sub.url} className="block flex">
                                     Show Details{" "}

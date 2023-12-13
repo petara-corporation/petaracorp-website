@@ -10,7 +10,6 @@ export default function Home() {
     <>
       <HeroCarousel />
       <OurServices />
-      <Benefits />
       <Testimonials />
       <Trustmarker />
       <ContactUsSection />

@@ -1,6 +1,6 @@
 .overlayText {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.6)
   ) !important;
   opacity: 1 !important;
@@ -11,6 +11,7 @@
   left: 0 !important;
   margin: 0 !important;
   text-align: left !important;
+  border-radius: 0 !important;
 }
 
 .textWrap {
@@ -18,16 +19,17 @@
   top: 50%;
   transform: translateY(-50%);
   margin: 0 60px;
+  width: 45%;
 }
 
 .overlayText h1 {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 400;
   font-family: "trashhand";
   margin-bottom: 8px;
 }
 .overlayText p {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 32px;
 }
@@ -37,24 +39,24 @@
   background: linear-gradient(180deg, #e97358 0%, #e93325 100%);
   width: 200px;
   height: 64px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 819px) {
   .overlayText h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .overlayText p {
-    font-size: 14px;
+    font-size: 0.85rem;
   }
   .overlayText button {
     border-radius: 40px;
     background: linear-gradient(180deg, #e97358 0%, #e93325 100%);
     width: 100px;
     height: 32px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
   }

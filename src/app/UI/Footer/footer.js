@@ -115,14 +115,17 @@ export default function Footer() {
           <div className={`${styles.addressWrap} mb-8`}>
             <Image src="/marker.svg" alt="Address" width={40} height={40} />
             <p className="text-sm font-medium ml-6">
-              5 Shiv Shakti Complx, B S V Road, <br />
-              Dahisar,Mumbai,Maharashtra
+              10/9, Vivekanand Chs, Saraswat Colony, <br />
+              Dombivli (e), Thane - 421201
             </p>
           </div>
           <div className={styles.addressWrap}>
             <Image src="/phone.svg" alt="Address" width={40} height={40} />
-            <a href="tel:02228486811" className="text-sm font-medium ml-6">
-              022-284-86811
+            <a href="tel:8879292103" className="text-sm font-medium ml-6">
+              8879292103
+            </a>
+            <a href="tel:9819554405" className="text-sm font-medium ml-6">
+            9819554405
             </a>
           </div>
         </section>

@@ -32,7 +32,7 @@
     width: 100%;
   }
   .trustmarker {
-    width: 95%;
+    width: calc(100% - 24px);
     margin: 0 auto;
   }
 }

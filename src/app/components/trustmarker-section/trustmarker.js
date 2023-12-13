@@ -9,11 +9,16 @@ export default function Trustmarker() {
     },
     {
       id: 2,
+      title: "Ethical Business Practices",
+      desc: "Our practices are rooted in transparency and integrity. <br /> Ensuring trust and sustainability in every interaction.",
+    },
+    {
+      id: 3,
       title: "Scalable Workforce",
       desc: "Beyond our dedicated team, capacity to swiftly expand to 300 individuals. <br />Geared for tackling substantial projects effectively.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Adaptability in Action",
       desc: "Empowers us to manage major undertakings with ease. <br /> Ensures agility in addressing diverse project requirements.",
     },

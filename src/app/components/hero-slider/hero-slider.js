@@ -17,22 +17,22 @@ const HeroCarousel = () => (
         <img alt="Premium Inflatable Solutions" src="./slide1.jpg" />
         <div className={`${styles.overlayText} legend`}>
           <div className={styles.textWrap}>
-            <h1>Premium Inflatable Solutions</h1>
-            <p>for Your Business Success</p>
+            <h1>We’re on a mission to craft lasting impressions!</h1>
+            <p>Unleash a Petara (basket) of solutions that are guaranteed to amaze your clients - from Inflatables to personalized gifting solutions, we craft everything that catches the eye and soul.</p>
             <button>Explore</button>
           </div>
         </div>
       </div>
-      <div className="slide">
+      {/* <div className="slide">
         <img alt="Premium Inflatable Solutions" src="./slide2.jpg" />
         <div className={`${styles.overlayText} legend`}>
           <div className={styles.textWrap}>
-            <h1>Premium Sky Balloons</h1>
-            <p>for Your Business Success</p>
+            <h1>We’re on a mission to craft lasting impressions!</h1>
+            <p>Unleash a Petara (basket) of solutions that are guaranteed to amaze your clients - from Inflatables to personalized gifting solutions, we craft everything that catches the eye and soul.</p>
             <button>Explore</button>
           </div>
         </div>
-      </div>
+      </div> */}
     </Carousel>
   </div>
 );
