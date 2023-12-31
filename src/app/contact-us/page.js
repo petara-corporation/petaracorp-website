@@ -1,87 +1,93 @@
-"use client";
-import Image from "next/image";
-import styles from "./contact-us.module.css";
-import React, { useState, useRef, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+'use client';
+import Image from 'next/image';
+import styles from './contact-us.module.css';
+import React, { useState, useRef, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 const ContactUs = () => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef();
   const searchParams = useSearchParams();
-  console.log(searchParams.get("name"));
   const [user, setUserData] = useState({
-    name: searchParams?.get("name") || "",
-    email: searchParams?.get("email") || "",
-    companyName: "",
-    subject: "",
-    through: "",
-    message: "",
-    phone: "",
-    selectedProduct: "",
-    selectedCompanyType: "",
-    customService: "",
-    eventDate: "",
+    userName: searchParams?.get('name') || '',
+    email: searchParams?.get('email') || '',
+    companyName: '',
+    subject: '',
+    through: '',
+    message: '',
+    phone: '',
+    selectedProduct: '',
+    selectedCompanyType: '',
+    customService: '',
+    eventDate: '',
   });
 
   const productList = [
     {
       id: 1,
-      label: "Inflatables",
-      subProducts: [
-        "Ground Inflatable Product Shape ",
-        "Ground Inflatable Character Shape",
-      ],
+      label: 'Corporate Gifts',
+      subProducts: ['Corporate Gifts'],
     },
     {
       id: 2,
-      label: "Bouncy",
+      label: 'Inflatables',
       subProducts: [
-        "Ball Pool : Bouncy with Ball",
-        "Basic Bouncy : Standard Bouncy",
-        "Combo Units : Mix of Many Bouncy",
-        "Fun Slide : Bouncy & Slide",
-        "Fun Obstacle : Bouncy & Obstructs",
-        "Aqua Fun : Water Bouncy",
-        "Maze’s : Puzzle Bouncy",
-        "Package Bouncy : Mix Of All Bouncy",
-        "Fun Interactive : Interactive Bouncy",
-        "Fun Tunnel  : Tunnel Bouncy",
+        'Ground Inflatable Product Shape ',
+        'Ground Inflatable Character Shape',
       ],
     },
     {
       id: 3,
-      label: "Costumes",
+      label: 'Bouncy',
       subProducts: [
-        "Inflatable Costume : Product Shape",
-        "Inflatable Costume : Character Shape ",
-        "Fur Costume",
+        'Ball Pool : Bouncy with Ball',
+        'Basic Bouncy : Standard Bouncy',
+        'Combo Units : Mix of Many Bouncy',
+        'Fun Slide : Bouncy & Slide',
+        'Fun Obstacle : Bouncy & Obstructs',
+        'Aqua Fun : Water Bouncy',
+        'Maze’s : Puzzle Bouncy',
+        'Package Bouncy : Mix Of All Bouncy',
+        'Fun Interactive : Interactive Bouncy',
+        'Fun Tunnel  : Tunnel Bouncy',
       ],
     },
     {
       id: 4,
-      label: "Trendy",
-      subProducts: ["Arches & Kiosk", "Balloons & Blimps"],
+      label: 'Costumes',
+      subProducts: [
+        'Inflatable Costume : Product Shape',
+        'Inflatable Costume : Character Shape ',
+        'Fur Costume',
+      ],
+    },
+    {
+      id: 5,
+      label: 'Trendy',
+      subProducts: ['Arches & Kiosk', 'Balloons & Blimps'],
     },
   ];
 
   const companyTypes = [
-    "Marketing Agency",
-    "Sports Agency",
-    "Creative Agency",
-    "Private",
-    "Small Business",
-    "Government",
-    "Technology",
-    "Banking & Finance",
-    "NGO",
-    "School / College",
-    "Artist",
-    "Others",
+    'Marketing Agency',
+    'Sports Agency',
+    'Creative Agency',
+    'Private',
+    'Small Business',
+    'Government',
+    'Technology',
+    'Banking & Finance',
+    'NGO',
+    'School / College',
+    'Artist',
+    'Others',
   ];
 
-  const handleChange = (e) => {
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+
+  const handleChange = e => {
     const { name, value } = e.target;
-    setUserData((prevValues) => ({
+    setUserData(prevValues => ({
       ...prevValues,
       [name]: value,
     }));
@@ -99,88 +105,98 @@ const ContactUs = () => {
             <div
               className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
             >
-              <h2 className="text-4xl font-semibold mb-4">Contact Us</h2>
+              <h2 className='text-4xl font-semibold mb-4'>Contact Us</h2>
               <div className={`${styles.bar}`}></div>
             </div>
           </div>
           <div className={`${styles.pageWrap} container mx-auto`}>
-            <div className={`${styles.formWrap}`}>
-              <h3 className="mb-8 font-medium text-xl">
+            <form
+              className={`${styles.formWrap}`}
+              onSubmit={e => {
+                e.preventDefault();
+                e.stopPropagation();
+                showData();
+              }}
+            >
+              <h3 className='mb-8 font-medium text-xl'>
                 Kindly provide a brief details to enhance our service to you
               </h3>
               <div className={`${styles.formRow}`}>
                 <div className={`${styles.formItem} ${styles.formItemFirst}`}>
-                  <label htmlFor="name" className={`${styles.formLabel}`}>
+                  <label htmlFor='name' className={`${styles.formLabel}`}>
                     Name
                   </label>
                   <input
-                    type="text"
-                    name="name"
-                    value={user.name}
+                    type='text'
+                    name='userName'
+                    value={user.userName}
                     onChange={handleChange}
                     className={styles.inputForm}
-                    placeholder="Eg: John Doe"
+                    placeholder='Eg: John Doe'
+                    required
                   />
                 </div>
                 <div className={`${styles.formItem}`}>
                   <label
                     className={`${styles.formLabel}`}
-                    htmlFor="companyName"
+                    htmlFor='companyName'
                   >
                     Company Name
                   </label>
                   <input
-                    type="text"
-                    name="companyName"
+                    type='text'
+                    name='companyName'
                     value={user.companyName}
                     onChange={handleChange}
                     className={styles.inputForm}
-                    placeholder="Eg: Amazon"
+                    placeholder='Eg: Amazon'
+                    required
                   />
                 </div>
               </div>
               <div className={`${styles.formRow}`}>
                 <div className={`${styles.formItem} ${styles.formItemFirst}`}>
-                  <label className={`${styles.formLabel}`} htmlFor="phone">
+                  <label className={`${styles.formLabel}`} htmlFor='phone'>
                     Phone
                   </label>
                   <input
-                    type="text"
-                    name="phone"
+                    type='text'
+                    name='phone'
                     value={user.phone}
                     onChange={handleChange}
                     className={styles.inputForm}
-                    placeholder="+14845219693"
+                    placeholder='+14845219693'
                   />
                 </div>
                 <div className={`${styles.formItem}`}>
-                  <label className={`${styles.formLabel}`} htmlFor="email">
+                  <label className={`${styles.formLabel}`} htmlFor='email'>
                     Email
                   </label>
                   <input
-                    type="email"
-                    name="email"
+                    type='email'
+                    name='email'
                     value={user.email}
                     onChange={handleChange}
                     className={styles.inputForm}
-                    placeholder="Eg: johndoe@gmail.com"
+                    placeholder='Eg: johndoe@gmail.com'
+                    required
                   />
                 </div>
               </div>
               <div className={`${styles.formRow}`}>
                 <div className={`${styles.formItem}`}>
-                  <label htmlFor="name" className={`${styles.formLabel}`}>
+                  <label htmlFor='name' className={`${styles.formLabel}`}>
                     What type of industry or business do you operate in?
                   </label>
                   <select
-                    name="selectedCompanyType"
-                    id="selectedCompanyType"
+                    name='selectedCompanyType'
+                    id='selectedCompanyType'
                     className={styles.inputSelect}
                     value={user.selectedCompanyType}
                     onChange={handleChange}
                   >
-                    <option value={""} disabled></option>
-                    {companyTypes.map((company) => {
+                    <option value={''} disabled></option>
+                    {companyTypes.map(company => {
                       return (
                         <option value={company} key={company}>
                           {company}
@@ -194,27 +210,27 @@ const ContactUs = () => {
                 <div className={`${styles.formItem}`}>
                   <label
                     className={`${styles.formLabel}`}
-                    htmlFor="selectedProduct"
+                    htmlFor='selectedProduct'
                   >
                     Which inflatable product or service are you looking for?
                   </label>
                   <select
-                    name="selectedProduct"
-                    id="selectedProduct"
+                    name='selectedProduct'
+                    id='selectedProduct'
                     className={styles.inputSelect}
                     value={user.selectedProduct}
                     onChange={handleChange}
                   >
-                    <option value={""} disabled>
+                    <option value={''} disabled>
                       Select From Our Top Products & Services
                     </option>
-                    {productList.map((productGroup) => {
+                    {productList.map(productGroup => {
                       return (
                         <optgroup
                           label={productGroup.label}
                           key={productGroup.id}
                         >
-                          {productGroup.subProducts.map((product) => {
+                          {productGroup.subProducts.map(product => {
                             return (
                               <option value={product} key={product}>
                                 {product}
@@ -231,102 +247,153 @@ const ContactUs = () => {
                 <div className={`${styles.formItem}`}>
                   <label
                     className={`${styles.formLabel}`}
-                    htmlFor="customService"
+                    htmlFor='customService'
                   >
                     What other products or services are you seeking?
                   </label>
                   <input
-                    type="text"
-                    name="customService"
+                    type='text'
+                    name='customService'
                     value={user.customService}
                     onChange={handleChange}
                     className={styles.inputForm}
-                    placeholder="Eg: Theme Based"
+                    placeholder='Eg: Theme Based'
                   />
                 </div>
               </div>
               <div className={`${styles.formRow}`}>
                 <div className={`${styles.formItem}`}>
-                  <label className={`${styles.formLabel}`} htmlFor="eventDate">
+                  <label className={`${styles.formLabel}`} htmlFor='eventDate'>
                     When is the Event
                   </label>
                   <input
-                    type="date"
-                    name="eventDate"
+                    type='date'
+                    name='eventDate'
                     value={user.eventDate}
                     onChange={handleChange}
                     className={styles.inputForm}
-                    placeholder=""
+                    placeholder=''
                   />
                 </div>
               </div>
               <div className={`${styles.formRow}`}>
                 <div className={`${styles.formItem}`}>
-                  <label className={`${styles.formLabel}`} htmlFor="message">
+                  <label className={`${styles.formLabel}`} htmlFor='message'>
                     Please provide additional information about your needs
                   </label>
                   <textarea
                     className={styles.textarea}
                     value={user.message}
-                    name="message"
+                    name='message'
                     onChange={handleChange}
-                    placeholder="Add your message"
+                    placeholder='Add your message'
                   ></textarea>
                 </div>
               </div>
+              {showSuccessAlert && (
+                <div
+                  id='alert-3'
+                  class='flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50'
+                  role='alert'
+                >
+                  <svg
+                    class='flex-shrink-0 w-4 h-4'
+                    aria-hidden='true'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                  >
+                    <path d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z' />
+                  </svg>
+                  <span class='sr-only'>Info</span>
+                  <div class='ms-3 text-sm font-medium'>
+                    A simple info alert with an{' '}
+                    <a
+                      href='#'
+                      class='font-semibold underline hover:no-underline'
+                    >
+                      example link
+                    </a>
+                    . Give it a click if you like.
+                  </div>
+                  <button
+                    type='button'
+                    class='ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8'
+                    data-dismiss-target='#alert-3'
+                    aria-label='Close'
+                  >
+                    <span class='sr-only'>Close</span>
+                    <svg
+                      class='w-3 h-3'
+                      aria-hidden='true'
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 14 14'
+                    >
+                      <path
+                        stroke='currentColor'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
+                      />
+                    </svg>
+                  </button>
+                </div>
+              )}
               <div className={`${styles.formRow}`}>
                 <div className={`${styles.formItem} text-center`}>
-                  <button className={styles.modalBtn} onClick={showData}>
+                  <button className={styles.modalBtn} type='submit'>
                     Get Quote
                   </button>
                 </div>
               </div>
-            </div>
+            </form>
             <div className={`${styles.rightDataWrap}`}>
-              <div className="pb-8 mb-8 border-b">
-                <h3 className="mb-8 font-medium text-xl">
+              <div className='pb-8 mb-8 border-b'>
+                <h3 className='mb-8 font-medium text-xl'>
                   We offer the following services:
                 </h3>
-                <ul className="list-disc px-8 text text-sm">
-                  <li className="mb-4">
+                <ul className='list-disc px-8 text text-sm'>
+                  <li className='mb-4'>
                     Phone consultations to assist you in selecting the
                     appropriate giant inflatable products or Corporate Gifts and
                     guiding you through the available options.
                   </li>
-                  <li className="mb-4">
+                  <li className='mb-4'>
                     A detailed quotation that encompasses your design,
                     fabrication, and delivery schedule requirements.
                   </li>
-                  <li className="mb-4">
+                  <li className='mb-4'>
                     Professional concept renderings for your events.
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="mb-8 font-medium text-xl">Contact Us</h3>
+                <h3 className='mb-8 font-medium text-xl'>Contact Us</h3>
                 <section className={styles.contact}>
                   <div className={`${styles.addressWrap} mb-8`}>
                     <Image
-                      src="/marker.svg"
-                      alt="Address"
+                      src='/marker.svg'
+                      alt='Address'
                       width={40}
                       height={40}
                     />
-                    <p className="text-sm font-medium ml-6">
+                    <p className='text-sm font-medium ml-6'>
                       5 Shiv Shakti Complx, B S V Road, <br />
                       Dahisar,Mumbai,Maharashtra
                     </p>
                   </div>
                   <div className={styles.addressWrap}>
                     <Image
-                      src="/phone.svg"
-                      alt="Address"
+                      src='/phone.svg'
+                      alt='Address'
                       width={40}
                       height={40}
                     />
                     <a
-                      href="tel:02228486811"
-                      className="text-sm font-medium ml-6"
+                      href='tel:02228486811'
+                      className='text-sm font-medium ml-6'
                     >
                       022-284-86811
                     </a>
