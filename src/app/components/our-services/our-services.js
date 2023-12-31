@@ -83,7 +83,7 @@ export default function OurServices() {
                 Forge lasting impressions with our sophisticated and
                 personalized corporate gifting solutions.
               </h4>
-              <Link href={'/'} className={styles.viewAll}>
+              <Link href={'/corporate-gifting'} className={styles.viewAll}>
                 View products
               </Link>
             </div>
