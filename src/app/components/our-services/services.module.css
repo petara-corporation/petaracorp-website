@@ -1,7 +1,9 @@
 .bar {
   width: 120px;
   height: 2px;
-  background-color: var(--active-color); /* --active-color variable needs to be defined */
+  background-color: var(
+    --active-color
+  ); /* --active-color variable needs to be defined */
   border-radius: 8px;
   margin-bottom: 60px;
 }
@@ -18,6 +20,14 @@
   padding: 32px;
   transition: all 1s ease-in-out;
   background-color: rgba(33, 33, 33, 0.77);
+}
+
+.inflatables {
+  /* background: url('/inflatables_and_bouncies.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; */
 }
 
 .layerWrap .hoverLayer {
@@ -111,12 +121,13 @@
   }
 }
 
-@media only screen and (max-width: 768px) { /* Corrected the max-width value */
+@media only screen and (max-width: 768px) {
+  /* Corrected the max-width value */
   .bar {
     width: 95px;
     margin-bottom: 30px;
   }
   .no_mobile {
-   display: none; 
+    display: none;
   }
 }

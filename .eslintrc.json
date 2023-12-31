@@ -1,0 +1,68 @@
+{
+  "env": { "browser": true, "node": true, "es6": true },
+  "settings": { "react": { "version": "detect" } },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:security/recommended",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": ["react"],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "prettier/prettier": ["off", { "singleQuote": false }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "implicit-arrow-linebreak": "off",
+    "comma-dangle": "off",
+    "indent": "off",
+    "no-trailing-spaces": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "dot-notation": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-cycle": "off",
+    "class-methods-use-this": "off",
+    "no-plusplus": "off",
+    "no-case-declarations": "off",
+    "no-else-return": "off",
+    "import/prefer-default-export": "off",
+    "react/no-array-index-key": "off",
+    "max-len": ["error", { "code": 120 }],
+    "react-hooks/exhaustive-deps": "off",
+    "no-console": ["error", { "allow": ["debug", "error"] }],
+    "security/detect-object-injection": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/no-unstable-nested-components": ["warn", { "allowAsProps": true }],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ]
+  }
+}

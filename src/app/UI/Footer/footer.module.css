@@ -1,5 +1,5 @@
 .footer {
-  background-color: #f0f3f8;
+  /* background-color: #f0f3f8; */
 }
 .addressWrap {
   display: flex;
@@ -9,6 +9,6 @@
   background-color: var(--body-text);
 }
 .moto {
-  font-family: "trashhand";
+  font-family: 'trashhand';
   margin: 15px;
 }

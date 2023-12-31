@@ -1,23 +1,23 @@
-"use client";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import styles from "./header.module.css";
-import { navLinks } from "./data";
-import ContactUsModal from "@/app/components/contact-popup/contact-popup";
-import { useState, useEffect } from "react";
+'use client';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import styles from './header.module.css';
+import { navLinks } from './data';
+import ContactUsModal from '@/app/components/contact-popup/contact-popup';
+import { useState } from 'react';
 
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [images, setImages] = useState([
     {
-      src: "/service-1.png",
-      alt: "Inflatables",
+      src: '/inflatables_bouncies.png',
+      alt: 'Inflatables',
     },
     {
-      src: "/service-2.png",
-      alt: "Corporate Gifting",
+      src: '/corporate_gifts_2.png',
+      alt: 'Corporate Gifting',
     },
   ]);
 
@@ -29,76 +29,76 @@ export default function Header() {
     setOpen(true);
   };
 
-  useEffect(() => {
-    prepareModal();
-  }, [pathname]);
+  // useEffect(() => {
+  //   prepareModal();
+  // }, [pathname]);
 
-  const prepareModal = () => {
-    switch (pathname) {
-      case "/":
-        if (localStorage.getItem("homepage")) {
-          return;
-        } else {
-          setImages([
-            {
-              src: "/service-1.png",
-              alt: "Inflatables",
-            },
-            {
-              src: "/service-2.png",
-              alt: "corporate gifting",
-            },
-          ]);
-          setTimeout(() => {
-            showModal();
-          }, 2500);
-          localStorage.setItem("homepage", true);
-        }
-        break;
-      case "/corporate-gifting":
-        if (localStorage.getItem("corporate")) {
-          return;
-        } else {
-          setImages([
-            {
-              src: "/service-1.jpg",
-              alt: "corporate 1",
-            },
-            {
-              src: "/service-2.png",
-              alt: "corporate",
-            },
-          ]);
-          setTimeout(() => {
-            showModal();
-          }, 2500);
-          localStorage.setItem("corporate", true);
-        }
-        break;
-      case "/products/inflatables":
-        if (localStorage.getItem("inflatables")) {
-          return;
-        } else {
-          setImages([
-            {
-              src: "/bouncy.png",
-              alt: "Bouncy",
-            },
-            {
-              src: "/inflatable.png",
-              alt: "Inflatables",
-            },
-          ]);
-          setTimeout(() => {
-            showModal();
-          }, 2500);
-          localStorage.setItem("inflatables", true);
-        }
-        break;
-      default:
-        break;
-    }
-  };
+  // const prepareModal = () => {
+  //   switch (pathname) {
+  //     case "/":
+  //       if (localStorage.getItem("homepage")) {
+  //         return;
+  //       } else {
+  //         setImages([
+  //           {
+  //             src: "/service-1.png",
+  //             alt: "Inflatables",
+  //           },
+  //           {
+  //             src: "/service-2.png",
+  //             alt: "corporate gifting",
+  //           },
+  //         ]);
+  //         setTimeout(() => {
+  //           showModal();
+  //         }, 2500);
+  //         localStorage.setItem("homepage", true);
+  //       }
+  //       break;
+  //     case "/corporate-gifting":
+  //       if (localStorage.getItem("corporate")) {
+  //         return;
+  //       } else {
+  //         setImages([
+  //           {
+  //             src: "/service-1.jpg",
+  //             alt: "corporate 1",
+  //           },
+  //           {
+  //             src: "/service-2.png",
+  //             alt: "corporate",
+  //           },
+  //         ]);
+  //         setTimeout(() => {
+  //           showModal();
+  //         }, 2500);
+  //         localStorage.setItem("corporate", true);
+  //       }
+  //       break;
+  //     case "/products/inflatables":
+  //       if (localStorage.getItem("inflatables")) {
+  //         return;
+  //       } else {
+  //         setImages([
+  //           {
+  //             src: "/bouncy.png",
+  //             alt: "Bouncy",
+  //           },
+  //           {
+  //             src: "/inflatable.png",
+  //             alt: "Inflatables",
+  //           },
+  //         ]);
+  //         setTimeout(() => {
+  //           showModal();
+  //         }, 2500);
+  //         localStorage.setItem("inflatables", true);
+  //       }
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
 
   return (
     <header
@@ -107,34 +107,34 @@ export default function Header() {
       <div
         className={`container  mx-auto flex justify-between items-center ${styles.resContainer}`}
       >
-        <div className="flex">
+        <div className='flex'>
           <div className={`${styles.hamburger} relative`}>
             <Image
               className={`relative mr-4 top-1`}
-              src="/menu.svg"
-              alt="Menu"
+              src='/menu.svg'
+              alt='Menu'
               width={35}
               height={35}
             />
             <div className={`${styles.menuSlide} absolute`}>
               <div className={`${styles.nav}`}>
                 <nav className={`${styles.mobileMenu} self-center`}>
-                  <ul className="my-4">
-                    {navLinks.map((nav) => {
+                  <ul className='my-4'>
+                    {navLinks.map(nav => {
                       return (
-                        <li className="mb-2" key={nav.id}>
+                        <li className='mb-2' key={nav.id}>
                           <a
                             className={`block p-4 ${
-                              pathname === nav.path ? styles.activeLinkMob : ""
+                              pathname === nav.path ? styles.activeLinkMob : ''
                             }`}
                             href={nav.path}
                           >
                             {nav.title}
                           </a>
                           {nav?.subMenu && (
-                            <div className="">
-                              <ul className="pl-6">
-                                {nav?.subMenu?.map((sub) => {
+                            <div className=''>
+                              <ul className='pl-6'>
+                                {nav?.subMenu?.map(sub => {
                                   return (
                                     <li className={`ml-4 py-2`} key={sub?.id}>
                                       <a href={sub.url}>{sub.label}</a>
@@ -152,26 +152,26 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <Link href="/" className={`block ${styles.logoWidth}`}>
+          <Link href='/' className={`block ${styles.logoWidth}`}>
             <Image
-              className="relative"
-              src="/petara_logo.png"
-              alt="Petara Logo"
+              className='relative'
+              src='/petara_logo.png'
+              alt='Petara Logo'
               width={163}
               height={55}
               priority
             />
           </Link>
         </div>
-        <div className="flex">
+        <div className='flex'>
           <nav className={`${styles.desktopMenu} self-center`}>
-            <ul className="flex">
-              {navLinks.map((nav) => {
+            <ul className='flex'>
+              {navLinks.map(nav => {
                 return (
                   <li className={`mr-4 ${styles.mainMenu}`} key={nav.id}>
                     <a
                       className={`${styles.link} px-4 pb-3 whitespace-nowrap ${
-                        pathname === nav.path ? styles.activeLink : ""
+                        pathname === nav.path ? styles.activeLink : ''
                       }`}
                       href={nav.path}
                     >
@@ -179,41 +179,45 @@ export default function Header() {
                     </a>
                     {nav?.subMenu && (
                       <div className={styles.subnav}>
-                        <ul className="container mx-auto flex flex-wrap justify-left">
-                          {nav?.subMenu?.map((sub) => {
+                        <ul className='container mx-auto flex flex-wrap justify-left'>
+                          {nav?.subMenu?.map(sub => {
                             return (
                               <li
                                 className={`mr-12 flex py-8 ${styles.menuItem}`}
                                 key={sub?.id}
                               >
-                                <div className={`relative`}>
-                                  <Image
-                                    className="relative"
-                                    src={sub.img}
-                                    alt={sub.label}
-                                    width={80}
-                                    height={80}
-                                  />
-                                </div>
-                                <div className={styles.menuInfo}>
-                                  <h2>{sub.label}</h2>
-                                  {/* <p>
-                                    Some two liners go here <br /> Some two
-                                    liners go here
-                                  </p> */}
-                                  {sub.subProducts.map(prod => <p>{prod}</p>)}
-
-                                  <a href={sub.url} className="block flex">
-                                    Show Details{" "}
+                                <a href={sub.url} className='flex'>
+                                  <div className={`relative`}>
                                     <Image
-                                      className="relative ml-1"
-                                      src="/arrow-right.svg"
-                                      alt="Arrow"
-                                      width={12}
-                                      height={12}
+                                      className='relative'
+                                      src={sub.img}
+                                      alt={sub.label}
+                                      width={80}
+                                      height={80}
                                     />
-                                  </a>
-                                </div>
+                                  </div>
+                                  <div className={styles.menuInfo}>
+                                    <h2>{sub.label}</h2>
+                                    {/* <p>
+                                      Some two liners go here <br /> Some two
+                                      liners go here
+                                    </p> */}
+                                    <p>{sub.description}</p>
+
+                                    <div
+                                      className={`block flex ${styles.productImage}`}
+                                    >
+                                      Show Details{' '}
+                                      <Image
+                                        className='relative ml-1'
+                                        src='/arrow-right.svg'
+                                        alt='Arrow'
+                                        width={12}
+                                        height={12}
+                                      />
+                                    </div>
+                                  </div>
+                                </a>
                               </li>
                             );
                           })}
@@ -226,7 +230,7 @@ export default function Header() {
             </ul>
           </nav>
         </div>
-        <div className="ctaWrap">
+        <div className='ctaWrap'>
           <button className={`${styles.cta} `} onClick={showModal}>
             Get in Touch
           </button>

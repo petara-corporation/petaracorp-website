@@ -1,14 +1,14 @@
 .bgwrap {
-  background-image: url("../../../public/contact-us-landing.jpg");
+  background-image: url('../../../public/contact-us-landing.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 300px;
   position: relative;
   margin-bottom: 60px;
 }
 .bgwrap:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -52,11 +52,11 @@
 }
 
 .processWrap .processItem .processInfo {
-  width: 50%;
+  width: 60%;
 }
 @media only screen and (max-width: 750px) {
   .bgwrap {
-    height: 300px;
+    height: 250px;
     margin-bottom: 30px;
   }
   .imgWrap {

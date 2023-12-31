@@ -1,14 +1,15 @@
 .bgwrap {
-  background-image: url("../../../public/inflatable.png");
+  background-image: url('../../../public/inflatable.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 300px;
   position: relative;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
+  padding: 0 32px;
 }
 .bgwrap:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -47,7 +48,7 @@
   border-bottom: 2px solid transparent;
   border-top-right-radius: 8px;
   cursor: pointer;
-  font-family: "roboto";
+  font-family: 'roboto';
   color: #8c8c8c;
 }
 
@@ -76,8 +77,8 @@
 
 @media only screen and (max-width: 768px) {
   .bgwrap {
-    height: 300px;
-    margin-bottom: 30px;
+    height: 250px;
+    /* margin-bottom: 30px; */
   }
 }
 

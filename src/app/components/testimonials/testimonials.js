@@ -1,78 +1,69 @@
-"use client";
-import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import styles from "./testimonials.module.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+'use client';
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import styles from './testimonials.module.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function Testimonials() {
   const brands = [
     {
       id: 1,
-      name: "ICICI Bank",
-      url: "/icici_logo.png",
+      name: 'ICICI Bank',
+      url: '/icici_logo.png',
     },
     {
       id: 2,
-      name: "Servo",
-      url: "/servo-logo-newa.jpg",
+      name: 'Servo',
+      url: '/servo-logo-newa.jpg',
     },
     {
       id: 3,
-      name: "Piaggio",
-      url: "/piaggio.png",
+      name: 'Piaggio',
+      url: '/piaggio.png',
     },
     {
       id: 4,
-      name: "Syngenta",
-      url: "/syngenta.png",
+      name: 'Syngenta',
+      url: '/syngenta.png',
     },
     {
       id: 5,
-      name: "Coromandel",
-      url: "/coromandel.png",
+      name: 'Coromandel',
+      url: '/coromandel.png',
     },
     {
       id: 6,
-      name: "Vision",
-      url: "/vision.png",
+      name: 'Vision',
+      url: '/vision.png',
     },
     {
       id: 7,
-      name: "UPL",
-      url: "/upl.png",
+      name: 'UPL',
+      url: '/upl.png',
     },
   ];
 
   return (
     <section className={styles.testimonialsWrap}>
-      <div className="heading container text-center flex flex-col items-center mx-auto">
-        <h2 className="text-2xl md:text-4xl font-semibold mb-4">
-        Brands That Trust Us Through Years
+      <div className='heading container text-center flex flex-col items-center mx-auto'>
+        <h2 className='text-2xl md:text-4xl font-semibold mb-4'>
+          Brands That Trust Us Through Years
         </h2>
         <div className={`${styles.bar}`}></div>
       </div>
       <div className={`${styles.brandsCarousel} container mx-auto`}>
         <div className={`${styles.desktopCarosel}`}>
-          {/* <Carousel
-            autoPlay
-            infiniteLoop
-            showStatus={false}
-            showThumbs={false}
-            // centerMode
-            // centerSlidePercentage={20}
-          > */}
-            {brands.map((slide) => {
-              return (
-                <div className={styles.slide} key={slide.id}>
-                  <img
-                    alt={slide.name}
-                    src={slide.url}
-                    className={styles.imgSlide}
-                  />
-                </div>
-              );
-            })}
-          {/* </Carousel> */}
+          {brands.map(slide => {
+            return (
+              <div className={styles.slide} key={slide.id}>
+                <img
+                  alt={slide.name}
+                  src={slide.url}
+                  className={styles.imgSlide}
+                />
+              </div>
+            );
+          })}
         </div>
         <div className={`${styles.mobileCarosel}`}>
           <Carousel
@@ -83,7 +74,7 @@ export default function Testimonials() {
             centerMode
             centerSlidePercentage={50}
           >
-            {brands.map((slide) => {
+            {brands.map(slide => {
               return (
                 <div className={styles.slide} key={slide.id}>
                   <img

@@ -1,50 +1,72 @@
-import Image from "next/image";
-import Trustmarker from "../components/trustmarker-section/trustmarker";
-import styles from "./about-us.module.css";
+import Image from 'next/image';
+import styles from './about-us.module.css';
+import Pillars from './pillars';
 
 export default function About() {
   return (
     <section>
       <div className={styles.bgwrap}>
         <div
-          className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
+          className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
         >
-          <h2 className="text-4xl font-semibold mb-4">About Us</h2>
+          <h2 className='text-4xl font-semibold mb-4'>About Petara</h2>
           <div className={`${styles.bar}`}></div>
         </div>
       </div>
-      <div className={`${styles.aboutInfo} container mx-auto text-center`}>
-        <h2 className="text-4xl mb-8 ">About Petara</h2>
-        <p className="mb-8 text">
-          Petara has been your trusted collaborator for creating, manufacturing, and implementing visual marketing solutions for a wide range of projects. We are eager to assist you with branding, provide the ideal attention-grabber for your events, and facilitate your product launches. Our focus is dedicated to sustainable business practices and environmental considerations.
+      <div className={`${styles.aboutInfo} container mx-auto`}>
+        <p className='mb-8 text'>
+          Petara is your trusted partner for bringing your visual marketing
+          projects to life. Specializing in larger-than-life inflatables and
+          corporate gifting, our solutions are designed to steal the spotlight
+          at your events and leave a lasting impression. With over 20 years of
+          experience in media, outdoor marketing, and brand promotion, our
+          dedicated team at Petara ensures excellence in every aspect of your
+          project.
         </p>
-        <h3 className="text-xl mb-8 font-bold">ALL PROJECTS, BIG AND SMALL</h3>
-        <p className="mb-8">
-          Flexibility is a core principle that runs throughout our entire organization, complementing our boundless imagination. In addition to our dedicated permanent team, we have the capacity to quickly expand to a workforce of up to 300 individuals when tackling substantial projects. This adaptability empowers us to effectively manage major undertakings. Trustworthiness is paramount to us, especially when handling product launches; rest assured, your confidential information is secure with X-Treme Creations, ensuring a bright future for your endeavors.
+        <p className='mb-8'>
+          Our sister company, ORION VISUALS ENTERPRISES, with a decade of
+          expertise, specializes in corporate gifting, serving esteemed clients
+          such as Indian Oil Corporation Limited, Bharat Petroleum Corporation
+          Limited, ICICI Bank, Syngenta, UPL, BASF, Coromandel International,
+          and many more.
+        </p>
+        <p className='mb-8'>
+          Furthermore, we collaborate with diverse B2B brands focused on
+          clothing, bags, accessories, and beyond , customizing their offerings
+          to align with your preferences. Whether it's printing branded T-shirts
+          or labelling top-notch office accessories, we cover it all. Our
+          expertise extends to handling bulk orders seamlessly, ensuring they
+          meet the highest standards upon delivery. Our partnerships span from
+          premium to local brands, addressing your unique needs.
         </p>
       </div>
       <div className={`${styles.processWrap} container mx-auto pt-8`}>
+        <div className={`${styles.aboutInfo} mx-auto text-center`}>
+          <h2 className='text-4xl mb-8 '>Why Petara?</h2>
+        </div>
         <div className={`${styles.processItem}`}>
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src="/service-1.png"
-              alt="Balloon"
+              src='/service-1.png'
+              alt='Balloon'
               width={250}
               height={250}
               priority
             />
           </div>
           <div className={`${styles.processInfo}`}>
-            <h2 className="mb-8 text-center md:text-left text-2xl md:text-3xl font-bold">
-              Production within the agreed timing
+            <h2 className='mb-8 text-center md:text-left text-2xl md:text-3xl font-bold'>
+              Promise of Quality
             </h2>
-            <p className="text-sm">
-              Throughout the entire production process, we maintain continuous
-              communication and prioritize adherence to deadlines. If desired,
-              we can vigilantly manage the project's budget. Our agile and lean
-              work approach allows us to smoothly accommodate last-minute
-              changes, ensuring a flexible and efficient project execution.
+            <p className='text-sm'>
+              Quality is our non-negotiable commitment. Be confident that your
+              giant inflatables are crafted from the finest materials, and
+              undergo thorough quality control. This stringent approach ensures
+              that our larger-than-life products meet the highest safety
+              standards. Our dedication to quality extends to corporate gifts as
+              well(give equal preference to both)—whether it's a pen or an
+              electronic device, only the highest quality gifts are delivered.
             </p>
           </div>
         </div>
@@ -52,21 +74,25 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src="/baloon.jpg"
-              alt="Balloon"
+              src='/baloon.jpg'
+              alt='Balloon'
               width={250}
               height={250}
               priority
             />
           </div>
           <div className={`${styles.processInfo}`}>
-            <h2 className="mb-8 text-center md:text-left text-2xl md:text-3xl font-bold">
-              Project management adapted to your budget
+            <h2 className='mb-8 text-center md:text-left text-2xl md:text-3xl font-bold'>
+              We bring you the truth, no matter how bitter
             </h2>
-            <p className="text-sm">
-              Petara can oversee both the project's design and execution. Please
-              inform us about your collaboration preferences, and we'll work
-              together to bring your vision to life.
+            <p className='text-sm'>
+              Our larger-than-life inflatables are born from imagination, so
+              it's tricky to know exactly how they'll turn out. Environmental
+              factors can also affect how they work and how long they last. But
+              don't worry—we make sure to tell you about any limitations
+              upfront, even more than the good stuff. When you work with us, you
+              won't have any unexpected surprises when it comes to setting up
+              the product.
             </p>
           </div>
         </div>
@@ -74,28 +100,26 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src="/service-2.png"
-              alt="Balloon"
+              src='/service-2.png'
+              alt='Balloon'
               width={250}
               height={250}
               priority
             />
           </div>
           <div className={`${styles.processInfo}`}>
-            <h2 className="mb-8 text-center md:text-left text-2xl md:text-3xl font-bold">
-              Designing your creative advice
+            <h2 className='mb-8 text-center md:text-left text-2xl md:text-3xl font-bold'>
+              Industry-altered solutions
             </h2>
-            <p className="text-sm">
-              At this juncture, we have reached a mutual consensus on the budget
-              and are enthusiastic to commence the design phase. Our team of
-              industrial design engineers is actively translating our collective
-              ideas into action. With a wealth of 25 years of expertise at our
-              disposal, we are meticulously selecting the most suitable
-              materials, construction methods, and printing procedures for your
-              giant inflatable. We are in the process of crafting the
-              three-dimensional framework and engineering blueprints, seamlessly
-              incorporating your logos and brand colors while adhering to your
-              branding guidelines
+            <p className='text-sm'>
+              Every industry has its own way of doing things. A gift, inflatable
+              or bouncy, that works for one might not work for another. Our team
+              pays close attention to the details of your industry and comes up
+              with ideas that fit just right. We have even transformed bouncy,
+              typically seen as a kids' product, into a practical corporate
+              utility and a safe game space for employees. Just bring us your
+              basic idea, and we'll suggest the right approach for your
+              promotional event.
             </p>
           </div>
         </div>
@@ -103,27 +127,22 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src="/costume.jpg"
-              alt="Balloon"
+              src='/costume.jpg'
+              alt='Balloon'
               width={250}
               height={250}
               priority
             />
           </div>
           <div className={`${styles.processInfo}`}>
-            <h2 className="mb-8 text-center md:text-left text-2xl md:text-3xl font-bold">
-              Air your views
+            <h2 className='mb-8 text-center md:text-left text-2xl md:text-3xl font-bold'>
+              Timely Project Execution
             </h2>
-            <p className="text-sm">
-              Our entire team is fully engaged, meticulously fabricating your
-              inflatable to meet your precise specifications. We will maintain
-              ongoing communication to keep you informed of the progress. Upon
-              completion, we subject every aspect, from construction to the
-              printing of your giant inflatable, to rigorous quality control and
-              pressure testing. This meticulous approach guarantees that every
-              detail adheres to the most stringent construction and safety
-              standards. we can assure the installation of the project, but also
-              the cleaning, the maintenance and the storage after use.
+            <p className='text-sm'>
+              From start to finish, we uphold constant communication, giving top
+              priority to meeting deadlines. Our agile and lean work approach
+              allows us to smoothly accommodate last-minute changes, ensuring a
+              flexible and efficient project execution.
             </p>
           </div>
         </div>
@@ -131,30 +150,53 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src="/bouncy.jpg"
-              alt="Balloon"
+              src='/bouncy.jpg'
+              alt='Balloon'
               width={250}
               height={250}
               priority
             />
           </div>
           <div className={`${styles.processInfo}`}>
-            <h2 className="mb-8 text-center md:text-left text-2xl md:text-3xl font-bold">
-              Delivery & satisfied customers
+            <h2 className='mb-8 text-center md:text-left text-2xl md:text-3xl font-bold'>
+              Visualize your vision
             </h2>
-            <p className="text-sm">
-              Your genuine, certified giant inflatable product is prepared to
-              leave our facility, poised to captivate, entertain, or effectively
-              promote your brand to your fans, target audience, or guests.
-              Satisfied customers are our #1 priority. Therefore, we discuss the
-              Return on Investment (ROI) of your project, so we can collaborate
-              more efficiently next time.
+            <p className='text-sm'>
+              We often receive ready artwork files from clients. Once we have
+              it, before making the actual product, we show you a graphical
+              representation that's as close as possible to how the final
+              product will look. This way, you can have an idea of what to
+              expect.
+            </p>
+          </div>
+        </div>
+        <div className={`${styles.processItem} flex-row-reverse`}>
+          <div className={`${styles.imgWrap}`}>
+            <Image
+              className={`relative md:mr-8 ${styles.processImg}`}
+              src='/costume.jpg'
+              alt='Balloon'
+              width={250}
+              height={250}
+              priority
+            />
+          </div>
+          <div className={`${styles.processInfo}`}>
+            <h2 className='mb-8 text-center md:text-left text-2xl md:text-3xl font-bold'>
+              Ethical business practices
+            </h2>
+            <p className='text-sm'>
+              At Petara, we believe in doing business the right way. Our
+              commitment to ethical practices means you can trust us to be fair,
+              transparent, and respectful in all our dealings. Choosing us as
+              your partner ensures that your business is in honest and reliable
+              hands.
             </p>
           </div>
         </div>
       </div>
       <div className={`${styles.processItem}`}>
-        <Trustmarker />
+        <Pillars />
       </div>
     </section>
   );

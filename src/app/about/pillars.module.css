@@ -1,0 +1,38 @@
+.bar {
+  width: 120px;
+  height: 2px;
+  background-color: var(--active-color);
+  border-radius: 8px;
+  margin-bottom: 64px;
+}
+.trustmarkerWrap {
+  padding: 60px 0;
+  background-color: #ffeeea;
+}
+
+.card {
+  border-radius: 8px;
+  background: #ffdfb2;
+  border: 1px solid #e93325;
+  padding: 16px;
+  margin-bottom: 24px;
+  margin-right: 24px;
+}
+
+.card h3 {
+  color: #000;
+}
+@media only screen and (max-width: 820px) {
+  .bar {
+    width: 55px;
+    margin-bottom: 30px;
+  }
+  .card {
+    margin-right: 0;
+    width: 100%;
+  }
+  .trustmarker {
+    width: calc(100% - 24px);
+    margin: 0 auto;
+  }
+}

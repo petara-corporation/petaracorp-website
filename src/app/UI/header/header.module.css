@@ -87,6 +87,10 @@
   height: auto;
 }
 
+.menuItem {
+  width: calc(25% - 48px);
+}
+
 .menuInfo {
   margin-left: 12px;
 }
@@ -94,7 +98,7 @@
 .menuInfo h2 {
   line-height: initial;
   color: #000;
-  font-family: "roboto";
+  font-family: 'roboto';
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -103,17 +107,17 @@
 .menuInfo p {
   line-height: initial;
   color: #000;
-  font-family: "roboto";
+  font-family: 'roboto';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   opacity: 0.5;
 }
 
-.menuInfo a {
+.productImage {
   line-height: 1.2;
   color: #e93325;
-  font-family: "roboto";
+  font-family: 'roboto';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
