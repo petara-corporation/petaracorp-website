@@ -2,6 +2,7 @@ import Script from 'next/script';
 import './globals.css';
 import Footer from './UI/Footer/footer';
 import Header from './UI/header/header';
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Petara Corp',
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body>
+      <Head>
         <Script src='https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID' />
         <Script id='google-analytics'>
           {`
@@ -22,6 +23,8 @@ export default function RootLayout({ children }) {
           gtag('config', 'G-WZ5KD741G7');
         `}
         </Script>
+      </Head>
+      <body>
         <Header />
         <main className='page-offset min-h-screen'>{children}</main>
         <Footer />

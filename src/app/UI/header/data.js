@@ -6,7 +6,7 @@ export const navLinks = [
   },
   {
     id: 2,
-    title: 'Products',
+    title: 'Inflatables',
     path: '/products',
     subMenu: [
       {

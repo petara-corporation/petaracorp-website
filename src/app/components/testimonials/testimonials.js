@@ -3,6 +3,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import styles from './testimonials.module.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Marquee from 'react-fast-marquee';
 
 export default function Testimonials() {
   const brands = [
@@ -52,7 +53,8 @@ export default function Testimonials() {
         <div className={`${styles.bar}`}></div>
       </div>
       <div className={`${styles.brandsCarousel} container mx-auto`}>
-        <div className={`${styles.desktopCarosel}`}>
+        <div className={`${styles.desktopCarousel}`}>
+          <Marquee>
           {brands.map(slide => {
             return (
               <div className={styles.slide} key={slide.id}>
@@ -64,16 +66,9 @@ export default function Testimonials() {
               </div>
             );
           })}
+          </Marquee>
         </div>
-        <div className={`${styles.mobileCarosel}`}>
-          <Carousel
-            autoPlay
-            infiniteLoop
-            showStatus={false}
-            showThumbs={false}
-            centerMode
-            centerSlidePercentage={50}
-          >
+        <div className={`${styles.mobileCarousel}`}>
             {brands.map(slide => {
               return (
                 <div className={styles.slide} key={slide.id}>
@@ -85,7 +80,6 @@ export default function Testimonials() {
                 </div>
               );
             })}
-          </Carousel>
         </div>
       </div>
     </section>

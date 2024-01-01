@@ -9,27 +9,28 @@
   height: 2px;
   background-color: var(--active-color);
   border-radius: 8px;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
 
 .imgSlide {
   padding: 16px;
 }
-.mobileCarosel {
+.mobileCarousel {
   display: none;
 }
-.desktopCarosel {
+.desktopCarousel {
   display: flex;
 }
-.desktopCarosel img {
+.desktopCarousel img {
   height: 100px;
 }
 
 @media only screen and (max-width: 750px) {
-  .mobileCarosel {
-    display: block;
+  .mobileCarousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .desktopCarosel {
+  .desktopCarousel {
     display: none;
   }
 }

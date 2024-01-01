@@ -43,21 +43,6 @@ export default function Inflatables() {
             <div className={`${styles.products}`}>
               <ul className='list-disc ml-6 mb-6'>
                 <li>
-                  <span>BOUNCY</span>
-                  <ul className='list-disc ml-6 mb-6'>
-                    <li>Bouncy with Ball</li>
-                    <li>Standard Bouncy</li>
-                    <li>Mix of Many Bouncy</li>
-                    <li>Bouncy & Slide</li>
-                    <li>Bouncy & Obstructs</li>
-                    <li>Water Bouncy</li>
-                    <li>Puzzle Bouncy</li>
-                    <li>Mix Of All Bouncy</li>
-                    <li>Interactive Bouncy</li>
-                    <li>Tunnel Bouncy</li>
-                  </ul>
-                </li>
-                <li>
                   <span>GROUND INFLATABLE</span>
                   <ul className='list-disc ml-6 mb-6'>
                     <li>Product Shape</li>
@@ -66,38 +51,13 @@ export default function Inflatables() {
                     <li>Special Shapes</li>
                   </ul>
                 </li>
-              </ul>
-              <ul className='list-disc ml-6 mb-6'>
                 <li>
-                  <span>MASCOTS</span>
+                  <span>Inflatable Mascot</span>
                   <ul className='list-disc ml-6 mb-6'>
-                    <li>
-                      <span>Inflatable Mascot</span>
-                      <ul className='list-disc ml-6 mb-6'>
-                        <li>Product Shape</li>
-                        <li>Character Shape</li>
-                        <li>Logo Shape</li>
-                        <li>Special Shapes</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <span>Fur Cloth Mascot</span>
-                      <ul className='list-disc ml-6 mb-6'>
-                        <li>Product Shape</li>
-                        <li>Character Shape</li>
-                        <li>Logo Shape</li>
-                        <li>Special Shapes</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <span>Foam Mascot</span>
-                      <ul className='list-disc ml-6 mb-6'>
-                        <li>Product Shape</li>
-                        <li>Character Shape</li>
-                        <li>Logo Shape</li>
-                        <li>Special Shapes</li>
-                      </ul>
-                    </li>
+                    <li>Product Shape</li>
+                    <li>Character Shape</li>
+                    <li>Logo Shape</li>
+                    <li>Special Shapes</li>
                   </ul>
                 </li>
               </ul>
