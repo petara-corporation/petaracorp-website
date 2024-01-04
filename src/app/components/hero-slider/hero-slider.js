@@ -19,8 +19,8 @@ const HeroCarousel = () => (
           <div className={styles.textWrap}>
             <h1>We’re on a mission to craft lasting impressions!</h1>
             <p>
-              Unleash a Petara (basket) of solutions that are guaranteed to
-              amaze your clients - from Inflatables to personalized gifting
+              Unleash a Petara i.e. "a Basket" of solutions that are guaranteed
+              to amaze your clients - from Inflatables to personalized gifting
               solutions, we craft everything that catches the eye and soul.
             </p>
             <a href='/products'>

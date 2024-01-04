@@ -26,7 +26,6 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <p className={styles.moto}>For Your Business Success</p>
         </section>
         <section className={`${styles.footerNav} mb-4 md:mb-0`}>
           <nav>
@@ -47,7 +46,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/gallery'
+                  href='/portfolio'
                   className='font-medium mb-4 inline-block text-sm'
                 >
                   Gallery
@@ -85,25 +84,25 @@ export default function Footer() {
                 <a
                   href='https://www.facebook.com'
                   target='_blank'
-                  className='font-medium mb-4 inline-block text-sm'
+                  className='font-medium mb-4 inline-block text-sm underline'
                 >
                   Facebook
                 </a>
               </li>
               <li>
                 <a
-                  href='https://www.instagram.com'
+                  href='https://www.instagram.com/petaracorp?igsh=MXU1NGZjbDVkaGNicg=='
                   target='_blank'
-                  className='font-medium mb-4 inline-block text-sm'
+                  className='font-medium mb-4 inline-block text-sm underline'
                 >
                   Instagram
                 </a>
               </li>
               <li>
                 <a
-                  href='https://www.linkedin.com'
+                  href='https://www.linkedin.com/company/petaracorp/'
                   target='_blank'
-                  className='font-medium mb-4 inline-block text-sm'
+                  className='font-medium mb-4 inline-block text-sm underline'
                 >
                   LinkedIn
                 </a>
@@ -115,17 +114,14 @@ export default function Footer() {
           <div className={`${styles.addressWrap} mb-8`}>
             <Image src='/marker.svg' alt='Address' width={40} height={40} />
             <p className='text-sm font-medium ml-6'>
-              10/9, Vivekanand Chs, Saraswat Colony, <br />
-              Dombivli (e), Thane - 421201
+              I - 5, Clarion Park, <br />
+              Aundh, Pune - 411007
             </p>
           </div>
           <div className={styles.addressWrap}>
             <Image src='/phone.svg' alt='Address' width={40} height={40} />
-            <a href='tel:8879292103' className='text-sm font-medium ml-6'>
-              8879292103
-            </a>
-            <a href='tel:9819554405' className='text-sm font-medium ml-6'>
-              9819554405
+            <a href='tel:+918879292103' className='text-sm font-medium ml-6'>
+              +91 88792 92103
             </a>
           </div>
         </section>

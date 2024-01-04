@@ -1,0 +1,36 @@
+.bar {
+  width: 120px;
+  height: 2px;
+  background-color: var(--active-color);
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.ContactUsWrap {
+  padding: 64px 0;
+  background-color: var(--body-text);
+  color: #fff;
+}
+
+.formWrap {
+  text-align: center;
+}
+
+.input {
+  width: 328px;
+  line-height: 48px;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 18px;
+  color: var(--body-text);
+  display: inline-block;
+}
+.quoteBtn {
+  border-radius: 40px;
+  background: linear-gradient(180deg, #e97358 0%, #e93325 100%);
+  width: 138px;
+  line-height: 48px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+}

@@ -42,8 +42,8 @@ export default function OurServices() {
               <br className={styles.no_mobile} />
               <h4>
                 Explore a wide variety of inflatables that promise a lasting
-                visual impact, ensuring your brand stays activated in the hearts
-                and minds of your customers.
+                visual impact with superior quality, ensuring your brand stays
+                activated in the hearts and minds of your customers.
               </h4>
               <Link href={'/products'} className={styles.viewAll}>
                 View Products

@@ -171,7 +171,11 @@ export default function Header() {
                   <li className={`mr-4 ${styles.mainMenu}`} key={nav.id}>
                     <a
                       className={`${styles.link} px-4 pb-3 whitespace-nowrap ${
-                        pathname === nav.path ? styles.activeLink : ''
+                        nav.path !== '/' && pathname.startsWith(nav.path)
+                          ? styles.activeLink
+                          : nav.path === pathname
+                          ? styles.activeLink
+                          : ''
                       }`}
                       href={nav.path}
                     >
@@ -179,43 +183,61 @@ export default function Header() {
                     </a>
                     {nav?.subMenu && (
                       <div className={styles.subnav}>
-                        <ul className='container mx-auto flex flex-wrap justify-left'>
+                        <ul className='container mx-auto flex justify-between'>
                           {nav?.subMenu?.map(sub => {
                             return (
                               <li
-                                className={`mr-12 flex py-8 ${styles.menuItem}`}
+                                className={`flex py-8 ${styles.menuItem}`}
                                 key={sub?.id}
                               >
-                                <a href={sub.url} className='flex'>
-                                  <div className={`relative`}>
-                                    <Image
-                                      className='relative'
-                                      src={sub.img}
-                                      alt={sub.label}
-                                      width={80}
-                                      height={80}
-                                    />
-                                  </div>
-                                  <div className={styles.menuInfo}>
-                                    <h2>{sub.label}</h2>
-                                    {/* <p>
-                                      Some two liners go here <br /> Some two
-                                      liners go here
-                                    </p> */}
-                                    <p>{sub.description}</p>
-
+                                <a
+                                  href={sub.url}
+                                  className='flex'
+                                  style={{
+                                    justifyContent: 'space-between',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                  }}
+                                >
+                                  <div className='flex'>
                                     <div
-                                      className={`block flex ${styles.productImage}`}
+                                      // className={`relative`}
+                                      style={{
+                                        width: 48,
+                                      }}
                                     >
-                                      Show Details{' '}
                                       <Image
-                                        className='relative ml-1'
-                                        src='/arrow-right.svg'
-                                        alt='Arrow'
-                                        width={12}
-                                        height={12}
+                                        className='relative'
+                                        src={sub.img}
+                                        alt={sub.label}
+                                        width={48}
+                                        height={48}
                                       />
                                     </div>
+                                    <div
+                                      className={styles.menuInfo}
+                                      style={{ flex: 1 }}
+                                    >
+                                      <h2>{sub.label}</h2>
+                                      <p>{sub.description}</p>
+                                      {/* <div>
+                                      {sub?.subProducts?.map(product => {
+                                        return <p key={product}>{product}</p>;
+                                      })}
+                                    </div> */}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className={`block flex ${styles.productImage}`}
+                                  >
+                                    Show Details{' '}
+                                    <Image
+                                      className='relative ml-1'
+                                      src='/arrow-right.svg'
+                                      alt='Arrow'
+                                      width={12}
+                                      height={12}
+                                    />
                                   </div>
                                 </a>
                               </li>

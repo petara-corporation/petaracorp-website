@@ -1,34 +1,44 @@
-import Image from "next/image";
-import styles from "./product-listing.module.css";
+import Image from 'next/image';
+import styles from './product-listing.module.css';
 
 export default function CorporateProductListing() {
   const productList = [
     {
       id: 1,
-      name: "Keychain And Accessories",
-      url: "/product.png",
+      name: 'Keychain And Accessories',
+      url: '/keychains_accessories.png',
     },
     {
       id: 2,
-      name: "Bags",
-      url: "/product.png",
+      name: 'Bags',
+      url: '/bags.png',
     },
     {
       id: 3,
-      name: "Copper Handmade Products",
-      url: "/product.png",
+      name: 'Stationary and Paper Items',
+      url: '/stationary.png',
     },
     {
       id: 4,
-      name: "Stationary and Paper Items",
-      url: "/product.png",
+      name: 'Apparels',
+      url: '/clothing.png',
+    },
+    {
+      id: 5,
+      name: 'Decorative Items',
+      url: '/decorative_items.png',
+    },
+    {
+      id: 6,
+      name: 'Electronic Gadgets',
+      url: '/electronics.png',
     },
   ];
   return (
-    <section className="mb-16">
-      <div className="heading container text-center flex flex-col items-center mx-auto">
-        <h2 className="text-2xl md:text-4xl font-semibold mb-4">
-          Selected from Catalog
+    <section className='mb-16'>
+      <div className='heading container text-center flex flex-col items-center mx-auto'>
+        <h2 className='text-2xl md:text-4xl font-semibold mb-4'>
+          Range of Products
         </h2>
         <div className={`${styles.bar}`}></div>
       </div>
@@ -36,7 +46,7 @@ export default function CorporateProductListing() {
         <ul
           className={`${styles.imgList} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 pt-4`}
         >
-          {productList.map((product) => {
+          {productList.map(product => {
             return (
               <li key={product.id} className={`${styles.prodCard} relative`}>
                 <Image
@@ -44,9 +54,9 @@ export default function CorporateProductListing() {
                   src={product.url}
                   alt={product.name}
                   fill={true}
-                  sizes="(max-width: 768px) 25vw, 25vw"
+                  sizes='(max-width: 768px) 25vw, 25vw'
                 />
-                <p className="text-center mt-4">{product.name}</p>
+                <p className='text-center mt-4'>{product.name}</p>
               </li>
             );
           })}

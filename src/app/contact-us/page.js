@@ -380,8 +380,8 @@ const ContactUs = () => {
                       height={40}
                     />
                     <p className='text-sm font-medium ml-6'>
-                      5 Shiv Shakti Complx, B S V Road, <br />
-                      Dahisar,Mumbai,Maharashtra
+                      I - 5, Clarion Park, <br />
+                      Aundh, Pune - 411007
                     </p>
                   </div>
                   <div className={styles.addressWrap}>
@@ -392,10 +392,10 @@ const ContactUs = () => {
                       height={40}
                     />
                     <a
-                      href='tel:02228486811'
+                      href='tel:+918879292103'
                       className='text-sm font-medium ml-6'
                     >
-                      022-284-86811
+                      +91 88792 92103
                     </a>
                   </div>
                 </section>

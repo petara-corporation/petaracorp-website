@@ -63,6 +63,14 @@ export const navLinks = [
           'Make a grand entrance or create unique event spaces effortlessly',
         subProducts: ['Inflatable Arches', 'Jumping Kiosks'],
       },
+      {
+        id: 5,
+        label: 'Balloons & Blimps',
+        img: '/balloon-icon.svg',
+        url: '/products/balloons-blimps',
+        description: 'Elevate your brand in the sky',
+        subProducts: ['Balloons', 'Blimps'],
+      },
     ],
   },
   {
