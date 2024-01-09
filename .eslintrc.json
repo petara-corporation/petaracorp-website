@@ -3,7 +3,6 @@
   "settings": { "react": { "version": "detect" } },
   "extends": [
     "airbnb",
-    "airbnb-typescript",
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
     "plugin:security/recommended",
