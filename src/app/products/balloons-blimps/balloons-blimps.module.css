@@ -1,5 +1,5 @@
 .bgwrap {
-  background-image: url('../../../../public/inflatable.png');
+  background-image: url('/images/inflatable-products/balloons/Banner-Sky-baloons.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,6 +82,7 @@
   width: 100% !important;
   height: 100% !important;
   position: relative !important;
+  object-fit: cover !important;
 }
 
 .flexWrap {

@@ -61,7 +61,7 @@ export default function Products() {
     <section>
       <div className={styles.bgwrap}>
         <div
-          className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
+          className={`heading  text-center flex flex-col items-center ${styles.verticalAlign}`}
         >
           <h2 className='text-4xl font-semibold mb-4'>
             Larger than Life Inflatables

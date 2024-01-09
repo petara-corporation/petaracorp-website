@@ -103,7 +103,7 @@ export default function ProductPromotion() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/Spiderman.png'
+                src='/images/promotions-giftings/promotional-products/Horse-watch.jpg'
                 alt='Corporate Gifting'
                 height={100}
                 width={500}
@@ -113,7 +113,7 @@ export default function ProductPromotion() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/zebra.jpg'
+                  src='/images/promotions-giftings/promotional-products/Thernmal.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -122,7 +122,7 @@ export default function ProductPromotion() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/petrol_man.jpg'
+                  src='/images/promotions-giftings/promotional-products/electric-board.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -131,7 +131,7 @@ export default function ProductPromotion() {
               <div className='flex-1 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/bottle.jpg'
+                  src='/images/promotions-giftings/promotional-products/Key-holder.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

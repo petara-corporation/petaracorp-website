@@ -10,7 +10,7 @@ export default function Testimonials() {
     {
       id: 1,
       name: 'ICICI Bank',
-      url: '/icici_logo.png',
+      url: '/images/clients/icici_logo.png',
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export default function Testimonials() {
     {
       id: 5,
       name: 'Coromandel',
-      url: '/coromandel.png',
+      url: '/images/clients/Coromandel.png',
     },
     {
       id: 6,
@@ -55,20 +55,6 @@ export default function Testimonials() {
       <div className={`${styles.brandsCarousel} container mx-auto`}>
         <div className={`${styles.desktopCarousel}`}>
           <Marquee>
-          {brands.map(slide => {
-            return (
-              <div className={styles.slide} key={slide.id}>
-                <img
-                  alt={slide.name}
-                  src={slide.url}
-                  className={styles.imgSlide}
-                />
-              </div>
-            );
-          })}
-          </Marquee>
-        </div>
-        <div className={`${styles.mobileCarousel}`}>
             {brands.map(slide => {
               return (
                 <div className={styles.slide} key={slide.id}>
@@ -80,6 +66,20 @@ export default function Testimonials() {
                 </div>
               );
             })}
+          </Marquee>
+        </div>
+        <div className={`${styles.mobileCarousel}`}>
+          {brands.map(slide => {
+            return (
+              <div className={styles.slide} key={slide.id}>
+                <img
+                  alt={slide.name}
+                  src={slide.url}
+                  className={styles.imgSlide}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

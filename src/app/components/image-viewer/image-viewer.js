@@ -1,15 +1,16 @@
-"use client";
+'use client';
 
-import styles from "./image-viewer.module.css";
-import React, { useState, useRef, useEffect } from "react";
-import useOutsideClick from "../useOutsideClick";
-import Image from "next/image";
+import styles from './image-viewer.module.css';
+import React, { useState, useRef, useEffect } from 'react';
+import useOutsideClick from '../useOutsideClick';
+import Image from 'next/image';
 
-const ImageViewer = (props) => {
+const ImageViewer = props => {
   const [imgIndex, setCurrentIndex] = useState(props.currentIndex);
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef();
   const [imgList, setImgList] = useState(props.images || []);
+
   const showImage = () => {
     return (
       <div className={styles.imgWrap}>
@@ -21,18 +22,19 @@ const ImageViewer = (props) => {
   useEffect(() => {
     setCurrentIndex(props.currentIndex);
   }, [props.currentIndex]);
+
   useEffect(() => {
     setImgList(props.images);
   }, [props.images]);
 
   const prevImage = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + imgList.length) % imgList.length
+      prevIndex => (prevIndex - 1 + imgList.length) % imgList.length,
     );
   };
 
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % imgList.length);
+    setCurrentIndex(prevIndex => (prevIndex + 1) % imgList.length);
   };
 
   useOutsideClick(ref, () => {
@@ -52,9 +54,9 @@ const ImageViewer = (props) => {
             onClick={prevImage}
           >
             <Image
-              className="relative"
-              src="/chevron-left.svg"
-              alt="Left"
+              className='relative'
+              src='/chevron-left.svg'
+              alt='Left'
               width={40}
               height={40}
             />
@@ -64,9 +66,9 @@ const ImageViewer = (props) => {
             onClick={nextImage}
           >
             <Image
-              className="relative"
-              src="/chevron-right.svg"
-              alt="Left"
+              className='relative'
+              src='/chevron-right.svg'
+              alt='Left'
               width={40}
               height={40}
             />

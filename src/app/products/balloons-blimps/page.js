@@ -47,7 +47,7 @@ export default function BalloonsBlimps() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/ball.png'
+                src='/images/inflatable-products/balloons/Baloon2.png'
                 alt='Bouncy and Inflatables'
                 fill
                 sizes='(max-width: 768px) 100vw, 50vw'
@@ -57,8 +57,8 @@ export default function BalloonsBlimps() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/play-inflatable.png'
-                  alt='Bouncy and Inflatables'
+                  src='/images/inflatable-products/balloons/Baloon2.png'
+                  alt='Blimps'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />

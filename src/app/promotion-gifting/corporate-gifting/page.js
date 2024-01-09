@@ -8,9 +8,7 @@ export default function PersonalUtilityGifting() {
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
         >
-          <h2 className='text-4xl font-semibold mb-4'>
-            Personal Utility Gifting
-          </h2>
+          <h2 className='text-4xl font-semibold mb-4'>Corporate Gifting</h2>
           <div className={`${styles.bar}`}></div>
         </div>
       </div>
@@ -50,7 +48,7 @@ export default function PersonalUtilityGifting() {
             <div className={`${styles.products}`}>
               <ul className='list-disc ml-6 mb-6'>
                 <li>
-                  <p>Keychain</p>
+                  <p className='mb-2'>Keychain</p>
                   <p className='text-sm'>
                     Discover a diverse range of premium keychains at Petara,
                     ranging from plastic and silicon rubber to gun metal and
@@ -64,7 +62,7 @@ export default function PersonalUtilityGifting() {
                 </li>
                 <br />
                 <li>
-                  <p>Pen</p>
+                  <p className='mb-2'>Pen</p>
                   <p className='text-sm'>
                     Explore an extensive selection of over 200 unique pen models
                     at Petara. Our diverse range includes innovative designs
@@ -80,7 +78,7 @@ export default function PersonalUtilityGifting() {
                 </li>
                 <br />
                 <li>
-                  <p>Custom Sets</p>
+                  <p className='mb-2'>Custom Sets</p>
                   <p className='text-sm'>
                     Perfect for creating a cohesive and branded gift package,
                     our Custom Sets provide a convenient solution for corporate
@@ -93,7 +91,7 @@ export default function PersonalUtilityGifting() {
                 </li>
                 <br />
                 <li>
-                  <p>Paper Items</p>
+                  <p className='mb-2'>Paper Items</p>
                   <p className='text-sm'>
                     Paper items not only serve as practical and functional gifts
                     but also provide a tangible platform to showcase your brand
@@ -115,7 +113,7 @@ export default function PersonalUtilityGifting() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/Spiderman.png'
+                src='/images/promotions-giftings/corporate-gifts/Pen-mobile-stand.jpg'
                 alt='Corporate Gifting'
                 height={100}
                 width={500}
@@ -125,7 +123,7 @@ export default function PersonalUtilityGifting() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/zebra.jpg'
+                  src='/images/promotions-giftings/corporate-gifts/35.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -134,7 +132,7 @@ export default function PersonalUtilityGifting() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/petrol_man.jpg'
+                  src='/images/promotions-giftings/corporate-gifts/Steel-pen-stand.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -143,7 +141,37 @@ export default function PersonalUtilityGifting() {
               <div className='flex-1 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/bottle.jpg'
+                  src='/images/promotions-giftings/corporate-gifts/36.jpg'
+                  alt='Corporate Gifting'
+                  fill
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+              </div>
+            </div>
+            <br />
+            <div className={`${styles.imgList}`}>
+              <div className='flex-1 mr-4 relative'>
+                <Image
+                  className={`${styles.gridImg} max-h-40 md:max-h-48`}
+                  src='/images/promotions-giftings/corporate-gifts/Black-direy.jpg'
+                  alt='Corporate Gifting'
+                  fill
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+              </div>
+              <div className='flex-1 relative'>
+                <Image
+                  className={`${styles.gridImg} max-h-40 max-h-48`}
+                  src='/images/promotions-giftings/corporate-gifts/Keychain.jpg'
+                  alt='Corporate Gifting'
+                  fill
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+              </div>
+              <div className='flex-1 mr-4 relative'>
+                <Image
+                  className={`${styles.gridImg} max-h-40 max-h-48`}
+                  src='/images/promotions-giftings/corporate-gifts/Corporate gift.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

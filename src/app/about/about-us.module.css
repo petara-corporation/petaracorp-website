@@ -1,9 +1,9 @@
 .bgwrap {
-  background-image: url('../../../public/contact-us-landing.jpg');
+  background-image: url('/contact-us-landing.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 416px;
   position: relative;
   margin-bottom: 60px;
 }

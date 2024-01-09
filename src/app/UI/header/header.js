@@ -4,8 +4,8 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import styles from './header.module.css';
 import { navLinks } from './data';
-import ContactUsModal from '@/app/components/contact-popup/contact-popup';
 import { useState } from 'react';
+import ContactUsModal from '../../components/contact-popup/contact-popup';
 
 export default function Header() {
   const pathname = usePathname();

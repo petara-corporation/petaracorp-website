@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './footer.module.css';
-import ContactUsModal from '@/app/components/contact-popup/contact-popup';
+import ContactUsModal from '../../components/contact-popup/contact-popup';
 
 export default function Footer() {
   const [open, setOpen] = useState(false);

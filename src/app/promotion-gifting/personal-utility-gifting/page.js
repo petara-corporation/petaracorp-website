@@ -139,7 +139,7 @@ export default function PersonalUtilityGifting() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/Spiderman.png'
+                src='/images/promotions-giftings/personal-utilities/Bag.jpg'
                 alt='Corporate Gifting'
                 height={100}
                 width={500}
@@ -149,7 +149,7 @@ export default function PersonalUtilityGifting() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/zebra.jpg'
+                  src='/images/promotions-giftings/personal-utilities/Bamboo-gift.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -158,7 +158,7 @@ export default function PersonalUtilityGifting() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/petrol_man.jpg'
+                  src='/images/promotions-giftings/personal-utilities/Bottle-class.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -167,7 +167,37 @@ export default function PersonalUtilityGifting() {
               <div className='flex-1 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/bottle.jpg'
+                  src='/images/promotions-giftings/personal-utilities/clothing.jpg'
+                  alt='Corporate Gifting'
+                  fill
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+              </div>
+            </div>
+            <br />
+            <div className={`${styles.imgList}`}>
+              <div className='flex-1 mr-4 relative'>
+                <Image
+                  className={`${styles.gridImg} max-h-40 md:max-h-48`}
+                  src='/images/promotions-giftings/personal-utilities/CAp.jpg'
+                  alt='Corporate Gifting'
+                  fill
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+              </div>
+              <div className='flex-1 mr-4 relative'>
+                <Image
+                  className={`${styles.gridImg} max-h-40 max-h-48`}
+                  src='/images/promotions-giftings/personal-utilities/headphone.jpg'
+                  alt='Corporate Gifting'
+                  fill
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+              </div>
+              <div className='flex-1 relative'>
+                <Image
+                  className={`${styles.gridImg} max-h-40 max-h-48`}
+                  src='/images/promotions-giftings/personal-utilities/Raincoat.jpg'
                   alt='Corporate Gifting'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

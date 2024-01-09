@@ -60,6 +60,8 @@
 
 .imgList {
   border-top: 2px solid #f4f4f4;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridImgPortfolio {

@@ -4,14 +4,8 @@ module.exports = {
       name: 'PetaraCorpWebsite',
       script: 'node_modules/next/dist/bin/next',
       args: 'start',
-      instances: 'max',
+      instances: 1,
       exec_mode: 'cluster',
-      env: {
-        NODE_ENV: 'development',
-      },
-      env_production: {
-        NODE_ENV: 'production',
-      },
     },
   ],
 };
