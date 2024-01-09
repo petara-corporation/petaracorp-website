@@ -5,10 +5,9 @@ import styles from './hero-slider.module.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const HeroCarousel = () => {
-  var window = global.window || {};
   return (
     <div className='relative w-full mb-10'>
-      {window.innerWidth < 768 ? (
+      {typeof window !== 'undefined' && window.innerWidth < 768 ? (
         <div className={styles.mobileView}>
           <img alt='Premium Inflatable Solutions' src='./slide1.jpg' />
           <div className={`${styles.overlayText} legend`}>
