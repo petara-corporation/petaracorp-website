@@ -38,7 +38,7 @@ export default function Inflatables() {
             </p>
 
             <h3 className='text-xl mb-2 font-bold'>
-              CHOOSE FROM TREMENDOUS COLLECTION
+              CHOOSE FROM VARIETY OF SHAPES
             </h3>
             <div className={`${styles.products}`}>
               <ul className='list-disc ml-6 mb-6'>
@@ -51,7 +51,7 @@ export default function Inflatables() {
                     <li>Special Shapes</li>
                   </ul>
                 </li>
-                <li>
+                {/* <li>
                   <span>Inflatable Mascot</span>
                   <ul className='list-disc ml-6 mb-6'>
                     <li>Product Shape</li>
@@ -59,7 +59,7 @@ export default function Inflatables() {
                     <li>Logo Shape</li>
                     <li>Special Shapes</li>
                   </ul>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div>
@@ -72,17 +72,17 @@ export default function Inflatables() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/ball.png'
+                src='/Spiderman.png'
                 alt='Bouncy and Inflatables'
-                fill
-                sizes='(max-width: 768px) 100vw, 50vw'
+                height={100}
+                width={500}
               />
             </div>
             <div className={`${styles.imgList}`}>
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/play-inflatable.png'
+                  src='/zebra.jpg'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -91,7 +91,7 @@ export default function Inflatables() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/spiderman.png'
+                  src='/petrol_man.jpg'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -100,7 +100,7 @@ export default function Inflatables() {
               <div className='flex-1 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/ferrero-kinderjoy-inflatable.png'
+                  src='/bottle.jpg'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

@@ -14,25 +14,25 @@
 }
 
 @font-face {
-  font-family: "noto_sans";
-  src: url("../../public/fonts/notosans-regular-webfont.woff2") format("woff2"),
-    url("../../public/fonts/notosans-regular-webfont.woff") format("woff");
+  font-family: 'noto_sans';
+  src: url('/fonts/notosans-regular-webfont.woff2') format('woff2'),
+    url('/fonts/notosans-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "trashhand";
-  src: url("../../public/fonts/trashhand-webfont.woff2") format("woff2"),
-    url("../../public/fonts/trashhand-webfont.woff") format("woff");
+  font-family: 'trashhand';
+  src: url('/fonts/trashhand-webfont.woff2') format('woff2'),
+    url('/fonts/trashhand-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "roboto";
-  src: url("../../public/fonts/roboto-regular-webfont.woff2") format("woff2"),
-    url("../../public/fonts/roboto-regular-webfont.woff") format("woff");
+  font-family: 'roboto';
+  src: url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
+    url('/fonts/roboto-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -46,12 +46,12 @@
 }
 
 body {
-  font-family: "noto_sans";
+  font-family: 'noto_sans';
   color: var(--body-text);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  background-image: url("../../public/bg.png");
+  background-image: url('/bg.png');
 }
 
 html {
@@ -70,7 +70,6 @@ html {
   html {
     font-size: 14px;
   }
-
 }
 
 .slider {

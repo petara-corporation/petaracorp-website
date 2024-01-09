@@ -6,7 +6,7 @@ export default function Products() {
     {
       id: 1,
       label: 'Inflatables',
-      img: '/menu.jpg',
+      img: '/inflatables.jpg',
       href: '/products/inflatables',
       subProducts: [
         'Ground Inflatable Product Shape ',
@@ -16,7 +16,7 @@ export default function Products() {
     {
       id: 2,
       label: 'Bouncy',
-      img: '/bouncy.jpg',
+      img: '/bouncies_1.jpg',
       href: '/products/bouncy',
       subProducts: [
         'Ball Pool : Bouncy with Ball',
@@ -34,7 +34,7 @@ export default function Products() {
     {
       id: 3,
       label: 'Costumes',
-      img: '/costume.jpg',
+      img: '/inflatable_costumes.png',
       href: '/products/costumes',
       subProducts: [
         'Inflatable Costume : Product Shape',
@@ -45,14 +45,14 @@ export default function Products() {
     {
       id: 4,
       label: 'Arches & Kiosk',
-      img: '/arches.jpeg',
+      img: '/inflatable_archs_kiosks.png',
       href: '/products/archs-&-kiosk',
       subProducts: ['Arches & Kiosk', 'Balloons & Blimps'],
     },
     {
       id: 5,
       label: 'Balloons & Blimps',
-      img: '/baloon.jpg',
+      img: '/Balloon2.png',
       href: '/products/balloons-blimps',
       subProducts: ['Arches & Kiosk', 'Balloons & Blimps'],
     },
@@ -63,8 +63,16 @@ export default function Products() {
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
         >
-          <h2 className='text-4xl font-semibold mb-4'>Products</h2>
+          <h2 className='text-4xl font-semibold mb-4'>
+            Larger than Life Inflatables
+          </h2>
           <div className={`${styles.bar}`}></div>
+          <p className='text-xl mt-4'>
+            Bring your brand to life with our Larger than Life Inflatables{' '}
+            <br />
+            making a grand statement that captures attention and creates lasting
+            impressions
+          </p>
         </div>
       </div>
       <div className={styles.products}>

@@ -64,26 +64,26 @@ export default function OurServices() {
               sizes='(max-width: 768px) 100vw, 50vw'
             />
             <div className={styles.overlay}>
-              <h2>Corporate Gifting</h2>
+              <h2>Promotion & Gifting</h2>
               <h3>
-                Elevate your corporate connections with the art of thoughtful
-                gifting
+                Elevate your corporate relationships and strengthen brand
+                connections
               </h3>
             </div>
           </div>
           <div className={styles.hoverLayer}>
             <div className={styles.text}>
-              <h2>Corporate Gifting</h2>
+              <h2>Promotion & Gifting</h2>
               <h3>
-                Elevate your corporate connections with the art of thoughtful
-                gifting
+                Elevate your corporate relationships and strengthen brand
+                connections
               </h3>
               <br />
               <h4>
                 Forge lasting impressions with our sophisticated and
                 personalized corporate gifting solutions.
               </h4>
-              <Link href={'/corporate-gifting'} className={styles.viewAll}>
+              <Link href={'/promotion-gifting'} className={styles.viewAll}>
                 View products
               </Link>
             </div>

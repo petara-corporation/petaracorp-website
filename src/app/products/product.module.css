@@ -1,5 +1,5 @@
 .bgwrap {
-  background-image: url("../../../public/products-landing.jpg");
+  background-image: url('/products_banner.jpeg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,7 +8,7 @@
   margin-bottom: 60px;
 }
 .bgwrap:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -115,6 +115,7 @@
   width: 100% !important;
   height: 100% !important;
   position: relative !important;
+  object-fit: cover !important;
 }
 .products {
   margin-bottom: 60px;

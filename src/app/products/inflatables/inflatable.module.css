@@ -1,9 +1,9 @@
 .bgwrap {
-  background-image: url('../../../../public/inflatable.png');
+  background-image: url('/Rhino_Inflatables.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 416px;
   position: relative;
   margin-bottom: 60px;
 }
@@ -82,6 +82,7 @@
   width: 100% !important;
   height: 100% !important;
   position: relative !important;
+  object-fit: cover !important;
 }
 
 .flexWrap {

@@ -39,7 +39,7 @@ export default function Inflatables() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/service-1.png'
+                src='/ferrero-kinderjoy-inflatable.png'
                 alt='Bouncy and Inflatables'
                 fill
                 sizes='(max-width: 768px) 100vw, 50vw'
@@ -49,7 +49,7 @@ export default function Inflatables() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/play-inflatable.png'
+                  src='/Costume.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -58,7 +58,7 @@ export default function Inflatables() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/spiderman.png'
+                  src='/joker.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -67,7 +67,7 @@ export default function Inflatables() {
               <div className='flex-1 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/disney-inflatable.png'
+                  src='/USPro-Paint.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

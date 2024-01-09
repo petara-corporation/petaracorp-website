@@ -19,7 +19,7 @@ export default function Footer() {
             <Link href='/'>
               <Image
                 className='relative'
-                src='/petara_logo.png'
+                src='/petara_logo_landscape.jpg'
                 alt='Petara Logo'
                 width={163}
                 height={55}

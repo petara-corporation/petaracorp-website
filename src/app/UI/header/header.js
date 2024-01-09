@@ -155,7 +155,7 @@ export default function Header() {
           <Link href='/' className={`block ${styles.logoWidth}`}>
             <Image
               className='relative'
-              src='/petara_logo.png'
+              src='/petara_logo_landscape.jpg'
               alt='Petara Logo'
               width={163}
               height={55}

@@ -75,8 +75,36 @@ export const navLinks = [
   },
   {
     id: 3,
-    title: 'Corporate Gifting',
-    path: '/corporate-gifting',
+    title: 'Promotion & Gifting',
+    path: '/promotion-gifting',
+    subMenu: [
+      {
+        id: 31,
+        label: 'Corporate Gifting',
+        img: '/corp_gifts.png',
+        url: '/promotion-gifting/corporate-gifting',
+        description:
+          'Stakeholder Recognition, Client or Distributor Appreciation, Annual Meetings, Festive Celebrations, Conferences and Seminars',
+      },
+
+      {
+        id: 32,
+        label: 'Personal Utility Gifting',
+        img: '/personal_utility_gifts.png',
+        url: '/promotion-gifting/personal-utility-gifting',
+        description:
+          'Stakeholder Birthdays, Company Anniversaries, Onboarding Programs, Seasonal Gifting',
+      },
+
+      {
+        id: 33,
+        label: 'Product Promotion',
+        img: '/product_promotion.png',
+        url: '/promotion-gifting/product-promotion',
+        description:
+          'Product Launch Events, Trade Shows and Expos, Marketing Campaigns, Store Openings, Promotional Events',
+      },
+    ],
   },
   {
     id: 4,

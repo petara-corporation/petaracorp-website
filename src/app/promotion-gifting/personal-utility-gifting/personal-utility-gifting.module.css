@@ -1,0 +1,102 @@
+.bgwrap {
+  background-image: url('/banner2.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 416px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.bgwrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+  opacity: 0.6;
+}
+.verticalAlign {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  position: relative;
+}
+
+.bar {
+  width: 120px;
+  height: 2px;
+  background-color: var(--active-color);
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.portfolioLink {
+  display: inline-block;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #e97358 0%, #e93325 100%);
+  line-height: 48px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.productDetailsWrap h2,
+.productDetailsWrap h3 {
+  color: var(--active-color);
+}
+
+.prodInfo {
+  width: 50%;
+  margin-right: 32px;
+}
+
+.galleryWrap {
+  width: 50%;
+  position: relative;
+}
+
+.galleryWrap .bigImg {
+  margin-bottom: 30px;
+}
+
+.imgList {
+  display: flex;
+}
+
+.gridImg {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  object-fit: cover !important;
+}
+
+.flexWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .prodInfo {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .galleryWrap {
+    width: 100%;
+  }
+  .bgwrap {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .flexWrap {
+    display: block;
+  }
+  .productDetailsWrap {
+    padding: 0 16px;
+  }
+}
