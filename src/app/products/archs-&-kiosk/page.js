@@ -4,6 +4,9 @@ import styles from './archs-&-kiosk.module.css';
 export default function Inflatables() {
   return (
     <section>
+      <head>
+        <title>Archs, Kiosks & Others | Petara Corporation</title>
+      </head>
       <div className={styles.bgwrap}>
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}

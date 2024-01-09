@@ -7,6 +7,9 @@ import CorporateProductListing from './components/products/product-listing';
 export default function CorporateGifting() {
   return (
     <>
+      <head>
+        <title>Promotion & Gifting | Petara Corporation</title>
+      </head>
       <HeroCarouselCorporate />
       <Intro />
       <CorporateProductListing />

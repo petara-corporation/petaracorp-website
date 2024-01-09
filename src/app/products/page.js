@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './product.module.css';
+import PageTitle from '../components/page-title/page-title.component';
 
 export default function Products() {
   const productList = [
@@ -59,6 +60,9 @@ export default function Products() {
   ];
   return (
     <section>
+      <head>
+        <title>Inflatables | Petara Corporation</title>
+      </head>
       <div className={styles.bgwrap}>
         <div
           className={`heading  text-center flex flex-col items-center ${styles.verticalAlign}`}

@@ -4,6 +4,9 @@ import styles from './personal-utility-gifting.module.css';
 export default function PersonalUtilityGifting() {
   return (
     <section>
+      <head>
+        <title>Personal Utility Gifting | Petara Corporation</title>
+      </head>
       <div className={styles.bgwrap}>
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}

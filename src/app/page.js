@@ -7,6 +7,9 @@ import TrustMarker from './components/trustmarker-section/trustmarker';
 export default function Home() {
   return (
     <>
+      <head>
+        <title>Petara Corporation</title>
+      </head>
       <HeroCarousel />
       <OurServices />
       <Testimonials />

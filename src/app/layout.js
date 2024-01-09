@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', 'G-WZ5KD741G7');
+          gtag('config', 'G-2VVLNM7Z3P');
         `}
         </Script>
       </Head>

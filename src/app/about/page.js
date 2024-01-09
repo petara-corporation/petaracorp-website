@@ -5,6 +5,9 @@ import Pillars from './pillars';
 export default function About() {
   return (
     <section>
+      <head>
+        <title>About | Petara Corporation</title>
+      </head>
       <div className={styles.bgwrap}>
         <div
           className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}

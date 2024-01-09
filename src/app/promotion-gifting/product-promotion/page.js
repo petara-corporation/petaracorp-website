@@ -4,6 +4,9 @@ import styles from './product-promotion.module.css';
 export default function ProductPromotion() {
   return (
     <section>
+      <head>
+        <title>Promotional Products | Petara Corporation</title>
+      </head>
       <div className={styles.bgwrap}>
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}

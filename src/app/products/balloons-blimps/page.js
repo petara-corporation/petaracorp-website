@@ -4,6 +4,9 @@ import styles from './balloons-blimps.module.css';
 export default function BalloonsBlimps() {
   return (
     <section>
+      <head>
+        <title>Balloons & Blimps | Petara Corporation</title>
+      </head>
       <div className={styles.bgwrap}>
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}

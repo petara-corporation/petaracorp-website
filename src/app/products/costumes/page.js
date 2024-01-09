@@ -4,6 +4,9 @@ import styles from './costumes.module.css';
 export default function Inflatables() {
   return (
     <section>
+      <head>
+        <title>Inflatable Costumes | Petara Corporation</title>
+      </head>
       <div className={styles.bgwrap}>
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
@@ -39,7 +42,7 @@ export default function Inflatables() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/ferrero-kinderjoy-inflatable.png'
+                src='/images/inflatable-products/costumes/ferrero-kinderjoy-inflatable.png'
                 alt='Bouncy and Inflatables'
                 fill
                 sizes='(max-width: 768px) 100vw, 50vw'
@@ -49,7 +52,7 @@ export default function Inflatables() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/Costume.png'
+                  src='/images/inflatable-products/costumes/Costume.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -58,7 +61,7 @@ export default function Inflatables() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/joker.png'
+                  src='/images/inflatable-products/costumes/joker.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -67,7 +70,7 @@ export default function Inflatables() {
               <div className='flex-1 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/USPro-Paint.png'
+                  src='/images/inflatable-products/costumes/USPro-Paint.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

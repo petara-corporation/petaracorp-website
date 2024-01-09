@@ -70,6 +70,9 @@ const Portfolio = () => {
   }
   return (
     <section className='portfolio mb-8'>
+      <head>
+        <title>Portfolio | Petara Corporation</title>
+      </head>
       <div className={styles.bgwrap}>
         <div
           className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
