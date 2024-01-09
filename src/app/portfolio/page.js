@@ -1,65 +1,29 @@
 'use client';
+import { useRouter, useSearchParams } from 'next/navigation';
 import styles from './portfolio.module.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GalleryItems, TabList } from './data';
 import ImageViewer from '../components/image-viewer/image-viewer';
 import Testimonials from '../components/testimonials/testimonials';
 
 const Portfolio = () => {
-  const brands = [
-    {
-      id: 1,
-      name: 'ICICI Bank',
-      url: '/icici.png',
-    },
-    {
-      id: 2,
-      name: 'Servo',
-      url: '/servo.png',
-    },
-    {
-      id: 3,
-      name: 'Piaggio',
-      url: '/piaggio.png',
-    },
-    {
-      id: 4,
-      name: 'Syngenta',
-      url: '/syngenta.png',
-    },
-    {
-      id: 5,
-      name: 'Coromandel',
-      url: '/coromandel.png',
-    },
-    {
-      id: 6,
-      name: 'Vision',
-      url: '/vision.png',
-    },
-    {
-      id: 7,
-      name: 'UPL',
-      url: '/upl.png',
-    },
-  ];
+  const params = useSearchParams();
+  const router = useRouter();
 
-  const [selectedTab, setSelectedTab] = useState('All');
   const [selectedImgIndex, setSelectedImgIndex] = useState(0);
   const [displayList, setDisplayList] = useState(GalleryItems);
   const [isOpen, setIsOpen] = useState(false);
 
-  function filterPortfolio(tab) {
-    setSelectedTab(tab);
-    if (tab !== 'All') {
-      let data = GalleryItems.filter(f => f.type === tab);
-      setDisplayList(data);
+  const filterPortfolio = tab => {
+    if (tab) {
+      setDisplayList(GalleryItems.filter(f => f.type === tab));
     } else {
-      setDisplayList(GalleryItems);
+      setDisplayList([...GalleryItems]);
     }
-  }
+  };
+
   function setIndex(index) {
     setSelectedImgIndex(index);
     setIsOpen(true);
@@ -67,6 +31,15 @@ const Portfolio = () => {
   function hideModal() {
     setIsOpen(false);
   }
+
+  useEffect(() => {
+    if (params.get('tab')) {
+      filterPortfolio(params.get('tab'));
+    } else {
+      filterPortfolio();
+    }
+  }, [params]);
+
   return (
     <section className='portfolio mb-8'>
       <head>
@@ -93,9 +66,21 @@ const Portfolio = () => {
             {TabList.map(tab => {
               return (
                 <li
-                  onClick={() => filterPortfolio(tab)}
+                  onClick={() =>
+                    router.push(
+                      tab !== 'All' ? `/portfolio?tab=${tab}` : `/portfolio`,
+                      {
+                        scroll: false,
+                      },
+                    )
+                  }
                   key={tab}
-                  className={selectedTab === tab ? styles.activeTab : ''}
+                  className={
+                    params.get('tab') === tab ||
+                    (tab === 'All' && !params.get('tab'))
+                      ? styles.activeTab
+                      : ''
+                  }
                 >
                   {tab}
                 </li>
@@ -107,7 +92,7 @@ const Portfolio = () => {
           >
             {displayList.map((image, index) => {
               return (
-                <li key={image.alt} className='relative'>
+                <li key={image.src} className='relative'>
                   <Image
                     className={`${styles.gridImgPortfolio} relative`}
                     src={image.src}
