@@ -6,17 +6,17 @@ export default function CorporateProductListing() {
     {
       id: 1,
       name: 'Corporate Gifting',
-      url: '/keychains_accessories.png',
+      url: '/images/promotions-giftings/corporate-gifts/tile-corporate.jpg',
     },
     {
       id: 2,
       name: 'Personal Utility Gifting',
-      url: '/bags.png',
+      url: '/images/promotions-giftings/personal-utilities/Tile-personal.jpg',
     },
     {
       id: 3,
       name: 'Product Promotion',
-      url: '/stationary.png',
+      url: '/images/promotions-giftings/promotional-products/Tile-product.jpg',
     },
   ];
   return (
