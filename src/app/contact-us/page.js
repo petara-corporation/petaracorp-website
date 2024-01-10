@@ -94,13 +94,22 @@ const ContactUs = () => {
   };
 
   const showData = () => {
-    console.log(user);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/contact-us', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(user));
+    setShowSuccessAlert(true);
+    // setTimeout(() => {
+    // setUserData({});
+    // ref.current.reset();
+    // setShowSuccessAlert(false);
+    // }, 10000);
   };
 
   return (
     <div>
       <div>
-        <div className={` ${styles.ContactUsWrap}`} ref={ref}>
+        <div className={` ${styles.ContactUsWrap}`}>
           <div className={styles.bgwrap}>
             <div
               className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
@@ -117,6 +126,7 @@ const ContactUs = () => {
                 e.stopPropagation();
                 showData();
               }}
+              ref={ref}
             >
               <h3 className='mb-8 font-medium text-xl'>
                 Kindly provide a brief details to enhance our service to you
@@ -307,20 +317,28 @@ const ContactUs = () => {
                   </svg>
                   <span class='sr-only'>Info</span>
                   <div class='ms-3 text-sm font-medium'>
-                    A simple info alert with an{' '}
+                    We have got your request. Our team will reach out to you
+                    regarding your query. Feel free to ping us on{' '}
+                    <a href='mailto:sales@petaracorp.com'>
+                      sales@petaracorp.com
+                    </a>{' '}
+                    or call us on{' '}
+                    <a href='tel:+918879292103'>+91 88792 92103</a> for any
+                    urgent queries.
+                    <br />
                     <a
-                      href='#'
+                      href='https://www.instagram.com/petaracorp/?igsh=MXU1NGZjbDVkaGNicg%3D%3D'
                       class='font-semibold underline hover:no-underline'
                     >
-                      example link
+                      Check out our Instagram
                     </a>
-                    . Give it a click if you like.
                   </div>
                   <button
                     type='button'
                     class='ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8'
                     data-dismiss-target='#alert-3'
                     aria-label='Close'
+                    onClick={() => setShowSuccessAlert(false)}
                   >
                     <span class='sr-only'>Close</span>
                     <svg

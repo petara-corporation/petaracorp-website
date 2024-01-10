@@ -12,7 +12,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [images, setImages] = useState([
     {
-      src: '/inflatables_bouncies.png',
+      src: '/images/inflatable-products/bouncies/inflatables_bouncies.png',
       alt: 'Inflatables',
     },
     {

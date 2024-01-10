@@ -118,10 +118,19 @@ export default function Footer() {
               Aundh, Pune - 411007
             </p>
           </div>
-          <div className={styles.addressWrap}>
+          <div className={`${styles.addressWrap} mb-8`}>
             <Image src='/phone.svg' alt='Address' width={40} height={40} />
             <a href='tel:+918879292103' className='text-sm font-medium ml-6'>
               +91 88792 92103
+            </a>
+          </div>
+          <div className={styles.addressWrap}>
+            <Image src='/phone.svg' alt='Address' width={40} height={40} />
+            <a
+              href='mailto:sales@petaracorp.com'
+              className='text-sm font-medium ml-6'
+            >
+              sales@petaracorp.com
             </a>
           </div>
         </section>
