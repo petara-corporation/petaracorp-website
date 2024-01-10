@@ -75,7 +75,7 @@ export default function Inflatables() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/Spiderman.png'
+                src='/images/inflatable-products/inflatables/Spiderman.png'
                 alt='Bouncy and Inflatables'
                 height={100}
                 width={500}
@@ -103,7 +103,7 @@ export default function Inflatables() {
               <div className='flex-1 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/bottle.jpg'
+                  src='/images/inflatable-products/inflatables/bottle.jpg'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

@@ -69,7 +69,7 @@ export default function BalloonsBlimps() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/spiderman.png'
+                  src='/images/inflatable-products/inflatables/Spiderman.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

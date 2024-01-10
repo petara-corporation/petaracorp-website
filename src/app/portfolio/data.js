@@ -32,7 +32,7 @@ export const GalleryItems = [
   // },
   {
     type: 'Inflatables',
-    src: '/spiderman.png',
+    src: '/images/inflatable-products/inflatables/Spiderman.png',
     alt: 'Inflatables',
   },
   {
