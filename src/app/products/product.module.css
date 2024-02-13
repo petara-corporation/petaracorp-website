@@ -72,6 +72,13 @@
   text-align: center;
 }
 
+.layerWrap .hoverLayer .text h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
 .layerWrap:hover .overlay {
   opacity: 0;
   transition-delay: 0s;
