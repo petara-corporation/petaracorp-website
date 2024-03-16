@@ -1,13 +1,3 @@
-.bar {
-  width: 120px;
-  height: 2px;
-  background-color: var(
-    --active-color
-  ); /* --active-color variable needs to be defined */
-  border-radius: 8px;
-  margin-bottom: 60px;
-}
-
 .layerImageWrap {
   min-height: 400px;
 }
@@ -23,11 +13,6 @@
 }
 
 .inflatables {
-  /* background: url('/inflatables_and_bouncies.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat; */
 }
 
 .layerWrap .hoverLayer {
@@ -113,11 +98,15 @@
   }
   .overlay h2,
   .layerWrap .hoverLayer .text h2 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 10px;
   }
   .overlay h3,
   .layerWrap .hoverLayer .text h3 {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .viewAll {
+    margin-top: 14px;
   }
 }
 

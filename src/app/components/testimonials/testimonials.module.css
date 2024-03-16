@@ -1,6 +1,5 @@
 .testimonialsWrap {
   padding: 60px 0;
-  /* background-image: url("../../../../public/bg2.jpeg"); */
   background-color: #e8f2f7;
 }
 
@@ -16,28 +15,25 @@
   padding: 16px;
   max-height: 100px;
 }
-.mobileCarousel {
-  display: none;
-}
-.desktopCarousel {
-  display: flex;
-}
-.desktopCarousel img {
-  height: 100px;
-}
-
-@media only screen and (max-width: 750px) {
-  .mobileCarousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .desktopCarousel {
-    display: none;
-  }
-}
 
 .slide {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.carousal {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+
+@media only screen and (max-width: 750px) {
+  .carousal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .twoCol {
+    grid-template-columns: 1fr 1fr;
+  }
 }

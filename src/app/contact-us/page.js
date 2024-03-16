@@ -1,11 +1,10 @@
 'use client';
 import Image from 'next/image';
 import styles from './contact-us.module.css';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-const ContactUs = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const ContactUsComponent = () => {
   const ref = useRef();
   const searchParams = useSearchParams();
   const [user, setUserData] = useState({
@@ -99,11 +98,6 @@ const ContactUs = () => {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(user));
     setShowSuccessAlert(true);
-    // setTimeout(() => {
-    // setUserData({});
-    // ref.current.reset();
-    // setShowSuccessAlert(false);
-    // }, 10000);
   };
 
   return (
@@ -159,7 +153,7 @@ const ContactUs = () => {
                     value={user.companyName}
                     onChange={handleChange}
                     className={styles.inputForm}
-                    placeholder='Eg: Amazon'
+                    placeholder='Eg: XYZ Corp'
                     required
                   />
                 </div>
@@ -423,6 +417,14 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const ContactUs = () => {
+  return (
+    <Suspense>
+      <ContactUsComponent />
+    </Suspense>
   );
 };
 

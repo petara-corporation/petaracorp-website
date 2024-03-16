@@ -10,5 +10,11 @@
 }
 .moto {
   font-family: 'trashhand';
-  margin: 15px;
+  margin: 16px;
+}
+.footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }

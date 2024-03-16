@@ -3,14 +3,14 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import styles from './portfolio.module.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { GalleryItems, TabList } from './data';
 import ImageViewer from '../components/image-viewer/image-viewer';
 import Testimonials from '../components/testimonials/testimonials';
 
-const Portfolio = () => {
-  const params = useSearchParams();
+const PortfolioComponent = () => {
   const router = useRouter();
+  const params = useSearchParams();
 
   const [selectedImgIndex, setSelectedImgIndex] = useState(0);
   const [displayList, setDisplayList] = useState(GalleryItems);
@@ -114,6 +114,14 @@ const Portfolio = () => {
         open={isOpen}
       />
     </section>
+  );
+};
+
+const Portfolio = () => {
+  return (
+    <Suspense>
+      <PortfolioComponent />
+    </Suspense>
   );
 };
 

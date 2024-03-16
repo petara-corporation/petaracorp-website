@@ -51,7 +51,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  background-image: url('/bg.png');
+  background-image: url('/bg-cropped.png');
 }
 
 html {
@@ -86,4 +86,12 @@ html {
 .carousel .control-dots .dot.selected,
 .carousel .control-dots .dot:hover {
   background-color: #2c74d6 !important;
+}
+
+.bar {
+  width: 120px;
+  height: 2px;
+  background-color: var(--active-color);
+  border-radius: 8px;
+  margin-bottom: 60px;
 }

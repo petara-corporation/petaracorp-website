@@ -10,7 +10,7 @@ import ContactUsModal from '../../components/contact-popup/contact-popup';
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [images, setImages] = useState([
+  const images = [
     {
       src: '/images/inflatable-products/bouncies/inflatables_bouncies.png',
       alt: 'Inflatables',
@@ -19,7 +19,7 @@ export default function Header() {
       src: '/corporate_gifts_2.png',
       alt: 'Corporate Gifting',
     },
-  ]);
+  ];
 
   const hideModal = () => {
     setOpen(false);
@@ -182,9 +182,19 @@ export default function Header() {
           </nav>
         </div>
         <div className='ctaWrap'>
-          <button className={`${styles.cta} `} onClick={showModal}>
-            Get in Touch
-          </button>
+          {pathname !== '/contact-us' ? (
+            <button className={`${styles.cta} `} onClick={showModal}>
+              Get in Touch
+            </button>
+          ) : (
+            <div
+              style={{
+                width: 133.66,
+              }}
+            >
+              &nbsp;
+            </div>
+          )}
         </div>
       </div>
       <ContactUsModal open={open} images={images} hideModal={hideModal} />
