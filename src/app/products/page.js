@@ -19,7 +19,7 @@ export default function Products() {
     {
       id: 2,
       label: 'Bouncy',
-      img: '/bouncies_1.jpg',
+      img: '/images/inflatable-products/bouncies/bouncies_1.jpg',
       href: '/products/bouncy',
       subProducts: [
         'Ball Pool : Bouncy with Ball',
@@ -61,7 +61,7 @@ export default function Products() {
     {
       id: 5,
       label: 'Balloons & Blimps',
-      img: '/Balloon2.png',
+      img: '/images/inflatable-products/balloons/Balloon2.png',
       href: '/products/balloons-blimps',
       subProducts: ['Arches & Kiosk', 'Balloons & Blimps'],
       description:
