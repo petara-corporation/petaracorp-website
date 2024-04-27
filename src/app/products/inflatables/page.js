@@ -1,7 +1,17 @@
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './inflatable.module.css';
 
 export default function Inflatables() {
+  const imageList = [
+    '/images/inflatable-products/inflatables/Spiderman.png',
+    '/images/inflatable-products/inflatables/Rhyno.jpg',
+    '/Main-file-sqr.jpg',
+    '/images/inflatable-products/inflatables/bottle.jpg',
+  ];
+  const [bigImageIndex, setBigImageIndex] = useState(0);
   return (
     <section>
       <head>
@@ -75,40 +85,29 @@ export default function Inflatables() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/images/inflatable-products/inflatables/Spiderman.png'
+                src={imageList[bigImageIndex]}
                 alt='Bouncy and Inflatables'
                 height={100}
                 width={500}
               />
             </div>
             <div className={`${styles.imgList}`}>
-              <div className='flex-1 mr-4 relative'>
-                <Image
-                  className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/images/inflatable-products/inflatables/Rhyno.jpg'
-                  alt='Bouncy and Inflatables'
-                  fill
-                  sizes='(max-width: 768px) 100vw, 50vw'
-                />
-              </div>
-              <div className='flex-1 mr-4 relative'>
-                <Image
-                  className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/Main-file-sqr.jpg'
-                  alt='Bouncy and Inflatables'
-                  fill
-                  sizes='(max-width: 768px) 100vw, 50vw'
-                />
-              </div>
-              <div className='flex-1 relative'>
-                <Image
-                  className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/images/inflatable-products/inflatables/bottle.jpg'
-                  alt='Bouncy and Inflatables'
-                  fill
-                  sizes='(max-width: 768px) 100vw, 50vw'
-                />
-              </div>
+              {imageList.map((image, index) => {
+                return bigImageIndex !== index ? (
+                  <div
+                    key={image}
+                    className={`flex-1 ${index + 1 === imageList.length ? '' : 'mr-4'} relative cursor-pointer`}
+                  >
+                    <Image
+                      className={`${styles.gridImg} max-h-40 md:max-h-48`}
+                      src={image}
+                      alt='Bouncy and Inflatables'
+                      fill
+                      onClick={() => setBigImageIndex(index)}
+                    />
+                  </div>
+                ) : null;
+              })}
             </div>
           </div>
         </div>

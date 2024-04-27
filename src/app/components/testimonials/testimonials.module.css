@@ -28,6 +28,10 @@
   align-items: last baseline;
 }
 
+.twoCol img {
+  height: 80px;
+}
+
 @media only screen and (max-width: 750px) {
   .carousal {
     display: grid;

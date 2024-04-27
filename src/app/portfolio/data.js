@@ -24,12 +24,6 @@ export const GalleryItems = [
     src: '/play-inflatable.png',
     alt: 'bouncy second',
   },
-  // {
-  //   key: 6,
-  //   type: 'Bouncy',
-  //   src: '/images/inflatable-products/bouncies/bouncy.png',
-  //   alt: 'bouncy third',
-  // },
   {
     type: 'Inflatables',
     src: '/images/inflatable-products/inflatables/Spiderman.png',
@@ -92,4 +86,11 @@ export const GalleryItems = [
   },
 ];
 
-export const TabList = ['All', 'Inflatables', 'Bouncy', 'Costumes', 'Arches'];
+export const TabList = [
+  'All',
+  'Inflatables',
+  'Bouncy',
+  'Costumes',
+  'Arches',
+  // 'Product Promotions',
+];

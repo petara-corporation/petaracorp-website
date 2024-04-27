@@ -58,7 +58,7 @@ export default function Inflatables() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
-                  src='/Dolphin-bouncy.png'
+                  src='/images/inflatable-products/bouncies/Dolphin-bouncy.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -67,7 +67,7 @@ export default function Inflatables() {
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
-                  src='/bouncy-8.png'
+                  src='/images/inflatable-products/bouncies/bouncy-8.png'
                   alt='Bouncy and Inflatables'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'

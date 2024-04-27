@@ -4,11 +4,6 @@ import Footer from './UI/Footer/footer';
 import Header from './UI/header/header';
 import Head from 'next/head';
 
-export const metadata = {
-  title: 'Petara Corp',
-  description: 'Corporate Gifting | Bouncy & Inflatables Provider',
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
@@ -23,6 +18,9 @@ export default function RootLayout({ children }) {
           gtag('config', 'G-2VVLNM7Z3P');
         `}
         </Script>
+        <meta charSet='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <body>
         <Header />

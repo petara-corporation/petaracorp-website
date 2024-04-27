@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import styles from './product.module.css';
-import PageTitle from '../components/page-title/page-title.component';
 
 export default function Products() {
   const productList = [
     {
       id: 1,
       label: 'Inflatables',
-      img: '/inflatables.jpg',
+      img: '/images/inflatable-products/inflatables/7Up.png',
       href: '/products/inflatables',
       subProducts: [
         'Ground Inflatable Product Shape ',
@@ -75,11 +74,11 @@ export default function Products() {
       </head>
       <div className={styles.bgwrap}>
         <div
-          className={`heading  text-center flex flex-col items-center ${styles.verticalAlign}`}
+          className={`heading text-center flex flex-col items-center ${styles.verticalAlign}`}
         >
-          <h2 className='text-4xl font-semibold mb-4'>
+          <p className='text-2xl md:text-4xl font-semibold mb-4'>
             Larger than Life Inflatables
-          </h2>
+          </p>
           <div className={`${styles.bar}`}></div>
           <p className='text-xl mt-4'>
             Bring your brand to life with our Larger than Life Inflatables{' '}
@@ -91,10 +90,10 @@ export default function Products() {
       </div>
       <div className={styles.products}>
         <div className={`${styles.subnav} container mx-auto`}>
-          <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+          <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
             {productList.map(product => {
               return (
-                <li className={`${styles.productItem}`} key={product?.id}>
+                <li className={`${styles.productItem}`} key={product?.label}>
                   <a href={product?.href} className='block h-full'>
                     <div className={`${styles.layerWrap} relative`}>
                       <div className={styles.layerImageWrap}>

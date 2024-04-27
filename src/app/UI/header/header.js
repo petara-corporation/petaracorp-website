@@ -7,17 +7,21 @@ import { navLinks } from './data';
 import { useState } from 'react';
 import ContactUsModal from '../../components/contact-popup/contact-popup';
 
-export default function Header() {
+const Header = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const images = [
     {
-      src: '/images/inflatable-products/bouncies/inflatables_bouncies.png',
+      src: '/images/inflatables_bouncies_contact_us.png',
       alt: 'Inflatables',
     },
     {
-      src: '/corporate_gifts_2.png',
+      src: '/images/corporate_gifts_contact_us.png',
       alt: 'Corporate Gifting',
+    },
+    {
+      src: '/images/Bamboo/eco-ethnic.webp',
+      alt: 'Eco Friendly Gifting',
     },
   ];
 
@@ -34,7 +38,7 @@ export default function Header() {
       className={`fixed w-full py-2 md:py-0 px-2 md:px-4 top-0 bg-white z-10  ${styles.header}`}
     >
       <div
-        className={`container  mx-auto flex justify-between items-center ${styles.resContainer}`}
+        className={`container mx-auto flex justify-between items-center ${styles.resContainer}`}
       >
         <div className='flex'>
           <div className={`${styles.hamburger} relative`}>
@@ -51,7 +55,7 @@ export default function Header() {
                   <ul className='my-4'>
                     {navLinks.map(nav => {
                       return (
-                        <li className='mb-2' key={nav.id}>
+                        <li className='mb-2' key={nav.title}>
                           <a
                             className={`block p-4 ${
                               pathname === nav.path ? styles.activeLinkMob : ''
@@ -65,7 +69,10 @@ export default function Header() {
                               <ul className='pl-6'>
                                 {nav?.subMenu?.map(sub => {
                                   return (
-                                    <li className={`ml-4 py-2`} key={sub?.id}>
+                                    <li
+                                      className={`ml-4 py-2`}
+                                      key={sub?.label}
+                                    >
                                       <a href={sub.url}>{sub.label}</a>
                                     </li>
                                   );
@@ -84,7 +91,7 @@ export default function Header() {
           <Link href='/' className={`block ${styles.logoWidth}`}>
             <Image
               className='relative'
-              src='/petara_logo_landscape.jpg'
+              src='/images/petara_logo_landscape.jpg'
               alt='Petara Logo'
               width={163}
               height={55}
@@ -97,14 +104,17 @@ export default function Header() {
             <ul className='flex'>
               {navLinks.map(nav => {
                 return (
-                  <li className={`mr-4 ${styles.mainMenu}`} key={nav.id}>
+                  <li
+                    className={`mr-4 ${styles.mainMenu} px-4`}
+                    key={nav.title}
+                  >
                     <a
-                      className={`${styles.link} px-4 pb-3 whitespace-nowrap ${
+                      className={`${styles.link} whitespace-nowrap ${
                         nav.path !== '/' && pathname.startsWith(nav.path)
                           ? styles.activeLink
                           : nav.path === pathname
-                          ? styles.activeLink
-                          : ''
+                            ? styles.activeLink
+                            : ''
                       }`}
                       href={nav.path}
                     >
@@ -117,7 +127,7 @@ export default function Header() {
                             return (
                               <li
                                 className={`flex py-8 ${styles.menuItem}`}
-                                key={sub?.id}
+                                key={sub?.label}
                               >
                                 <a
                                   href={sub.url}
@@ -200,4 +210,6 @@ export default function Header() {
       <ContactUsModal open={open} images={images} hideModal={hideModal} />
     </header>
   );
-}
+};
+
+export default Header;

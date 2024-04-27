@@ -7,19 +7,54 @@ import { useSearchParams } from 'next/navigation';
 const ContactUsComponent = () => {
   const ref = useRef();
   const searchParams = useSearchParams();
-  const [user, setUserData] = useState({
-    userName: searchParams?.get('name') || '',
+
+  const [formData, setFormData] = useState({
+    name: searchParams?.get('name') || '',
     email: searchParams?.get('email') || '',
     companyName: '',
-    subject: '',
-    through: '',
     message: '',
     phone: '',
     selectedProduct: '',
     selectedCompanyType: '',
     customService: '',
     eventDate: '',
+    timestamp: new Date().toISOString(),
   });
+
+  const isValidEmail = email => /\S+@\S+\.\S+/.test(email);
+  const isFormValid = formData.name && isValidEmail(formData.email);
+
+  const handleSubmit = async event => {
+    event.preventDefault();
+    event.stopPropagation();
+    // Send the form data to Google Apps Script
+    fetch(
+      'https://script.google.com/macros/s/AKfycbytYoO2QxO92ggRO_IWkTtuPYf1iBTaNZqhQ9GutKz4CQFwqtmm7Zdz-86zwsGTqBwL/exec',
+      {
+        method: 'POST',
+        mode: 'no-cors', // Important to avoid CORS errors
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(formData),
+      },
+    )
+      .then(() => {
+        setShowSuccessAlert(true);
+        setFormData({
+          name: '',
+          email: '',
+          companyName: '',
+          message: '',
+          phone: '',
+          selectedProduct: '',
+          selectedCompanyType: '',
+          customService: '',
+          eventDate: '',
+          timestamp: new Date().toISOString(),
+        });
+      })
+      .catch(error => console.error('Error submitting form', error));
+  };
 
   const productList = [
     {
@@ -92,14 +127,6 @@ const ContactUsComponent = () => {
     }));
   };
 
-  const showData = () => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api/contact-us', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(user));
-    setShowSuccessAlert(true);
-  };
-
   return (
     <div>
       <div>
@@ -115,11 +142,7 @@ const ContactUsComponent = () => {
           <div className={`${styles.pageWrap} container mx-auto`}>
             <form
               className={`${styles.formWrap}`}
-              onSubmit={e => {
-                e.preventDefault();
-                e.stopPropagation();
-                showData();
-              }}
+              onSubmit={handleSubmit}
               ref={ref}
             >
               <h3 className='mb-8 font-medium text-xl'>
@@ -132,9 +155,11 @@ const ContactUsComponent = () => {
                   </label>
                   <input
                     type='text'
-                    name='userName'
-                    value={user.userName}
-                    onChange={handleChange}
+                    name='name'
+                    value={formData.name}
+                    onChange={e =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
                     className={styles.inputForm}
                     placeholder='Eg: John Doe'
                     required
@@ -150,8 +175,10 @@ const ContactUsComponent = () => {
                   <input
                     type='text'
                     name='companyName'
-                    value={user.companyName}
-                    onChange={handleChange}
+                    value={formData.companyName}
+                    onChange={e =>
+                      setFormData({ ...formData, companyName: e.target.value })
+                    }
                     className={styles.inputForm}
                     placeholder='Eg: XYZ Corp'
                     required
@@ -166,8 +193,10 @@ const ContactUsComponent = () => {
                   <input
                     type='text'
                     name='phone'
-                    value={user.phone}
-                    onChange={handleChange}
+                    value={formData.phone}
+                    onChange={e =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
                     className={styles.inputForm}
                     placeholder='+14845219693'
                   />
@@ -179,8 +208,10 @@ const ContactUsComponent = () => {
                   <input
                     type='email'
                     name='email'
-                    value={user.email}
-                    onChange={handleChange}
+                    value={formData.email}
+                    onChange={e =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className={styles.inputForm}
                     placeholder='Eg: johndoe@gmail.com'
                     required
@@ -196,8 +227,13 @@ const ContactUsComponent = () => {
                     name='selectedCompanyType'
                     id='selectedCompanyType'
                     className={styles.inputSelect}
-                    value={user.selectedCompanyType}
-                    onChange={handleChange}
+                    value={formData.selectedCompanyType}
+                    onChange={e =>
+                      setFormData({
+                        ...formData,
+                        selectedCompanyType: e.target.value,
+                      })
+                    }
                   >
                     <option value={''} disabled></option>
                     {companyTypes.map(company => {
@@ -222,8 +258,13 @@ const ContactUsComponent = () => {
                     name='selectedProduct'
                     id='selectedProduct'
                     className={styles.inputSelect}
-                    value={user.selectedProduct}
-                    onChange={handleChange}
+                    value={formData.selectedProduct}
+                    onChange={e =>
+                      setFormData({
+                        ...formData,
+                        selectedProduct: e.target.value,
+                      })
+                    }
                   >
                     <option value={''} disabled>
                       Select From Our Top Products & Services
@@ -258,8 +299,13 @@ const ContactUsComponent = () => {
                   <input
                     type='text'
                     name='customService'
-                    value={user.customService}
-                    onChange={handleChange}
+                    value={formData.customService}
+                    onChange={e =>
+                      setFormData({
+                        ...formData,
+                        customService: e.target.value,
+                      })
+                    }
                     className={styles.inputForm}
                     placeholder='Eg: Theme Based'
                   />
@@ -273,8 +319,10 @@ const ContactUsComponent = () => {
                   <input
                     type='date'
                     name='eventDate'
-                    value={user.eventDate}
-                    onChange={handleChange}
+                    value={formData.eventDate}
+                    onChange={e =>
+                      setFormData({ ...formData, eventDate: e.target.value })
+                    }
                     className={styles.inputForm}
                     placeholder=''
                   />
@@ -287,9 +335,11 @@ const ContactUsComponent = () => {
                   </label>
                   <textarea
                     className={styles.textarea}
-                    value={user.message}
+                    value={formData.message}
                     name='message'
-                    onChange={handleChange}
+                    onChange={e =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     placeholder='Add your message'
                   ></textarea>
                 </div>
@@ -355,7 +405,11 @@ const ContactUsComponent = () => {
               )}
               <div className={`${styles.formRow}`}>
                 <div className={`${styles.formItem} text-center`}>
-                  <button className={styles.modalBtn} type='submit'>
+                  <button
+                    className={styles.modalBtn}
+                    type='submit'
+                    disabled={!isFormValid}
+                  >
                     Get Quote
                   </button>
                 </div>

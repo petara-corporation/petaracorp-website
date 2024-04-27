@@ -78,3 +78,9 @@
     padding: 24px 8%;
   }
 }
+
+.imgWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+}

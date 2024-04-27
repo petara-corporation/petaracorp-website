@@ -6,7 +6,7 @@ import Link from 'next/link';
 import styles from './footer.module.css';
 import ContactUsModal from '../../components/contact-popup/contact-popup';
 
-export default function Footer() {
+const Footer = () => {
   const [open, setOpen] = useState(false);
   const hideModal = () => {
     setOpen(false);
@@ -19,7 +19,7 @@ export default function Footer() {
             <Link href='/'>
               <Image
                 className='relative'
-                src='/petara_logo_landscape.jpg'
+                src='/images/petara_logo_landscape.jpg'
                 alt='Petara Logo'
                 width={163}
                 height={55}
@@ -94,7 +94,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href='https://www.facebook.com'
+                    href='https://www.facebook.com/share/hVc4mo2gMNxvbCFi/?mibextid=qi2Omg'
                     target='_blank'
                     className='font-medium mb-4 inline-block text-sm underline'
                   >
@@ -157,4 +157,6 @@ export default function Footer() {
       <ContactUsModal open={open} hideModal={hideModal} email={''} name={''} />
     </footer>
   );
-}
+};
+
+export default Footer;

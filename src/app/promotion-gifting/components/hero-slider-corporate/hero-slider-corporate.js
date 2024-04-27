@@ -39,16 +39,16 @@ const HeroCarouselCorporate = () => {
               </div>
             </div>
           </div>
-          {/* <div className="slide">
-          <img alt="Premium Inflatable Solutions" src="./slide-4.jpg" />
-          <div className={`${styles.overlayText} legend`}>
-            <div className={styles.textWrap}>
-              <h1>Customize Gift Packing</h1>
-              <p>for Your Business Success</p>
-              <button>Explore</button>
+          <div className='slide'>
+            <img alt='Premium Inflatable Solutions' src='./slide-4.jpg' />
+            <div className={`${styles.overlayText} legend`}>
+              <div className={styles.textWrap}>
+                <h1>Customize Gift Packing</h1>
+                <p>for Your Business Success</p>
+                <button>Explore</button>
+              </div>
             </div>
           </div>
-        </div> */}
         </Carousel>
       )}
     </div>

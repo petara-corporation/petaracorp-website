@@ -1,13 +1,15 @@
 import Image from 'next/image';
 import styles from './about-us.module.css';
 import Pillars from './pillars';
+import Meta from '../components/meta/meta.component';
 
 export default function About() {
   return (
     <section>
-      <head>
-        <title>About | Petara Corporation</title>
-      </head>
+      <Meta
+        title='About | Petara Corporation'
+        description='Inflatables, Bouncy & Corporate Gifting provider'
+      />
       <div className={styles.bgwrap}>
         <div
           className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
@@ -41,6 +43,43 @@ export default function About() {
           expertise extends to handling bulk orders seamlessly, ensuring they
           meet the highest standards upon delivery. Our partnerships span from
           premium to local brands, addressing your unique needs.
+        </p>
+      </div>
+      <div className={`${styles.aboutInfo} container mx-auto`}>
+        <h2 className='mb-8 text-center md:text-left text-2xl md:text-3xl font-bold'>
+          Made in India
+        </h2>
+        <p className='text-lg'>Why Made in India?</p>
+        <p className='text-sm mb-2'>
+          At Petara, we take pride in being an Indian brand that stands for
+          excellence, ethics, and a commitment to global well-being. Here's why
+          choosing "Made in India" matters:
+        </p>
+        <p className='text-md'>Technological Prowess on a Budget:</p>
+        <p className='text-sm mb-2'>
+          Just like Chandrayaan (Indian Lunar Exploration Programme) symbolizes
+          India's top-tier technological capabilities at an unbelievable cost,
+          we at Petara deliver the best quality products at reasonable prices.
+          Our commitment to excellence ensures that you receive cutting-edge
+          solutions without breaking the bank.
+        </p>
+        <p className='text-md'>Humanity First:</p>
+        <p className='text-sm mb-4'>
+          During the challenging times of the pandemic, India extended a helping
+          hand globally. Unlike others, India not only provided vaccines to
+          those in need but did so free of cost. Embracing the spirit of
+          Vasudaiva Kutumbakam (the world is one family), India helped numerous
+          developing nations fulfil their vaccine requirements without
+          prioritising profits. At Petara, we uphold this principle, placing
+          humanity and ethics at the core of our business.
+        </p>
+        <p className='text-sm mb-4'>
+          By choosing Petara, you support a brand rooted in Indian values,
+          proving that India can not only compete but excel on the global stage.
+          We challenge the misconception that only certain countries can produce
+          at scale and affordable rates—India stands tall, delivering quality
+          without compromise. Join us in celebrating the excellence and ethics
+          that define "Made in India."
         </p>
       </div>
       <div className={`${styles.processWrap} container mx-auto pt-8`}>
@@ -77,7 +116,7 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src='/baloon.jpg'
+              src='/images/baloon.webp'
               alt='Balloon'
               width={250}
               height={250}
@@ -130,7 +169,7 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src='/costume.jpg'
+              src='/images/timely_execution.webp'
               alt='Balloon'
               width={250}
               height={250}
@@ -153,7 +192,7 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src='/bouncy.jpg'
+              src='/images/inflatable-products/bouncies/bouncy.jpg'
               alt='Balloon'
               width={250}
               height={250}
@@ -177,7 +216,7 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src='/costume.jpg'
+              src='/images/ethics.jpeg'
               alt='Balloon'
               width={250}
               height={250}

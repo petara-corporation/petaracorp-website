@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './testimonials.module.css';
 
-export default function Testimonials() {
+const Testimonials = () => {
   const brandsTopLine = [
     {
       name: 'UPL',
@@ -10,7 +10,7 @@ export default function Testimonials() {
     },
     {
       name: 'BASF',
-      url: '/images/clients/basf.png',
+      url: '/images/clients/BASF_B_W_logo.jpg',
     },
     {
       name: 'IOCL',
@@ -32,6 +32,10 @@ export default function Testimonials() {
       name: 'Indigo',
       url: '/images/clients/Indigo.png',
     },
+    // {
+    //   name: 'Govind Milk and Milk Products',
+    //   url: '/images/clients/govind_milk.jpeg',
+    // },
     {
       name: 'Ageis',
       url: '/images/clients/Ageis.png',
@@ -40,10 +44,10 @@ export default function Testimonials() {
       name: 'Pidilite',
       url: '/images/clients/Pidilite.png',
     },
-    {
-      name: 'Mahyco',
-      url: '/images/clients/mahyco.png',
-    },
+    // {
+    //   name: 'Mahyco',
+    //   url: '/images/clients/mahyco.png',
+    // },
   ];
   const brands = [
     {
@@ -59,8 +63,8 @@ export default function Testimonials() {
       url: '/images/clients/Finolex Cables.png',
     },
     {
-      name: 'Indofil',
-      url: '/images/clients/Indofil-2.jpeg',
+      name: 'Atul Limited',
+      url: '/images/clients/Atul_logo.svg',
     },
     {
       name: 'Rovensa Next',
@@ -73,8 +77,16 @@ export default function Testimonials() {
   ];
   const brandsLastRow = [
     {
+      name: 'Syngenta',
+      url: '/images/clients/syngenta.jpeg',
+    },
+    {
       name: 'ICICI Bank',
       url: '/images/clients/icici_logo.png',
+    },
+    {
+      name: 'Indofil',
+      url: '/images/clients/Indofil-2.jpeg',
     },
     {
       name: 'Coromandel',
@@ -132,6 +144,7 @@ export default function Testimonials() {
                 <img
                   alt={slide.name}
                   src={slide.url}
+                  style={{ height: 64 }}
                   className={styles.imgSlide}
                 />
               </div>
@@ -141,4 +154,6 @@ export default function Testimonials() {
       </div>
     </section>
   );
-}
+};
+
+export default Testimonials;

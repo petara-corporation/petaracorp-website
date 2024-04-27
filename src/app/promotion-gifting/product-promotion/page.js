@@ -5,7 +5,9 @@ export default function ProductPromotion() {
   return (
     <section>
       <head>
-        <title>Promotional Products | Petara Corporation</title>
+        <title>
+          Promotional Products | Product Promotion | Petara Corporation
+        </title>
       </head>
       <div className={styles.bgwrap}>
         <div

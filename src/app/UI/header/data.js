@@ -1,33 +1,29 @@
 export const navLinks = [
   {
-    id: 1,
     title: 'Home',
     path: '/',
   },
   {
-    id: 2,
     title: 'Inflatables',
     path: '/products',
     subMenu: [
       {
-        id: 1,
         label: 'Inflatables',
         img: '/inflatable-icon.svg',
         url: '/products/inflatables',
         description:
-          'Elevate events with attention-grabbing, larger-than-life inflatables',
+          'Product Launches, Corporate Event, Outdoor Festivals, Sporting Events, Trade Shows',
         subProducts: [
           'Ground Inflatable Product Shape ',
           'Ground Inflatable Character Shape',
         ],
       },
       {
-        id: 2,
         label: 'Bouncy',
         img: '/bouncy-icon.svg',
         url: '/products/bouncy',
         description:
-          'Foster joy and physical development with our vibrant bouncy products',
+          'Corporate events, Birthday Parties, Family Gatherings, School Events, Community Festivals, Carnivals',
         subProducts: [
           'Ball Pool : Bouncy with Ball',
           'Basic Bouncy : Standard Bouncy',
@@ -42,12 +38,11 @@ export const navLinks = [
         ],
       },
       {
-        id: 3,
         label: 'Costumes',
         img: '/costume-icon.svg',
         url: '/products/costumes',
         description:
-          'Transform moments with playful, interactive and creative inflatable costumes',
+          'Marketing Campaigns, Corporate Events, Themed Parties, Halloween Celebrations, School Performances',
         subProducts: [
           'Inflatable Costume : Product Shape',
           'Inflatable Costume : Character Shape ',
@@ -55,49 +50,42 @@ export const navLinks = [
         ],
       },
       {
-        id: 4,
         label: 'Arches & Kiosk',
         img: '/arches-icon.svg',
         url: '/products/archs-&-kiosk',
         description:
-          'Make a grand entrance or create unique event spaces effortlessly',
+          'Trade Shows, Expos, Entrance Decor for Events, Product Launches, Corporate Conferences',
         subProducts: ['Inflatable Arches', 'Jumping Kiosks'],
       },
       {
-        id: 5,
         label: 'Balloons & Blimps',
         img: '/balloon-icon.svg',
         url: '/products/balloons-blimps',
-        description: 'Elevate your brand in the sky',
+        description:
+          'Outdoor Events, Marketing Campaigns, Product Launches, Parades, Store Openings',
         subProducts: ['Balloons', 'Blimps'],
       },
     ],
   },
   {
-    id: 3,
     title: 'Promotion & Gifting',
     path: '/promotion-gifting',
     subMenu: [
       {
-        id: 31,
         label: 'Corporate Gifting',
         img: '/corp_gifts.png',
         url: '/promotion-gifting/corporate-gifting',
         description:
           'Stakeholder Recognition, Client or Distributor Appreciation, Annual Meetings, Festive Celebrations, Conferences and Seminars',
       },
-
       {
-        id: 32,
         label: 'Personal Utility Gifting',
         img: '/personal_utility_gifts.png',
         url: '/promotion-gifting/personal-utility-gifting',
         description:
           'Stakeholder Birthdays, Company Anniversaries, Onboarding Programs, Seasonal Gifting',
       },
-
       {
-        id: 33,
         label: 'Product Promotion',
         img: '/product_promotion.png',
         url: '/promotion-gifting/product-promotion',
@@ -107,12 +95,30 @@ export const navLinks = [
     ],
   },
   {
-    id: 4,
+    title: 'Eco-Ethnic Gifting',
+    path: '/eco-ethnic-gifting',
+    subMenu: [
+      {
+        label: 'Eco Friendly Gifting',
+        img: '/product_promotion.png',
+        url: '/eco-ethnic-gifting/eco-friendly-gifting',
+        description:
+          'Product Launch Events, Trade Shows and Expos, Marketing Campaigns, Store Openings, Promotional Events',
+      },
+      {
+        label: 'Indian Traditional Gifting',
+        img: '/service-4.jpeg',
+        url: '/eco-ethnic-gifting/indian-traditional-gifting',
+        description:
+          'Product Launch Events, Trade Shows and Expos, Marketing Campaigns, Store Openings, Promotional Events',
+      },
+    ],
+  },
+  {
     title: 'Portfolio',
     path: '/portfolio',
   },
   {
-    id: 5,
     title: 'About',
     path: '/about',
   },

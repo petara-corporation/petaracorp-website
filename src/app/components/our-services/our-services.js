@@ -25,20 +25,22 @@ export default function OurServices() {
               sizes='(max-width: 768px) 100vw, 50vw'
             />
             <div className={styles.overlay}>
-              <h2>Bouncy & Inflatables</h2>
-              <h3>
+              <p className={styles.title}>Bouncy & Inflatables</p>
+              <p className={styles.shortDesc}>
                 Embark on a journey of inflatable wonder where the fun never
                 deflates
-              </h3>
+              </p>
             </div>
           </div>
           <div className={styles.hoverLayer}>
             <div className={styles.text}>
-              <h2>Bouncy & Inflatables: Larger than life products</h2>
-              <h3 className={styles.no_mobile}>
+              <p className={styles.title}>
+                Bouncy & Inflatables: Larger than life products
+              </p>
+              <p className={`${styles.no_mobile} ${styles.shortDesc}`}>
                 Embark on a journey of inflatable wonder where the fun never
                 deflates
-              </h3>
+              </p>
               <br className={styles.no_mobile} />
               <h4>
                 Explore a wide variety of inflatables that promise a lasting
@@ -64,20 +66,21 @@ export default function OurServices() {
               sizes='(max-width: 768px) 100vw, 50vw'
             />
             <div className={styles.overlay}>
-              <h2>Promotion & Gifting</h2>
-              <h3>
+              <p className={styles.title}>Promotion & Gifting</p>
+              <p className={styles.shortDesc}>
                 Elevate your corporate relationships and strengthen brand
                 connections
-              </h3>
+              </p>
             </div>
           </div>
           <div className={styles.hoverLayer}>
             <div className={styles.text}>
-              <h2>Promotion & Gifting</h2>
-              <h3>
+              <p className={styles.title}>Promotion & Gifting</p>
+              <p className={styles.shortDesc}>
                 Elevate your corporate relationships and strengthen brand
                 connections
-              </h3>
+                <br />
+              </p>
               <br />
               <h4>
                 Forge lasting impressions with our sophisticated and

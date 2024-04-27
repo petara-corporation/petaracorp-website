@@ -13,7 +13,7 @@ export default function CorporateGifting() {
       <HeroCarouselCorporate />
       <Intro />
       <CorporateProductListing />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <ContactUsSection />
     </>
   );
