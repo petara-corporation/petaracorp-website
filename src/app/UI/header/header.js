@@ -52,7 +52,7 @@ const Header = () => {
             <div className={`${styles.menuSlide} absolute`}>
               <div className={`${styles.nav}`}>
                 <nav className={`${styles.mobileMenu} self-center`}>
-                  <ul className='my-4 grid grid-cols-3'>
+                  <ul className='my-4'>
                     {navLinks.map(nav => {
                       return (
                         <li className='mb-2' key={nav.title}>
