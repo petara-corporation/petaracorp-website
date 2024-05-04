@@ -9,7 +9,7 @@ export const navLinks = [
     subMenu: [
       {
         label: 'Inflatables',
-        img: '/inflatable-icon.svg',
+        img: '/images/inflatable-products/inflatables/Inflatable.png',
         url: '/products/inflatables',
         description:
           'Product Launches, Corporate Event, Outdoor Festivals, Sporting Events, Trade Shows',
@@ -20,7 +20,7 @@ export const navLinks = [
       },
       {
         label: 'Bouncy',
-        img: '/bouncy-icon.svg',
+        img: '/images/inflatable-products/bouncies/Bouncy-menu.png',
         url: '/products/bouncy',
         description:
           'Corporate events, Birthday Parties, Family Gatherings, School Events, Community Festivals, Carnivals',
@@ -39,7 +39,7 @@ export const navLinks = [
       },
       {
         label: 'Costumes',
-        img: '/costume-icon.svg',
+        img: '/images/inflatable-products/costumes/Constumes.png',
         url: '/products/costumes',
         description:
           'Marketing Campaigns, Corporate Events, Themed Parties, Halloween Celebrations, School Performances',
@@ -51,7 +51,7 @@ export const navLinks = [
       },
       {
         label: 'Arches & Kiosk',
-        img: '/arches-icon.svg',
+        img: '/images/inflatable-products/archs/archs.png',
         url: '/products/archs-&-kiosk',
         description:
           'Trade Shows, Expos, Entrance Decor for Events, Product Launches, Corporate Conferences',
@@ -59,7 +59,7 @@ export const navLinks = [
       },
       {
         label: 'Balloons & Blimps',
-        img: '/balloon-icon.svg',
+        img: '/images/inflatable-products/balloons/Balloons & Blimps.png',
         url: '/products/balloons-blimps',
         description:
           'Outdoor Events, Marketing Campaigns, Product Launches, Parades, Store Openings',
@@ -73,21 +73,21 @@ export const navLinks = [
     subMenu: [
       {
         label: 'Corporate Gifting',
-        img: '/corp_gifts.png',
+        img: '/images/promotions-giftings/corporate-gifts/Corporate-gifting.png',
         url: '/promotion-gifting/corporate-gifting',
         description:
           'Stakeholder Recognition, Client or Distributor Appreciation, Annual Meetings, Festive Celebrations, Conferences and Seminars',
       },
       {
         label: 'Personal Utility Gifting',
-        img: '/personal_utility_gifts.png',
+        img: '/images/promotions-giftings/personal-utilities/personal-uti.png',
         url: '/promotion-gifting/personal-utility-gifting',
         description:
           'Stakeholder Birthdays, Company Anniversaries, Onboarding Programs, Seasonal Gifting',
       },
       {
         label: 'Product Promotion',
-        img: '/product_promotion.png',
+        img: '/images/promotions-giftings/promotional-products/Product-promo.png',
         url: '/promotion-gifting/product-promotion',
         description:
           'Product Launch Events, Trade Shows and Expos, Marketing Campaigns, Store Openings, Promotional Events',
@@ -100,14 +100,14 @@ export const navLinks = [
     subMenu: [
       {
         label: 'Eco Friendly Gifting',
-        img: '/product_promotion.png',
+        img: '/images/eco-friendly-gifting/Echo-friendly-menu.png',
         url: '/eco-ethnic-gifting/eco-friendly-gifting',
         description:
           'Product Launch Events, Trade Shows and Expos, Marketing Campaigns, Store Openings, Promotional Events',
       },
       {
         label: 'Indian Traditional Gifting',
-        img: '/service-4.jpeg',
+        img: '/images/Traditional/Traditional-gifting.png',
         url: '/eco-ethnic-gifting/indian-traditional-gifting',
         description:
           'Product Launch Events, Trade Shows and Expos, Marketing Campaigns, Store Openings, Promotional Events',

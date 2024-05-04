@@ -53,7 +53,7 @@ export default function EcoFriendlyGifting() {
             <div className={`${styles.bigImg}`}>
               <Image
                 className={`${styles.gridImg}`}
-                src='/images/promotions-giftings/promotional-products/Horse-watch.jpg'
+                src='/images/eco-friendly-gifting/eco-friendly-ganesha.jpeg'
                 alt='Corporate Gifting'
                 height={100}
                 width={500}

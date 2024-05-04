@@ -52,7 +52,7 @@ const Header = () => {
             <div className={`${styles.menuSlide} absolute`}>
               <div className={`${styles.nav}`}>
                 <nav className={`${styles.mobileMenu} self-center`}>
-                  <ul className='my-4'>
+                  <ul className='my-4 grid grid-cols-3'>
                     {navLinks.map(nav => {
                       return (
                         <li className='mb-2' key={nav.title}>
@@ -122,7 +122,9 @@ const Header = () => {
                     </a>
                     {nav?.subMenu && (
                       <div className={styles.subnav}>
-                        <ul className='container mx-auto flex justify-between'>
+                        <ul
+                          className={`container mx-auto flex justify-between grid grid-cols-${Math.min(nav.subMenu.length, 3)}`}
+                        >
                           {nav?.subMenu?.map(sub => {
                             return (
                               <li
@@ -140,17 +142,16 @@ const Header = () => {
                                 >
                                   <div className='flex'>
                                     <div
-                                      // className={`relative`}
                                       style={{
-                                        width: 48,
+                                        width: 102,
                                       }}
                                     >
                                       <Image
-                                        className='relative'
+                                        className='relative rounded'
                                         src={sub.img}
                                         alt={sub.label}
-                                        width={48}
-                                        height={48}
+                                        width={102}
+                                        height={102}
                                       />
                                     </div>
                                     <div
@@ -159,24 +160,20 @@ const Header = () => {
                                     >
                                       <h2>{sub.label}</h2>
                                       <p>{sub.description}</p>
-                                      {/* <div>
-                                      {sub?.subProducts?.map(product => {
-                                        return <p key={product}>{product}</p>;
-                                      })}
-                                    </div> */}
+
+                                      <div
+                                        className={`block flex ${styles.productImage}`}
+                                      >
+                                        Show Details{' '}
+                                        <Image
+                                          className='relative ml-1'
+                                          src='/arrow-right.svg'
+                                          alt='Arrow'
+                                          width={12}
+                                          height={12}
+                                        />
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div
-                                    className={`block flex ${styles.productImage}`}
-                                  >
-                                    Show Details{' '}
-                                    <Image
-                                      className='relative ml-1'
-                                      src='/arrow-right.svg'
-                                      alt='Arrow'
-                                      width={12}
-                                      height={12}
-                                    />
                                   </div>
                                 </a>
                               </li>

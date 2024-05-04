@@ -95,7 +95,9 @@ export default function Products() {
               return (
                 <li className={`${styles.productItem}`} key={product?.label}>
                   <a href={product?.href} className='block h-full'>
-                    <div className={`${styles.layerWrap} relative`}>
+                    <div
+                      className={`${styles.layerWrap} relative rounded overflow-hidden`}
+                    >
                       <div className={styles.layerImageWrap}>
                         <Image
                           className={`${styles.gridImg} relative`}
