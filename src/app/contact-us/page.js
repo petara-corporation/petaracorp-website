@@ -446,11 +446,28 @@ const ContactUsComponent = () => {
                       height={40}
                     />
                     <p className='text-sm font-medium ml-6'>
+                      <b>Communication Address:</b>
+                      <br />
                       I - 5, Clarion Park, <br />
                       Aundh, Pune - 411007
                     </p>
                   </div>
-                  <div className={styles.addressWrap}>
+                  <div className={`${styles.addressWrap} mb-8`}>
+                    <Image
+                      src='/marker.svg'
+                      alt='Address'
+                      width={40}
+                      height={40}
+                    />
+                    <p className='text-sm font-medium ml-6'>
+                      <b>Head Office:</b>
+                      <br />
+                      10/09, Shri Vivekanand CHS, <br />
+                      Saraswat Colony, <br />
+                      Dombivli (E), Mumbai 421201
+                    </p>
+                  </div>
+                  <div className={`${styles.addressWrap} mb-8`}>
                     <Image
                       src='/phone.svg'
                       alt='Address'
@@ -462,6 +479,20 @@ const ContactUsComponent = () => {
                       className='text-sm font-medium ml-6'
                     >
                       +91 88792 92103
+                    </a>
+                  </div>
+                  <div className={styles.addressWrap}>
+                    <Image
+                      src='/phone.svg'
+                      alt='Address'
+                      width={40}
+                      height={40}
+                    />
+                    <a
+                      href='tel:+919819554405'
+                      className='text-sm font-medium ml-6'
+                    >
+                      +91 98195 54405
                     </a>
                   </div>
                 </section>

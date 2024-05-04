@@ -56,7 +56,7 @@ export default function BalloonsBlimps() {
                 sizes='(max-width: 768px) 100vw, 50vw'
               />
             </div>
-            <div className={`${styles.imgList}`}>
+            {/* <div className={`${styles.imgList}`}>
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
@@ -84,7 +84,7 @@ export default function BalloonsBlimps() {
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

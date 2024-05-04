@@ -192,7 +192,7 @@ export default function About() {
           <div className={`${styles.imgWrap}`}>
             <Image
               className={`relative md:mr-8 ${styles.processImg}`}
-              src='/images/inflatable-products/bouncies/bouncy.jpg'
+              src='/visualize-your-vision-2.jpeg'
               alt='Balloon'
               width={250}
               height={250}
