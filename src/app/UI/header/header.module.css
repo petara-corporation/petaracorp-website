@@ -45,13 +45,15 @@
 }
 
 .menuSlide {
-  transform: translateX(-280px);
+  transform: translateX(-286px);
   transition: all 0.5s ease-out;
   width: 260px;
   height: 100vh;
   overflow-y: auto;
   background-color: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
   top: 53px;
   padding-left: 1rem;
 }
@@ -148,11 +150,9 @@
   }
 }
 
-@media only screen and (max-width: 819px) {
+@media only screen and (max-width: 1024px) {
   .desktopMenu {
     display: none;
-  }
-  .nav {
   }
   .hamburger {
     display: block;

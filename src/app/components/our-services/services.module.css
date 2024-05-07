@@ -114,7 +114,7 @@
   /* Corrected the max-width value */
   .bar {
     width: 95px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
   .no_mobile {
     display: none;

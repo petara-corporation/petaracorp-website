@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full py-2 md:py-0 px-2 md:px-4 top-0 bg-white z-10  ${styles.header}`}
+      className={`fixed w-full py-2 px-2 md:px-4 top-0 bg-white z-10  ${styles.header}`}
     >
       <div
         className={`container mx-auto flex justify-between items-center ${styles.resContainer}`}
@@ -120,7 +120,7 @@ const Header = () => {
                     >
                       {nav.title}
                     </a>
-                    {nav?.subMenu && (
+                    {nav?.subMenu ? (
                       <div className={styles.subnav}>
                         <ul
                           className={`container mx-auto flex justify-between grid grid-cols-${Math.min(nav.subMenu.length, 3)}`}
@@ -181,7 +181,7 @@ const Header = () => {
                           })}
                         </ul>
                       </div>
-                    )}
+                    ) : null}
                   </li>
                 );
               })}

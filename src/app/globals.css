@@ -15,7 +15,8 @@
 
 @font-face {
   font-family: 'noto_sans';
-  src: url('/fonts/notosans-regular-webfont.woff2') format('woff2'),
+  src:
+    url('/fonts/notosans-regular-webfont.woff2') format('woff2'),
     url('/fonts/notosans-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -23,7 +24,8 @@
 
 @font-face {
   font-family: 'trashhand';
-  src: url('/fonts/trashhand-webfont.woff2') format('woff2'),
+  src:
+    url('/fonts/trashhand-webfont.woff2') format('woff2'),
     url('/fonts/trashhand-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -31,7 +33,8 @@
 
 @font-face {
   font-family: 'roboto';
-  src: url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
+  src:
+    url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
     url('/fonts/roboto-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -60,6 +63,12 @@ html {
 
 .page-offset {
   margin-top: 87px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .page-offset {
+    margin-top: 56px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -93,5 +102,5 @@ html {
   height: 2px;
   background-color: var(--active-color);
   border-radius: 8px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }

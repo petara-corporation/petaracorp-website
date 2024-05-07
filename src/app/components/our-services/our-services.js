@@ -4,17 +4,15 @@ import styles from './services.module.css';
 
 export default function OurServices() {
   return (
-    <section className='ourServices'>
+    <section className='container mx-auto max-[1024px]:px-4'>
       <div className='heading container text-center flex flex-col items-center mx-auto'>
         <h2 className='text-2xl md:text-4xl font-semibold mb-4'>
           Our Services
         </h2>
         <div className='bar'></div>
       </div>
-      <div className='images container mx-auto block md:flex justify-between'>
-        <div
-          className={`${styles.layerWrap} w-11/12 mx-auto md:w-2/4 mb-8 md:mb-0 md:mr-6 relative`}
-        >
+      <div className='images container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 py-8'>
+        <div className={`${styles.layerWrap} relative max-md:mb-8`}>
           <div className={`${styles.layerImageWrap} ${styles.inflatables}`}>
             <Image
               src='/inflatables_and_bouncies.png'
@@ -53,9 +51,7 @@ export default function OurServices() {
             </div>
           </div>
         </div>
-        <div
-          className={`${styles.layerWrap} w-11/12 mx-auto md:w-2/4 relative`}
-        >
+        <div className={`${styles.layerWrap} relative`}>
           <div className={styles.layerImageWrap}>
             <Image
               src='/corporate_gifts.png'
