@@ -125,7 +125,7 @@ const Header = () => {
                         <ul
                           className={`container mx-auto flex justify-between grid grid-cols-${Math.min(nav.subMenu.length, 3)}`}
                           style={{
-                            'grid-template-columns': `repeat(${Math.min(nav.subMenu.length, 3)}, minmax(0, 1fr))`,
+                            gridTemplateColumns: `repeat(${Math.min(nav.subMenu.length, 3)}, minmax(0, 1fr))`,
                           }}
                         >
                           {nav?.subMenu?.map(sub => {

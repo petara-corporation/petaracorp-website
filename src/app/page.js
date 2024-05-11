@@ -5,9 +5,6 @@ import OurServices from './components/our-services/our-services';
 import Testimonials from './components/testimonials/testimonials';
 import TrustMarker from './components/trustmarker-section/trustmarker';
 
-// AKfycbzpuFou4q73FrbfNNOXkV9b7yc3QnhDjAcQFbm_0YLpeBSK0ZTbV9Wc00MnxwacdT1j
-// https://script.google.com/macros/s/AKfycbzpuFou4q73FrbfNNOXkV9b7yc3QnhDjAcQFbm_0YLpeBSK0ZTbV9Wc00MnxwacdT1j/exec
-
 export const metadata = {
   title: 'Petara Corporation',
   description: 'Inflatables, Bouncy & Corporate Gifting Provider',

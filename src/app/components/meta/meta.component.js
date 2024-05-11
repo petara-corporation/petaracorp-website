@@ -1,10 +1,12 @@
+import Head from 'next/head';
+
 const Meta = ({
   title,
   description,
   summary = 'Inflatables, Bouncy & Corporate Gifting provider',
 }) => {
   return (
-    <head>
+    <Head>
       <title>{title}</title>
       <meta name='description' content={description} />
       {/* open graph meta tags */}
@@ -17,7 +19,7 @@ const Meta = ({
       {/* google seo meta tags */}
       <meta itemProp='name' content={title} />
       <meta itemProp='description' content={description} />
-    </head>
+    </Head>
   );
 };
 
