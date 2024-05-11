@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full py-2 px-2 md:px-4 top-0 bg-white z-10  ${styles.header}`}
+      className={`fixed w-full px-2 md:px-4 top-0 bg-white z-10  ${styles.header}`}
     >
       <div
         className={`container mx-auto flex justify-between items-center ${styles.resContainer}`}
@@ -124,6 +124,9 @@ const Header = () => {
                       <div className={styles.subnav}>
                         <ul
                           className={`container mx-auto flex justify-between grid grid-cols-${Math.min(nav.subMenu.length, 3)}`}
+                          style={{
+                            'grid-template-columns': `repeat(${Math.min(nav.subMenu.length, 3)}, minmax(0, 1fr))`,
+                          }}
                         >
                           {nav?.subMenu?.map(sub => {
                             return (
