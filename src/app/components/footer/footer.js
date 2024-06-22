@@ -94,7 +94,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href='https://www.facebook.com/share/hVc4mo2gMNxvbCFi/?mibextid=qi2Omg'
+                    href='https://www.facebook.com/share/hVc4mo2gMNxvbCFi/'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='font-medium mb-4 inline-block text-sm underline'
@@ -104,7 +104,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href='https://www.instagram.com/petaracorp?igsh=MXU1NGZjbDVkaGNicg=='
+                    href='https://www.instagram.com/petaracorp'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='font-medium mb-4 inline-block text-sm underline'
