@@ -2,10 +2,10 @@ import styles from './intro.module.css';
 
 const Intro = () => {
   return (
-    <div className={styles.contactUs}>
+    <section className={styles.contactUs} aria-labelledby="intro-heading">
       <div className='container mx-auto'>
         <div className={`${styles.aboutInfo} text-center`}>
-          <h2 className='text-4xl mb-8 '>
+          <h2 id="intro-heading" className='text-4xl mb-8'>
             In the rush of the world, let the act of giving be stress-free
           </h2>
           <p className='mb-8 text'>
@@ -17,6 +17,7 @@ const Intro = () => {
             solutions offer a diverse array of possibilities.
           </p>
         </div>
+        {/* Uncomment and use if needed */}
         {/* <div className={`${styles.processWrap} mx-auto`}>
           <ul className={`flex flex-wrap`}>
             <li>
@@ -51,7 +52,7 @@ const Intro = () => {
           </ul>
         </div> */}
       </div>
-    </div>
+    </section>
   );
 };
 

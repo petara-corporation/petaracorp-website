@@ -4,9 +4,9 @@ import styles from './services.module.css';
 
 export default function OurServices() {
   return (
-    <section className='container mx-auto max-[1024px]:px-4'>
+    <section className='container mx-auto max-[1024px]:px-4' aria-labelledby="our-services-heading">
       <div className='heading container text-center flex flex-col items-center mx-auto'>
-        <h2 className='text-2xl md:text-4xl font-semibold mb-4'>
+        <h2 id="our-services-heading" className='text-2xl md:text-4xl font-semibold mb-4'>
           Our Services
         </h2>
         <div className='bar'></div>
@@ -21,8 +21,9 @@ export default function OurServices() {
               objectPosition='center'
               objectFit='cover'
               sizes='(max-width: 768px) 100vw, 50vw'
+              loading='lazy'
             />
-            <div className={styles.overlay}>
+            <div className={styles.overlay} aria-hidden="true">
               <p className={styles.title}>Bouncy & Inflatables</p>
               <p className={styles.shortDesc}>
                 Embark on a journey of inflatable wonder where the fun never
@@ -45,7 +46,7 @@ export default function OurServices() {
                 visual impact with superior quality, ensuring your brand stays
                 activated in the hearts and minds of your customers.
               </h4>
-              <Link href={'/products'} className={styles.viewAll}>
+              <Link href='/products' className={styles.viewAll} aria-label="View all products related to Bouncy & Inflatables">
                 View Products
               </Link>
             </div>
@@ -60,8 +61,9 @@ export default function OurServices() {
               objectPosition='center'
               objectFit='cover'
               sizes='(max-width: 768px) 100vw, 50vw'
+              loading='lazy'
             />
-            <div className={styles.overlay}>
+            <div className={styles.overlay} aria-hidden="true">
               <p className={styles.title}>Promotion & Gifting</p>
               <p className={styles.shortDesc}>
                 Elevate your corporate relationships and strengthen brand
@@ -82,7 +84,7 @@ export default function OurServices() {
                 Forge lasting impressions with our sophisticated and
                 personalized corporate gifting solutions.
               </h4>
-              <Link href={'/promotion-gifting'} className={styles.viewAll}>
+              <Link href='/promotion-gifting' className={styles.viewAll} aria-label="View all promotion and gifting products">
                 View products
               </Link>
             </div>

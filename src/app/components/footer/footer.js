@@ -11,6 +11,7 @@ const Footer = () => {
   const hideModal = () => {
     setOpen(false);
   };
+
   return (
     <footer className={styles.footer}>
       <div className='container mx-auto block px-8 md:px-4 md:flex py-4 md:py-16 justify-between'>
@@ -20,9 +21,10 @@ const Footer = () => {
               <Image
                 className='relative'
                 src='/images/petara_logo_landscape.jpg'
-                alt='Petara Logo'
+                alt='Petara Corporation Logo'
                 width={163}
                 height={55}
+                priority
               />
             </Link>
           </div>
@@ -34,14 +36,13 @@ const Footer = () => {
           }}
         >
           <section>
-            <nav>
+            <nav aria-label="Company navigation">
               <ul>
                 <li>
                   <h3
                     className='font-bold mb-6'
                     style={{ fontFamily: 'arial' }}
                   >
-                    {' '}
                     Company
                   </h3>
                 </li>
@@ -70,25 +71,24 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href='/contact-us'
                     className='font-medium inline-block text-sm'
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
           </section>
           <section>
-            <nav>
+            <nav aria-label="Follow Us navigation">
               <ul>
                 <li>
                   <h3
                     className='font-bold mb-6'
                     style={{ fontFamily: 'arial' }}
                   >
-                    {' '}
                     Follow Us
                   </h3>
                 </li>
@@ -96,6 +96,7 @@ const Footer = () => {
                   <a
                     href='https://www.facebook.com/share/hVc4mo2gMNxvbCFi/?mibextid=qi2Omg'
                     target='_blank'
+                    rel='noopener noreferrer'
                     className='font-medium mb-4 inline-block text-sm underline'
                   >
                     Facebook
@@ -105,6 +106,7 @@ const Footer = () => {
                   <a
                     href='https://www.instagram.com/petaracorp?igsh=MXU1NGZjbDVkaGNicg=='
                     target='_blank'
+                    rel='noopener noreferrer'
                     className='font-medium mb-4 inline-block text-sm underline'
                   >
                     Instagram
@@ -114,6 +116,7 @@ const Footer = () => {
                   <a
                     href='https://www.linkedin.com/company/petaracorp/'
                     target='_blank'
+                    rel='noopener noreferrer'
                     className='font-medium mb-4 inline-block text-sm underline'
                   >
                     LinkedIn
@@ -125,20 +128,20 @@ const Footer = () => {
         </div>
         <section className={styles.contact}>
           <div className={`${styles.addressWrap} mb-6`}>
-            <Image src='/marker.svg' alt='Address' width={40} height={40} />
-            <p className='text-sm font-medium ml-6'>
+            <Image src='/marker.svg' alt='Location marker icon' width={40} height={40} />
+            <address className='text-sm font-medium ml-6 not-italic'>
               I - 5, Clarion Park, <br />
               Aundh, Pune - 411007
-            </p>
+            </address>
           </div>
           <div className={`${styles.addressWrap} mb-6`}>
-            <Image src='/phone.svg' alt='Address' width={40} height={40} />
+            <Image src='/phone.svg' alt='Phone icon' width={40} height={40} />
             <a href='tel:+918879292103' className='text-sm font-medium ml-6'>
               +91 88792 92103
             </a>
           </div>
           <div className={styles.addressWrap}>
-            <Image src='/email.svg' alt='Address' width={40} height={40} />
+            <Image src='/email.svg' alt='Email icon' width={40} height={40} />
             <a
               href='mailto:sales@petaracorp.com'
               className='text-sm font-medium ml-6'
@@ -150,8 +153,7 @@ const Footer = () => {
       </div>
       <div className={`${styles.copyright} py-4`}>
         <p className='text-white container text-center mx-auto'>
-          &#169; Copyright {new Date().getFullYear()} Petara Corp, All rights
-          reserved.
+          &#169; Copyright {new Date().getFullYear()} Petara Corp, All rights reserved.
         </p>
       </div>
       <ContactUsModal open={open} hideModal={hideModal} email={''} name={''} />

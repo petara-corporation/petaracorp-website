@@ -1,21 +1,15 @@
 'use client';
 import { useState } from 'react';
-// import ContactUsModal from '../contact-popup/contact-popup';
 import styles from './contact-us-section.module.css';
 
 export default function ContactUsSection() {
-  const [open, setOpen] = useState(false);
-  const [fullname, setFullname] = useState('');
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const hideModal = () => {
-    setOpen(false);
-  };
+
   return (
-    <section className={styles.ContactUsWrap}>
-      <div
-        className={`${styles.heading} container text-center flex flex-col items-center mx-auto`}
-      >
-        <h2 className='text-4xl font-semibold mb-4'>Contact Us</h2>
+    <section className={styles.ContactUsWrap} aria-labelledby="contact-us-heading">
+      <div className={`${styles.heading} container text-center flex flex-col items-center mx-auto`}>
+        <h2 id="contact-us-heading" className='text-4xl font-semibold mb-4'>Contact Us</h2>
         <div className={`${styles.bar}`}></div>
         <p className='mb-4 px-4'>Ready to take the next step?</p>
         <p className='mb-14 px-4'>
@@ -24,37 +18,40 @@ export default function ContactUsSection() {
         </p>
       </div>
       <div className='container mx-auto'>
-        <div className={styles.formWrap}>
+        <form className={styles.formWrap} action='/contact-us' method='GET'>
+          <label htmlFor='name' className='sr-only'>Full Name</label>
           <input
             type='text'
-            maxLength={60}
+            id='name'
+            name='name'
+            maxLength={100}
             placeholder='Name'
             required
+            value={fullName}
             className={`${styles.input} mt-4 mr-0 md:mt-0 md:mr-4`}
-            onChange={e => setFullname(e.target.value)}
+            onChange={e => setFullName(e.target.value)}
           />
+          <label htmlFor='email' className='sr-only'>Email Address</label>
           <input
             type='email'
-            maxLength={60}
+            id='email'
+            name='email'
+            maxLength={100}
             placeholder='Email'
             required
+            value={email}
             className={`${styles.input} mt-4 mr-0 md:mt-0 md:mr-4`}
             onChange={e => setEmail(e.target.value)}
           />
-          <a
-            href={`/contact-us/?name=${fullname}&email=${email}`}
+          <button
+            type='submit'
             className={`${styles.quoteBtn} mt-4 ml-0 md:ml-4`}
+            aria-label='Get a quote'
           >
             Get Quote
-          </a>
-        </div>
+          </button>
+        </form>
       </div>
-      {/* <ContactUsModal
-        open={open}
-        hideModal={hideModal}
-        email={email}
-        name={fullname}
-      /> */}
     </section>
   );
 }

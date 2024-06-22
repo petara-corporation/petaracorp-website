@@ -19,74 +19,52 @@ export default function CorporateProductListing() {
       href: '/promotion-gifting/personal-utility-gifting',
     },
   ];
-  // const productList2 = [
-  //   {
-  //     name: 'Eco-friendly gifting',
-  //     url: '/images/promotions-giftings/promotional-products/Tile-product.jpg',
-  //     href: '/promotion-gifting/eco-friendly-gifting',
-  //   },
-  //   {
-  //     name: 'Indian Traditional Gifting',
-  //     url: '/images/promotions-giftings/promotional-products/Tile-product.jpg',
-  //     href: '/promotion-gifting/indian-traditional-gifting',
-  //   },
-  // ];
+
   return (
-    <section className='mb-16'>
+    <section className='mb-16' aria-labelledby="product-listing-heading">
       <div className='heading container text-center flex flex-col items-center mx-auto'>
-        <h2 className='text-2xl md:text-4xl font-semibold mb-4'>
+        <h2 id="product-listing-heading" className='text-2xl md:text-4xl font-semibold mb-4'>
           Range of Products
         </h2>
         <div className={`${styles.bar}`}></div>
       </div>
       <div className={`${styles.products} container mx-auto`}>
-        <ul
-          className={`${styles.imgList} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 pt-4`}
-        >
-          {productList1.map(product => {
-            return (
-              <a
-                href={product?.href}
-                className='block h-full'
-                key={product.name}
-              >
-                <li className={`${styles.prodCard} relative`}>
-                  <Image
-                    className={`${styles.gridImgPortfolio} relative`}
-                    src={product.url}
-                    alt={product.name}
-                    fill={true}
-                    sizes='(max-width: 768px) 25vw, 25vw'
-                  />
-                  <p className='text-center mt-4'>{product.name}</p>
-                </li>
+        <ul className={`${styles.imgList} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4`}>
+          {productList1.map(product => (
+            <li key={product.name} className={`${styles.prodCard} relative`}>
+              <a href={product.href} className='block h-full' aria-label={`View details of ${product.name}`}>
+                <Image
+                  className={`${styles.gridImgPortfolio} relative`}
+                  src={product.url}
+                  alt={product.name}
+                  fill={true}
+                  sizes='(max-width: 768px) 25vw, 25vw'
+                  loading="lazy"
+                />
+                <p className='text-center mt-4'>{product.name}</p>
               </a>
-            );
-          })}
+            </li>
+          ))}
         </ul>
-        {/* <ul
-          className={`${styles.imgList} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-8 pt-4`}
-        >
-          {productList2.map(product => {
-            return (
-              <a href={product?.href} className='block h-full'>
-                <li
-                  key={product.name}
-                  className={`${styles.prodCard} relative`}
-                >
-                  <Image
-                    className={`${styles.gridImgPortfolio} relative`}
-                    src={product.url}
-                    alt={product.name}
-                    fill={true}
-                    sizes='(max-width: 768px) 25vw, 25vw'
-                  />
-                  <p className='text-center mt-4'>{product.name}</p>
-                </li>
+        {/* Uncomment and use if needed
+        <ul className={`${styles.imgList} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 pt-4`}>
+          {productList2.map(product => (
+            <li key={product.name} className={`${styles.prodCard} relative`}>
+              <a href={product.href} className='block h-full'>
+                <Image
+                  className={`${styles.gridImgPortfolio} relative`}
+                  src={product.url}
+                  alt={product.name}
+                  fill={true}
+                  sizes='(max-width: 768px) 25vw, 25vw'
+                  loading="lazy"
+                />
+                <p className='text-center mt-4'>{product.name}</p>
               </a>
-            );
-          })}
-        </ul> */}
+            </li>
+          ))}
+        </ul>
+        */}
       </div>
     </section>
   );

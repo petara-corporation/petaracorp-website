@@ -5,6 +5,7 @@
   border-radius: 8px;
   margin-bottom: 32px;
 }
+
 .ContactUsWrap {
   padding: 64px 0;
   background-color: var(--body-text);
@@ -24,6 +25,7 @@
   color: var(--body-text);
   display: inline-block;
 }
+
 .quoteBtn {
   border-radius: 40px;
   background: linear-gradient(180deg, #e97358 0%, #e93325 100%);
@@ -33,4 +35,15 @@
   font-weight: 700;
   cursor: pointer;
   display: inline-block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

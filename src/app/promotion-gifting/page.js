@@ -4,14 +4,22 @@ import HeroCarouselCorporate from './components/hero-slider-corporate/hero-slide
 import Intro from './components/intro/intro';
 import CorporateProductListing from './components/products/product-listing';
 
+const metadata = {
+  title: 'Promotion & Gifting | Petara Corporation',
+  description: 'Explore premium promotion and gifting solutions from Petara Corporation. Perfect for all corporate events and occasions.',
+  keywords: 'Promotion, Gifting, Corporate Gifting, Petara Corporation, Event Solutions',
+  image: '/images/promotion-gifting-banner.jpg',
+  url: '/promotion-gifting',
+};
+
 export default function CorporateGifting() {
   return (
-    <>
-      <Meta title='Promotion & Gifting | Petara Corporation' />
+    <main>
+      <Meta {...metadata} />
       <HeroCarouselCorporate />
       <Intro />
       <CorporateProductListing />
       <ContactUsSection />
-    </>
+    </main>
   );
 }

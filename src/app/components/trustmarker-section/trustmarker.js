@@ -23,30 +23,24 @@ export default function TrustMarker() {
       desc: 'Empowers us to manage major undertakings with ease. <br /> Ensures agility in addressing diverse project requirements.',
     },
   ];
+
   return (
-    <section className={styles.trustmarkerWrap}>
+    <section className={styles.trustmarkerWrap} aria-labelledby="trustmarker-heading">
       <div className={styles.trustmarker}>
-        <div
-          className={`${styles.heading} container text-center flex flex-col items-center mx-auto`}
-        >
-          <h2 className='text-2xl md:text-4xl font-semibold mb-4'>
+        <div className={`${styles.heading} container text-center flex flex-col items-center mx-auto`}>
+          <h2 id="trustmarker-heading" className='text-2xl md:text-4xl font-semibold mb-4'>
             Flexibility, Innovation, Trust
           </h2>
           <div className={`${styles.bar}`}></div>
         </div>
         <div className='container mx-auto'>
-          <ul className=' block md:flex justify-center flex-wrap'>
-            {benefitsList.map(benefit => {
-              return (
-                <li key={benefit.id} className={`${styles.card}  mb-6 md:mb-0`}>
-                  <h3 className='font-bold  mb-2'>{benefit.title}</h3>
-                  <div
-                    className='font-light text-sm ml-4'
-                    dangerouslySetInnerHTML={{ __html: benefit.desc }}
-                  ></div>
-                </li>
-              );
-            })}
+          <ul className='block md:flex justify-center flex-wrap'>
+            {benefitsList.map(benefit => (
+              <li key={benefit.id} className={`${styles.card} mb-6 md:mb-0`}>
+                <h3 className='font-bold mb-2'>{benefit.title}</h3>
+                <p className='font-light text-sm ml-4' dangerouslySetInnerHTML={{ __html: benefit.desc }}></p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

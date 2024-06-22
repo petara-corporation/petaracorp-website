@@ -26,6 +26,7 @@
   font-family: 'trashhand';
   margin-bottom: 8px;
 }
+
 .overlayText p {
   font-size: 24px;
   font-weight: 400;
@@ -67,12 +68,14 @@
     text-align: center;
   }
 }
+
 .mobileView {
   width: 100%;
   height: 300px;
   position: relative;
   color: #fff;
 }
+
 .mobileView img {
   width: 100%;
   height: 100%;

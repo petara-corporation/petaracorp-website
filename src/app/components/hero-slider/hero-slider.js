@@ -6,16 +6,21 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const HeroCarousel = () => {
   return (
-    <div className='relative w-full mb-10'>
+    <section className='relative w-full mb-10' aria-label="Hero Carousel">
       <Carousel
         autoPlay
         infiniteLoop
         showStatus={false}
         showThumbs={false}
         dynamicHeight={false}
+        aria-label="Main hero carousel"
       >
         <div className={styles.desktopView}>
-          <img alt='Premium Inflatable Solutions' src='./slide1.jpg' />
+          <img
+            alt='Premium Inflatable Solutions'
+            src='./slide1.jpg'
+            loading='lazy'
+          />
           <div className={`${styles.overlayText} legend`}>
             <div className={styles.textWrap}>
               <div>
@@ -29,13 +34,13 @@ const HeroCarousel = () => {
                 the eye and soul.
               </p>
               <a href='/products'>
-                <button>Explore</button>
+                <button aria-label="Explore Products">Explore</button>
               </a>
             </div>
           </div>
         </div>
       </Carousel>
-    </div>
+    </section>
   );
 };
 

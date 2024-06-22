@@ -1,24 +1,31 @@
+import React from 'react';
 import Image from 'next/image';
 import styles from './archs-&-kiosk.module.css';
+import Meta from '../../components/meta/meta.component';
 
-export default function Inflatables() {
+const metadata = {
+  title: 'Petara Corporation - Arches & Kiosks',
+  description: 'Provider of premium quality arches and kiosks for events. Make a grand entrance or create unique event spaces effortlessly with Petara Corporation.',
+  keywords: 'Inflatables, Arches, Kiosks, Petara Corporation, Event Solutions',
+  image: '/images/inflatable-products/archs/banner---Arches-&-Kiosk.jpg',
+  url: '/products/archs-&-kiosk',
+};
+
+export default function ArchsAndKiosks() {
   return (
-    <section>
-      <head>
-        <title>Archs, Kiosks & Others | Petara Corporation</title>
-      </head>
-      <div className={styles.bgwrap}>
-        <div
-          className={`heading  text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
-        >
-          <h2 className='text-4xl font-semibold mb-4'>Arches & Kiosk</h2>
+    <main>
+      <Meta {...metadata} />
+      <section className={styles.bgwrap} aria-labelledby="archs-kiosk-heading">
+        <div className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}>
+          <h1 id="archs-kiosk-heading" className='text-4xl font-semibold mb-4'>Arches & Kiosk</h1>
           <div className={`${styles.bar}`}></div>
         </div>
-      </div>
-      <div className={`${styles.productDetailsWrap} container mx-auto mb-8`}>
+      </section>
+      <section className={`${styles.productDetailsWrap} container mx-auto mb-8`} aria-labelledby="product-details-heading">
+        <h2 id="product-details-heading" className="sr-only">Product Details</h2>
         <div className={styles.flexWrap}>
           <div className={styles.prodInfo}>
-            <h1 className='text-4xl mb-8 '>Meet your event superheroes</h1>
+            <h1 className='text-4xl mb-8'>Meet your event superheroes</h1>
             <p className='mb-8 text'>
               Arches & Kiosk Inflatables redefine the landscape of events—
               Picture eye-catching arches welcoming everyone, and kiosks being
@@ -31,9 +38,7 @@ export default function Inflatables() {
               of events. With our Arches & Kiosk Inflatables, your brand becomes
               the star of the show, leaving a mark that people won't forget!
             </p>
-            <h3 className='text-xl mb-8 font-bold'>
-              Grab your customers' attention from a Kilometre away
-            </h3>
+            <h3 className='text-xl mb-8 font-bold'>Grab your customers' attention from a Kilometre away</h3>
             <p className='mb-8 text'>
               Choosing our Arches & Kiosks is more than a purchase; it's a
               strategic investment that amplifies your business or event. Our
@@ -50,9 +55,7 @@ export default function Inflatables() {
               apart from the competition.
             </p>
             <div>
-              <a className={styles.portfolioLink} href='/portfolio'>
-                View Inflatable Portfolio
-              </a>
+              <a className={styles.portfolioLink} href='/portfolio'>View Inflatable Portfolio</a>
             </div>
           </div>
           <div className={styles.galleryWrap}>
@@ -60,9 +63,10 @@ export default function Inflatables() {
               <Image
                 className={`${styles.gridImg}`}
                 src='/images/inflatable-products/archs/Arch.png'
-                alt='Bouncy and Inflatables'
+                alt='Arch Inflatable'
                 fill
                 sizes='(max-width: 768px) 100vw, 50vw'
+                loading="lazy"
               />
             </div>
             <div className={`${styles.imgList}`}>
@@ -70,33 +74,36 @@ export default function Inflatables() {
                 <Image
                   className={`${styles.gridImg} max-h-40 md:max-h-48`}
                   src='/images/inflatable-products/archs/archs.png'
-                  alt='Bouncy and Inflatables'
+                  alt='Arches Inflatable'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
+                  loading="lazy"
                 />
               </div>
               <div className='flex-1 mr-4 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
                   src='/images/inflatable-products/archs/arches.jpeg'
-                  alt='Bouncy and Inflatables'
+                  alt='Arches Inflatable'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
+                  loading="lazy"
                 />
               </div>
               <div className='flex-1 relative'>
                 <Image
                   className={`${styles.gridImg} max-h-40 max-h-48`}
                   src='/images/inflatable-products/kiosks/Inflatable-stall.jpg'
-                  alt='Bouncy and Inflatables'
+                  alt='Kiosk Inflatable'
                   fill
                   sizes='(max-width: 768px) 100vw, 50vw'
+                  loading="lazy"
                 />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }

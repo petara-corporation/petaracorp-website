@@ -32,10 +32,6 @@ const Testimonials = () => {
       name: 'Indigo',
       url: '/images/clients/Indigo.png',
     },
-    // {
-    //   name: 'Govind Milk and Milk Products',
-    //   url: '/images/clients/govind_milk.jpeg',
-    // },
     {
       name: 'Ageis',
       url: '/images/clients/Ageis.png',
@@ -44,15 +40,11 @@ const Testimonials = () => {
       name: 'Pidilite',
       url: '/images/clients/Pidilite.png',
     },
-    // {
-    //   name: 'Mahyco',
-    //   url: '/images/clients/mahyco.png',
-    // },
   ];
   const brands = [
     {
       name: 'Piaggio',
-      url: '/piaggio.png',
+      url: '/images/clients/piaggio.png',
     },
     {
       name: 'SWAL',
@@ -61,6 +53,14 @@ const Testimonials = () => {
     {
       name: 'Finolex',
       url: '/images/clients/Finolex Cables.png',
+    },
+    {
+      name: 'Govind Milk and Milk Products',
+      url: '/images/clients/govind_milk.jpeg',
+    },
+    {
+      name: 'Mahyco',
+      url: '/images/clients/mahyco.png',
     },
     {
       name: 'Atul Limited',
@@ -72,7 +72,7 @@ const Testimonials = () => {
     },
     {
       name: 'Vision',
-      url: '/vision.png',
+      url: '/images/clients/vision.png',
     },
   ];
   const brandsLastRow = [
@@ -103,49 +103,52 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className={styles.testimonialsWrap}>
+    <section className={styles.testimonialsWrap} aria-labelledby="testimonials-heading">
       <div className='heading container text-center flex flex-col items-center mx-auto'>
-        <h2 className='text-2xl md:text-4xl font-semibold mb-4'>
+        <h2 id="testimonials-heading" className='text-2xl md:text-4xl font-semibold mb-4'>
           Brands That Trust Us Through Years
         </h2>
         <div className={`${styles.bar}`}></div>
       </div>
       <div className={`${styles.brandsCarousel} container mx-auto`}>
-        <div className={`${styles.carousal}`}>
+        <div className={`${styles.carousel}`} aria-label="Top brands carousel">
           {brandsTopLine.map(slide => {
             return (
               <div className={styles.slide} key={slide.name}>
                 <img
-                  alt={slide.name}
+                  alt={`Logo of ${slide.name}`}
                   src={slide.url}
                   className={styles.imgSlide}
+                  loading='lazy'
                 />
               </div>
             );
           })}
         </div>
-        <div className={`${styles.carousal}  ${styles.twoCol}`}>
+        <div className={`${styles.carousel} ${styles.twoCol}`} aria-label="Middle brands carousel">
           {brands.map(slide => {
             return (
               <div className={styles.slide} key={slide.name}>
                 <img
-                  alt={slide.name}
+                  alt={`Logo of ${slide.name}`}
                   src={slide.url}
                   className={styles.imgSlide}
+                  loading='lazy'
                 />
               </div>
             );
           })}
         </div>
-        <div className={`${styles.carousal}  ${styles.twoCol}`}>
+        <div className={`${styles.carousel} ${styles.twoCol}`} aria-label="Bottom brands carousel">
           {brandsLastRow.map(slide => {
             return (
               <div className={styles.slide} key={slide.name}>
                 <img
-                  alt={slide.name}
+                  alt={`Logo of ${slide.name}`}
                   src={slide.url}
                   style={{ height: 64 }}
                   className={styles.imgSlide}
+                  loading='lazy'
                 />
               </div>
             );

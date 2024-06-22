@@ -10,10 +10,12 @@
 .aboutInfo h3 {
   color: var(--active-color);
 }
+
 .processWrap li b {
   font-weight: bolder !important;
   color: black !important;
 }
+
 .processWrap .processItem {
   display: flex;
   justify-content: space-evenly;
@@ -22,6 +24,7 @@
   /* border-bottom: 1px dotted #e7e7e7; */
   margin-bottom: 30px;
 }
+
 .processImg {
   border-radius: 16px;
 }
@@ -61,13 +64,6 @@
   margin-bottom: 2rem;
 }
 
-.bar {
-  width: 120px;
-  height: 2px;
-  background-color: var(--active-color);
-  border-radius: 8px;
-  margin-bottom: 32px;
-}
 .ContactUsWrap {
   padding: 32px 0;
   background-color: var(--body-text);
@@ -88,6 +84,7 @@
   color: var(--body-text);
   display: inline-block;
 }
+
 .quoteBtn {
   border-radius: 40px;
   background: linear-gradient(180deg, #e97358 0%, #e93325 100%);
