@@ -15,7 +15,7 @@ export default function OurServices() {
         <div className={`${styles.layerWrap} relative max-md:mb-8`}>
           <div className={`${styles.layerImageWrap} ${styles.inflatables}`}>
             <Image
-              src='/inflatables_and_bouncies.png'
+              src='/inflatables_and_bouncies-min.png'
               alt='Bouncy and Inflatables'
               fill
               objectPosition='center'
@@ -55,7 +55,7 @@ export default function OurServices() {
         <div className={`${styles.layerWrap} relative`}>
           <div className={styles.layerImageWrap}>
             <Image
-              src='/corporate_gifts.png'
+              src='/corporate_gifts-min.png'
               alt='Corporate Gifting'
               fill
               objectPosition='center'

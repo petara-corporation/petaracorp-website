@@ -18,7 +18,7 @@ const HeroCarousel = () => {
         <div className={styles.desktopView}>
           <img
             alt='Premium Inflatable Solutions'
-            src='./slide1.jpg'
+            src='./slide1-min.jpg'
             loading='lazy'
           />
           <div className={`${styles.overlayText} legend`}>
