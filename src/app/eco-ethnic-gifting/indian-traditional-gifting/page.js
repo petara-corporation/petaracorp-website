@@ -10,9 +10,9 @@ const metadata = {
 };
 
 export default function IndianTraditionalGifting() {
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <section className={styles.bgwrap} aria-labelledby="indian-traditional-gifting-heading">
         <div className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}>
           <h2 id="indian-traditional-gifting-heading" className='text-4xl font-semibold mb-4'>Indian Traditional Gifting</h2>
@@ -84,5 +84,5 @@ export default function IndianTraditionalGifting() {
         </div>
       </section>
     </main>
-  );
+  ];
 }

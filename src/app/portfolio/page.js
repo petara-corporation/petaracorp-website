@@ -49,9 +49,9 @@ const PortfolioComponent = () => {
     }
   }, [params]);
 
-  return (
+  return [
+    <Meta {...metadata} />,
     <section className='portfolio mb-8' aria-labelledby="portfolio-heading">
-      <Meta {...metadata} />
       <div className={styles.bgwrap}>
         <div className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}>
           <h2 id="portfolio-heading" className='text-4xl font-semibold mb-4'>Explore our diverse portfolio</h2>
@@ -97,7 +97,7 @@ const PortfolioComponent = () => {
         open={isOpen}
       />
     </section>
-  );
+  ];
 };
 
 const Portfolio = () => {

@@ -12,9 +12,9 @@ const metadata = {
 };
 
 export default function Bouncy() {
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <section className={styles.bgwrap} aria-labelledby="bouncy-heading">
         <div className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}>
           <h1 id="bouncy-heading" className='text-4xl font-semibold mb-4'>Bouncy</h1>
@@ -94,5 +94,5 @@ export default function Bouncy() {
         </div>
       </section>
     </main>
-  );
+  ];
 }

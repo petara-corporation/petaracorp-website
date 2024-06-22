@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 const BASE_URL = 'https://petaracorp.com';
 
 const Meta = ({
@@ -10,8 +8,13 @@ const Meta = ({
   keywords = 'Inflatables, Bouncy, Corporate Gifting, Petara Corporation, Event Solutions',
 }) => {
   return (
-    <Head>
+    <head>
       <title>{title}</title>
+      <meta charSet='UTF-8' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <link rel='icon' href='/favicon.ico' />
+      <meta name="author" content="Petara Corporation" />
+      <meta property="og:type" content="website" />
       <meta name='description' content={description} />
       <meta name='keywords' content={keywords} />
       <link rel="canonical" href={`${BASE_URL}${url.startsWith('/') ? url : `/${url}`}`} />
@@ -29,7 +32,7 @@ const Meta = ({
       <meta itemProp='name' content={title} />
       <meta itemProp='description' content={description} />
       <meta itemProp='image' content={`${BASE_URL}${image.startsWith('/') ? image : `/${image}`}`} />
-    </Head>
+    </head>
   );
 };
 

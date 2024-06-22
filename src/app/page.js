@@ -12,14 +12,12 @@ export const metadata = {
 };
 
 export default function Home() {
-  return (
-    <>
-      <Meta {...metadata} />
-      <HeroCarousel />
-      <OurServices />
-      <Testimonials />
-      <TrustMarker />
-      <ContactUsSection />
-    </>
-  );
+  return [
+    <Meta {...metadata} />,
+    <HeroCarousel />,
+    <OurServices />,
+    <Testimonials />,
+    <TrustMarker />,
+    <ContactUsSection />
+  ];
 }

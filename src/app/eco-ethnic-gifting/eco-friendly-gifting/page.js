@@ -11,9 +11,9 @@ const metadata = {
 };
 
 export default function EcoFriendlyGifting() {
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <section className={styles.bgwrap} aria-labelledby="eco-friendly-gifting-heading">
         <div className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}>
           <h2 id="eco-friendly-gifting-heading" className='text-4xl font-semibold mb-4'>Eco-friendly Gifting</h2>
@@ -83,5 +83,5 @@ export default function EcoFriendlyGifting() {
         </div>
       </section>
     </main>
-  );
+  ];
 }

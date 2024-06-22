@@ -136,9 +136,9 @@ const ContactUsComponent = () => {
     }));
   };
 
-  return (
+  return [
+    <Meta {...metadata} />,
     <div>
-      <Meta {...metadata} />
       <div className={` ${styles.ContactUsWrap}`}>
         <div className={styles.bgwrap}>
           <div
@@ -510,7 +510,7 @@ const ContactUsComponent = () => {
         </div>
       </div>
     </div>
-  );
+  ];
 };
 
 const ContactUs = () => {

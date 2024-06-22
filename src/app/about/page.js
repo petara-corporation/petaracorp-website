@@ -4,12 +4,12 @@ import Pillars from './pillars';
 import Meta from '../components/meta/meta.component';
 
 export default function About() {
-  return (
+  return [
+    <Meta
+      title='About | Petara Corporation'
+      description='Inflatables, Bouncy & Corporate Gifting provider'
+    />,
     <section>
-      <Meta
-        title='About | Petara Corporation'
-        description='Inflatables, Bouncy & Corporate Gifting provider'
-      />
       <div className={styles.bgwrap}>
         <div
           className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}
@@ -241,5 +241,5 @@ export default function About() {
         <Pillars />
       </div>
     </section>
-  );
+  ];
 }

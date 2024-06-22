@@ -22,9 +22,9 @@ export default function Inflatables() {
   ];
   const [bigImageIndex, setBigImageIndex] = useState(0);
 
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <section className={styles.bgwrap} aria-labelledby="inflatable-heading">
         <div className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}>
           <h1 id="inflatable-heading" className='text-4xl font-semibold mb-4'>Inflatables</h1>
@@ -105,5 +105,5 @@ export default function Inflatables() {
         </div>
       </section>
     </main>
-  );
+  ];
 }

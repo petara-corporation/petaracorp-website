@@ -24,8 +24,8 @@ const HeroCarousel = () => {
           <div className={`${styles.overlayText} legend`}>
             <div className={styles.textWrap}>
               <div>
-                <h1>We’re on a mission</h1>
-                <h1>to craft lasting impressions!</h1>
+                <h1>We’re on a mission<br />
+                  to craft lasting impressions!</h1>
               </div>
               <p>
                 Unleash a Petara i.e. "a Basket" of solutions that are

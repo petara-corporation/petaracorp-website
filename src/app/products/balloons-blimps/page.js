@@ -12,9 +12,9 @@ const metadata = {
 };
 
 export default function BalloonsBlimps() {
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <section className={styles.bgwrap} aria-labelledby="balloons-blimps-heading">
         <div className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}>
           <h1 id="balloons-blimps-heading" className='text-4xl font-semibold mb-4'>Balloons & Blimps</h1>
@@ -98,5 +98,5 @@ export default function BalloonsBlimps() {
         </div>
       </section>
     </main>
-  );
+  ];
 }

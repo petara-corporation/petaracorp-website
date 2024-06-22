@@ -13,13 +13,13 @@ const metadata = {
 };
 
 export default function CorporateGifting() {
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <HeroCarouselCorporate />
       <Intro />
       <CorporateProductListing />
       <ContactUsSection />
     </main>
-  );
+  ];
 }

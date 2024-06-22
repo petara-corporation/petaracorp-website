@@ -77,9 +77,9 @@ const productList = [
 ];
 
 export default function Products() {
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <section className={styles.bgwrap} aria-labelledby="product-heading">
         <div className={`heading text-center flex flex-col items-center ${styles.verticalAlign}`}>
           <h1 id="product-heading" className='text-2xl md:text-4xl font-semibold mb-4'>
@@ -129,5 +129,5 @@ export default function Products() {
         </div>
       </section>
     </main>
-  );
+  ];
 }

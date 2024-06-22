@@ -12,9 +12,9 @@ const metadata = {
 };
 
 export default function Costumes() {
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <section className={styles.bgwrap} aria-labelledby="costumes-heading">
         <div className={`heading text-center flex flex-col items-center mx-auto ${styles.verticalAlign}`}>
           <h1 id="costumes-heading" className='text-4xl font-semibold mb-4'>Costumes</h1>
@@ -88,5 +88,5 @@ export default function Costumes() {
         </div>
       </section>
     </main>
-  );
+  ];
 }

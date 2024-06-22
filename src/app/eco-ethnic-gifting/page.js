@@ -12,15 +12,15 @@ const metadata = {
 };
 
 const CorporateGifting = () => {
-  return (
+  return [
+    <Meta {...metadata} />,
     <main>
-      <Meta {...metadata} />
       <EcoEthnicGiftingIntro />
       <EcoEthnicProductListing />
       {/* <Testimonials /> */}
       <ContactUsSection />
     </main>
-  );
+  ];
 };
 
 export default CorporateGifting;
