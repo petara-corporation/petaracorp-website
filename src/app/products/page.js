@@ -4,7 +4,8 @@ import Meta from '../components/meta/meta.component';
 
 export const metadata = {
   title: 'Petara Corporation - Inflatables, Bouncy & Costumes',
-  description: 'Inflatables, Bouncy & Costumes Provider. Petara Corporation offers premium quality products for all events.',
+  description:
+    'Inflatables, Bouncy & Costumes Provider. Petara Corporation offers premium quality products for all events.',
   keywords: 'Inflatables, Bouncy, Costumes, Petara Corporation, Event Solutions',
   image: '/products_banner.jpeg',
   url: '/products',
@@ -21,7 +22,7 @@ const productList = [
       'Ground Inflatable Character Shape',
     ],
     description:
-      'Elevate events with attention-grabbing, larger-than-life inflatables',
+      'Elevate events with <strong>attention-grabbing</strong>, <strong>larger-than-life inflatables</strong>',
   },
   {
     id: 2,
@@ -41,7 +42,7 @@ const productList = [
       'Fun Tunnel  : Tunnel Bouncy',
     ],
     description:
-      'Foster joy and physical development with our vibrant bouncy products',
+      'Foster <strong>joy</strong> and <strong>physical development</strong> with our <strong>vibrant bouncy products</strong>',
   },
   {
     id: 3,
@@ -54,7 +55,7 @@ const productList = [
       'Fur Costume',
     ],
     description:
-      'Transform moments with playful, interactive and creative inflatable costumes',
+      'Transform moments with <strong>playful</strong>, <strong>interactive</strong> and <strong>creative inflatable costumes</strong>',
   },
   {
     id: 4,
@@ -63,7 +64,7 @@ const productList = [
     href: '/products/archs-&-kiosk',
     subProducts: ['Arches & Kiosk', 'Balloons & Blimps'],
     description:
-      'Make a grand entrance or create unique event spaces effortlessly',
+      'Make a <strong>grand entrance</strong> or create <strong>unique event spaces</strong> effortlessly',
   },
   {
     id: 5,
@@ -72,7 +73,7 @@ const productList = [
     href: '/products/balloons-blimps',
     subProducts: ['Arches & Kiosk', 'Balloons & Blimps'],
     description:
-      'Store Openings, Product Launches, Parades, Outdoor Events, Marketing Campaigns',
+      '<strong>Store Openings</strong>, <strong>Product Launches</strong>, <strong>Parades</strong>, <strong>Outdoor Events</strong>, <strong>Marketing Campaigns</strong>',
   },
 ];
 
@@ -81,44 +82,69 @@ export default function Products() {
     <Meta {...metadata} />,
     <main>
       <section className={styles.bgwrap} aria-labelledby="product-heading">
-        <div className={`heading text-center flex flex-col items-center ${styles.verticalAlign}`}>
-          <h1 id="product-heading" className='text-2xl md:text-4xl font-semibold mb-4'>
-            Larger than Life Inflatables
+        <div
+          className={`heading text-center flex flex-col items-center ${styles.verticalAlign}`}
+        >
+          <h1
+            id="product-heading"
+            className="text-2xl md:text-4xl font-semibold mb-4"
+          >
+            <strong>Larger than Life Inflatables</strong>
           </h1>
           <div className={`${styles.bar}`}></div>
-          <p className='text-xl mt-4'>
-            Bring your brand to life with our Larger than Life Inflatables{' '}
+          <p className="text-xl mt-4">
+            <strong>Bring your brand to life</strong> with our{' '}
+            <strong>Larger than Life Inflatables</strong>
             <br />
-            making a grand statement that captures attention and creates lasting
-            impressions
+            making a <strong>grand statement</strong> that{' '}
+            <strong>captures attention</strong> and{' '}
+            <strong>creates lasting impressions</strong>
           </p>
         </div>
       </section>
-      <section className={styles.products} aria-labelledby="product-list-heading">
-        <h2 id="product-list-heading" className="sr-only">Product List</h2>
+      <section
+        className={styles.products}
+        aria-labelledby="product-list-heading"
+      >
+        <h2 id="product-list-heading" className="sr-only">
+          Product List
+        </h2>
         <div className={`${styles.subnav} container mx-auto`}>
-          <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
-            {productList.map(product => (
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {productList.map((product) => (
               <li className={`${styles.productItem}`} key={product.id}>
-                <a href={product.href} className='block h-full' aria-label={`View details of ${product.label}`}>
-                  <div className={`${styles.layerWrap} relative rounded overflow-hidden`}>
+                <a
+                  href={product.href}
+                  className="block h-full"
+                  aria-label={`View details of ${product.label}`}
+                >
+                  <div
+                    className={`${styles.layerWrap} relative rounded overflow-hidden`}
+                  >
                     <div className={styles.layerImageWrap}>
                       <Image
                         className={`${styles.gridImg} relative`}
                         src={product.img}
                         alt={product.label}
                         fill={true}
-                        sizes='(max-width: 768px) 25vw, 25vw'
-                        loading='lazy'
+                        sizes="(max-width: 768px) 25vw, 25vw"
+                        loading="lazy"
                       />
                       <div className={styles.overlay}>
                         <h2>{product.label}</h2>
                       </div>
                     </div>
-                    <div className={styles.hoverLayer} aria-hidden="true">
+                    <div
+                      className={styles.hoverLayer}
+                      aria-hidden="true"
+                    >
                       <div className={styles.text}>
                         <h2>{product.label}</h2>
-                        <h3>{product.description}</h3>
+                        <h3
+                          dangerouslySetInnerHTML={{
+                            __html: product.description,
+                          }}
+                        ></h3>
                       </div>
                     </div>
                   </div>
@@ -128,6 +154,6 @@ export default function Products() {
           </ul>
         </div>
       </section>
-    </main>
+    </main>,
   ];
 }

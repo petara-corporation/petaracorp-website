@@ -11,10 +11,10 @@ export default function ContactUsSection() {
       <div className={`${styles.heading} container text-center flex flex-col items-center mx-auto`}>
         <h2 id="contact-us-heading" className='text-4xl font-semibold mb-4'>Contact Us</h2>
         <div className={`${styles.bar}`}></div>
-        <p className='mb-4 px-4'>Ready to take the next step?</p>
+        <p className='mb-4 px-4'>Ready to take the <strong>next step</strong>?</p>
         <p className='mb-14 px-4'>
-          Share your details, and we'll get back to you promptly to bring your
-          vision to life!
+          <strong>Share your details</strong>, and we'll <strong>get back to you promptly</strong> to <strong>bring your
+            vision to life</strong>!
         </p>
       </div>
       <div className='container mx-auto'>
@@ -48,10 +48,10 @@ export default function ContactUsSection() {
             className={`${styles.quoteBtn} mt-4 ml-0 md:ml-4`}
             aria-label='Get a quote'
           >
-            Get Quote
+            <strong>Get Quote</strong>
           </button>
         </form>
       </div>
     </section>
   );
-}
+};

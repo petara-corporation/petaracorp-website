@@ -4,23 +4,27 @@ export default function TrustMarker() {
   const benefitsList = [
     {
       id: 1,
-      title: 'Flexibility at the Core',
-      desc: 'Integral principle woven into our organizational fabric. <br /> Seamlessly aligns with our boundless creativity.',
+      title: '<strong>Flexibility</strong> at the Core',
+      desc:
+        '<strong>Integral principle</strong> woven into our <strong>organizational fabric</strong>. <br /> Seamlessly aligns with our <strong>boundless creativity</strong>.',
     },
     {
       id: 2,
-      title: 'Ethical Business Practices',
-      desc: 'Our practices are rooted in transparency and integrity. <br /> Ensuring trust and sustainability in every interaction.',
+      title: '<strong>Ethical Business Practices</strong>',
+      desc:
+        'Our practices are rooted in <strong>transparency</strong> and <strong>integrity</strong>. <br /> Ensuring <strong>trust</strong> and <strong>sustainability</strong> in every interaction.',
     },
     {
       id: 3,
-      title: 'Scalable Workforce',
-      desc: 'Beyond our dedicated team, capacity to swiftly expand to 300 individuals. <br />Geared for tackling substantial projects effectively.',
+      title: '<strong>Scalable Workforce</strong>',
+      desc:
+        'Beyond our dedicated team, capacity to swiftly expand to <strong>300 individuals</strong>. <br /> Geared for tackling <strong>substantial projects effectively</strong>.',
     },
     {
       id: 4,
-      title: 'Adaptability in Action',
-      desc: 'Empowers us to manage major undertakings with ease. <br /> Ensures agility in addressing diverse project requirements.',
+      title: '<strong>Adaptability</strong> in Action',
+      desc:
+        'Empowers us to manage <strong>major undertakings</strong> with ease. <br /> Ensures <strong>agility</strong> in addressing <strong>diverse project requirements</strong>.',
     },
   ];
 
@@ -29,7 +33,7 @@ export default function TrustMarker() {
       <div className={styles.trustmarker}>
         <div className={`${styles.heading} container text-center flex flex-col items-center mx-auto`}>
           <h2 id="trustmarker-heading" className='text-2xl md:text-4xl font-semibold mb-4'>
-            Flexibility, Innovation, Trust
+            <strong>Flexibility</strong>, <strong>Innovation</strong>, <strong>Trust</strong>
           </h2>
           <div className={`${styles.bar}`}></div>
         </div>
@@ -37,7 +41,7 @@ export default function TrustMarker() {
           <ul className='block md:flex justify-center flex-wrap'>
             {benefitsList.map(benefit => (
               <li key={benefit.id} className={`${styles.card} mb-6 md:mb-0`}>
-                <h3 className='font-bold mb-2'>{benefit.title}</h3>
+                <h3 className='font-bold mb-2' dangerouslySetInnerHTML={{ __html: benefit.title }}></h3>
                 <p className='font-light text-sm ml-4' dangerouslySetInnerHTML={{ __html: benefit.desc }}></p>
               </li>
             ))}

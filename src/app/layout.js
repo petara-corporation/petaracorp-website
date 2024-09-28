@@ -7,6 +7,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head>
+        <meta name="msvalidate.01" content="752203A88C7F123A5D9EB3E811E1CF26" />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

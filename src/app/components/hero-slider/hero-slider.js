@@ -24,14 +24,16 @@ const HeroCarousel = () => {
           <div className={`${styles.overlayText} legend`}>
             <div className={styles.textWrap}>
               <div>
-                <h1>We’re on a mission<br />
-                  to craft lasting impressions!</h1>
+                <h1>
+                  We’re on a mission<br />
+                  to craft lasting impressions!
+                </h1>
               </div>
               <p>
-                Unleash a Petara i.e. "a Basket" of solutions that are
-                guaranteed to amaze your clients - from Inflatables to
-                personalized gifting solutions, we craft everything that catches
-                the eye and soul.
+                Unleash a <strong>Petara</strong> i.e. "a Basket" of solutions that are
+                guaranteed to amaze your clients—from <strong>Inflatables</strong> to
+                <strong> personalized gifting solutions</strong>, we craft everything that{' '}
+                <strong>catches the eye and soul</strong>.
               </p>
               <a href='/products'>
                 <button aria-label="Explore Products">Explore</button>
@@ -43,5 +45,6 @@ const HeroCarousel = () => {
     </section>
   );
 };
+
 
 export default HeroCarousel;
