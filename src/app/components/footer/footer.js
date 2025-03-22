@@ -36,7 +36,7 @@ const Footer = () => {
           }}
         >
           <section>
-            <nav aria-label="Company navigation">
+            <nav aria-label='Company navigation'>
               <ul>
                 <li>
                   <h3
@@ -82,7 +82,7 @@ const Footer = () => {
             </nav>
           </section>
           <section>
-            <nav aria-label="Follow Us navigation">
+            <nav aria-label='Follow Us navigation'>
               <ul>
                 <li>
                   <h3
@@ -128,10 +128,17 @@ const Footer = () => {
         </div>
         <section className={styles.contact}>
           <div className={`${styles.addressWrap} mb-6`}>
-            <Image src='/marker.svg' alt='Location marker icon' width={40} height={40} />
+            <Image
+              src='/marker.svg'
+              alt='Location marker icon'
+              width={40}
+              height={40}
+            />
             <address className='text-sm font-medium ml-6 not-italic'>
               I - 5, Clarion Park, <br />
-              Aundh, Pune - 411007
+              Aundh, Pune, MH,
+              <br />
+              India - 411007
             </address>
           </div>
           <div className={`${styles.addressWrap} mb-6`}>
@@ -143,17 +150,18 @@ const Footer = () => {
           <div className={styles.addressWrap}>
             <Image src='/email.svg' alt='Email icon' width={40} height={40} />
             <a
-              href='mailto:sales@petaracorp.com'
+              href='mailto:reach@petaracorp.com'
               className='text-sm font-medium ml-6'
             >
-              sales@petaracorp.com
+              reach@petaracorp.com
             </a>
           </div>
         </section>
       </div>
       <div className={`${styles.copyright} py-4`}>
         <p className='text-white container text-center mx-auto'>
-          &#169; Copyright {new Date().getFullYear()} Petara Corp, All rights reserved.
+          &#169; Copyright {new Date().getFullYear()} Petara Corp, All rights
+          reserved.
         </p>
       </div>
       <ContactUsModal open={open} hideModal={hideModal} email={''} name={''} />
