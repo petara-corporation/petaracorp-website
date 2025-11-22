@@ -73,9 +73,17 @@ const Footer = () => {
                 <li>
                   <Link
                     href='/contact-us'
-                    className='font-medium inline-block text-sm'
+                    className='font-medium mb-4 inline-block text-sm'
                   >
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href='/privacy-policy'
+                    className='font-medium inline-block text-sm'
+                  >
+                    Privacy Policy
                   </Link>
                 </li>
               </ul>

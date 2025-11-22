@@ -19,5 +19,6 @@ export default function Home() {
     <Testimonials />,
     <TrustMarker />,
     <ContactUsSection />
+
   ];
 }
